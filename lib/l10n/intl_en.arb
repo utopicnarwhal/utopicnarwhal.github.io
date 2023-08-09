@@ -1,0 +1,15 @@
+{
+  "contactMeButton": "Contact me!",
+  "changeLanguageButtonTooltip": "Change language",
+  "copyToClipboardMessage": "\"{text}\" copied to your clipboard",
+  "@copyToClipboardMessage": {
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "introViewGreeting": "Hello!\nI’m Sergei.",
+  "homePageAppBarTitle": "Portfolio",
+  "introViewMyTitleString": "professional <link href=\"https://flutter.dev/\">flutter</link> developer based in Helsinki, Finland"
+}

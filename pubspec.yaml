@@ -1,0 +1,99 @@
+name: portfolio
+description: Portfolio website
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.6 <4.0.0"
+  flutter: 3.10.6
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+
+  # Localization
+  flutter_localizations:
+    sdk: flutter
+
+  # Navigation and layout
+  go_router: ^10.0.0
+  multi_split_view: ^2.4.0
+
+  # Local storage and database
+  shared_preferences: ^2.1.1
+
+  # Device, package and app utils
+  dynamic_color: ^1.6.5
+  material_color_utilities: ^0.2.0
+
+  # Types annotations
+  equatable: ^2.0.5
+  json_annotation: ^4.8.0
+  meta: ^1.9.1
+
+  # Data types and utils
+  rxdart: ^0.27.7
+  intl: ^0.18.0
+  collection: ^1.16.0
+
+  # State management
+  provider: ^6.0.5
+  flutter_bloc: ^8.1.3
+  bloc: ^8.1.2
+
+  # Animation, images, and other external widgets
+  animations: ^2.0.7
+  flutter_svg: ^2.0.7
+  lottie: ^2.4.0
+  styled_text: ^8.1.0
+
+  # Open system UI views
+  url_launcher: ^6.1.11
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.4.5
+  build_verify: ^3.1.0
+  json_serializable: ^6.7.0
+  intl_utils: ^2.8.3
+  flutter_gen_runner: ^5.3.1
+  go_router_builder: ^2.2.4
+
+# https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl
+flutter_intl:
+  enabled: true
+  class_name: Dictums
+  main_locale: en
+  arb_dir: lib/l10n
+  output_dir: lib/l10n/generated
+
+flutter_gen:
+  output: lib/flutter_gen
+  line_length: 120
+
+flutter:
+  uses-material-design: true
+
+  # * Don't forget to run the code generation command after adding a new asset here:
+  assets:
+    - assets/images/third_party/freska-service-workers-app-icon.svg
+    - assets/images/third_party/freska-customer-app-icon.svg
+    - assets/images/third_party/github-icon.svg
+    - assets/images/third_party/freska-f-icon.svg
+
+    - assets/fonts/victor_mono/OFL.txt
+    - assets/fonts/inter/OFL.txt
+
+  fonts:
+    - family: "VictorMono"
+      fonts:
+        - asset: assets/fonts/victor_mono/VictorMono-VariableFont_wght.ttf
+        - asset: assets/fonts/victor_mono/VictorMono-Italic-VariableFont_wght.ttf
+          style: italic
+    - family: "Inter"
+      fonts:
+        - asset: assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf
