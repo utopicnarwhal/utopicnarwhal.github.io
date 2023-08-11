@@ -1,9 +1,13 @@
-name: freska-fi/superhero-native/workflow
+name: utopicnarwhal/utopicnarwhal.github.io/workflow
 
 on:
   workflow_dispatch:
   push:
-    branches: ['main', 'master']
+    branches:
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   build_and_publish:
@@ -21,14 +25,7 @@ jobs:
     - name: Build the web release
       run: flutter build web --release --no-tree-shake-icons
 
-    - name: Publish to GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v3.1.0
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
       with:
-        domain: github.io
-        target_branch: gh-pages
-        build_dir: build/web
-        jekyll: false
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-
+        folder: build/web
