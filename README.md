@@ -10,17 +10,26 @@
 
 If you use VScode just press `F5`
 Otherwise run the command in the `example` folder:
+
 ```
 $ flutter run
 ```
 
-## Build code
+## Development
+
+### Localization
+
+This project generates localized messages based on arb files found in the `lib/l10n` directory.
+
+More information [here](https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl)
+
+### Build code
 
 ```
 flutter build web --release --no-tree-shake-icons
 ```
 
-## Generate code
+### Generate code
 
 ```
 dart run build_runner build --delete-conflicting-outputs

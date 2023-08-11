@@ -41,57 +41,104 @@ class _IntroViewState extends State<IntroView> {
           SliverToBoxAdapter(child: SizedBox(height: edgePadding)),
           CustomSliverSeparatedList(
             everyChildPadding: EdgeInsets.symmetric(horizontal: edgePadding),
-            maxWidth: context.isExtraLargeScreen ? 840 : null,
+            maxWidth: context.isExtraLargeScreen ? 900 : null,
             alignment: context.isExtraLargeScreen ? Alignment.topCenter : Alignment.topLeft,
             children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Table(
+                columnWidths: const {
+                  0: FlexColumnWidth(),
+                  1: FixedColumnWidth(20),
+                  2: FixedColumnWidth(200),
+                },
                 children: [
-                  Expanded(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                  TableRow(
+                    children: [
+                      TableCell(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            SelectableText(
+                              Dictums.of(context).introViewGreeting,
+                              style: Theme.of(context).textTheme.displayLarge,
+                            ),
+                            Divider(
+                              thickness: 1,
+                              height: 32,
+                              color: Theme.of(context).colorScheme.outline,
+                            ),
+                            StyledText.selectable(
+                              text: Dictums.of(context).introViewMyTitleString,
+                              style:
+                                  Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).hintColor),
+                              tags: getUnifiedStyledTextTags(context),
+                            ),
+                          ],
+                        ),
+                      ),
+                      if (!context.isExtraSmallScreen) ...[
+                        const TableCell(child: SizedBox()),
+                        TableCell(
+                          verticalAlignment: TableCellVerticalAlignment.top,
+                          child: Image.network(
+                            'https://avatars.githubusercontent.com/u/8808766?v=4',
+                            alignment: Alignment.topCenter,
+                            loadingBuilder: (context, child, loadingProgress) {
+                              return SkeletonAnimationConfiguration.staggeredList(
+                                position: 0,
+                                isLoading: loadingProgress != null &&
+                                    loadingProgress.cumulativeBytesLoaded != loadingProgress.expectedTotalBytes,
+                                child: SkeletonLoader(child: child),
+                              );
+                            },
+                            frameBuilder: (context, child, _, __) {
+                              return ClipRRect(
+                                borderRadius: BorderRadius.circular(kCardBorderRadius),
+                                child: child,
+                              );
+                            },
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                  if (context.isExtraSmallScreen) ...[
+                    const TableRow(children: [TableCell(child: SizedBox(height: 20))]),
+                    TableRow(
                       children: [
-                        SelectableText(
-                          Dictums.of(context).introViewGreeting,
-                          style: Theme.of(context).textTheme.displayLarge,
-                        ),
-                        Divider(
-                          thickness: 1,
-                          height: 32,
-                          color: Theme.of(context).colorScheme.outline,
-                        ),
-                        StyledText.selectable(
-                          text: Dictums.of(context).introViewMyTitleString,
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).hintColor),
-                          tags: getUnifiedStyledTextTags(context),
+                        TableCell(
+                          child: Image.network(
+                            'https://avatars.githubusercontent.com/u/8808766?v=4',
+                            loadingBuilder: (context, child, loadingProgress) {
+                              return SkeletonAnimationConfiguration.staggeredList(
+                                position: 0,
+                                isLoading: loadingProgress != null &&
+                                    loadingProgress.cumulativeBytesLoaded != loadingProgress.expectedTotalBytes,
+                                child: SkeletonLoader(
+                                  child: child,
+                                ),
+                              );
+                            },
+                            frameBuilder: (context, child, _, __) {
+                              return AspectRatio(
+                                aspectRatio: 1,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(kCardBorderRadius),
+                                  child: child,
+                                ),
+                              );
+                            },
+                            alignment: Alignment.topLeft,
+                            fit: BoxFit.contain,
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                  const SizedBox(width: 200),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(kCardBorderRadius),
-                    child: Image.network(
-                      'https://avatars.githubusercontent.com/u/8808766?v=4',
-                      loadingBuilder: (context, child, loadingProgress) {
-                        return SkeletonAnimationConfiguration.staggeredList(
-                          position: 0,
-                          isLoading: loadingProgress != null &&
-                              loadingProgress.cumulativeBytesLoaded != loadingProgress.expectedTotalBytes,
-                          child: SkeletonLoader(
-                            child: child,
-                          ),
-                        );
-                      },
-                      width: 200,
-                      height: 200,
-                    ),
-                  ),
+                  ],
                 ],
               ),
-
-              const SizedBox(height: 60),
+              const SizedBox(height: 40),
               CardPlus(
                 padding: EdgeInsets.all(edgePadding),
                 child: Column(
@@ -110,10 +157,14 @@ class _IntroViewState extends State<IntroView> {
                 ),
               ),
               const SizedBox(height: 20),
-              // SelectableText( // TODO(sergei): add CV here
-              //   'placeholder to download boring CV here',
-              //   style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Theme.of(context).hintColor),
-              // ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: StyledText.selectable(
+                  text: 'Looking for CV? You can find it <link href="sergei_danilov_CV.pdf">here</link>',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).hintColor),
+                  tags: getUnifiedStyledTextTags(context),
+                ),
+              ),
             ],
           ),
           const SliverToBoxAdapter(child: SizedBox(height: 128)),
