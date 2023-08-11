@@ -33,6 +33,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "introViewGreeting":
             MessageLookupByLibrary.simpleMessage("Hello!\nI’m Sergei."),
         "introViewMyTitleString": MessageLookupByLibrary.simpleMessage(
-            "professional <link href=\"https://flutter.dev/\">flutter</link> developer based in Helsinki, Finland")
+            "professional <link href=\"https://flutter.dev/\">flutter</link> developer based in Helsinki, Finland"),
+        "toggleThemeModeButtonTooltip":
+            MessageLookupByLibrary.simpleMessage("Toggle theme mode")
       };
 }

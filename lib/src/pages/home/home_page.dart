@@ -69,9 +69,10 @@ class _HomePageState extends State<HomePage> {
           const SizedBox(width: 12),
           for (var action in commonActions) ...[
             action,
-            const SizedBox(width: 8),
+            const SizedBox(width: 4),
           ],
         ],
+        const SizedBox(width: 8),
         const _ContactMeButton(),
         const SizedBox(width: 12),
       ],

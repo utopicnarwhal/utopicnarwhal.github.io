@@ -17,7 +17,7 @@ $ flutter run
 ## Build code
 
 ```
-flutter build web
+flutter build web --release --no-tree-shake-icons
 ```
 
 ## Generate code

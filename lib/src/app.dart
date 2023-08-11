@@ -73,7 +73,7 @@ class _PortfolioAppState extends State<PortfolioApp> with WidgetsBindingObserver
                   theme: PortfolioTheme.getAppTheme(Brightness.light, lightDynamic),
                   darkTheme: PortfolioTheme.getAppTheme(Brightness.dark, darkDynamic),
                   themeMode: themeMode,
-                  scrollBehavior: const MaterialScrollBehavior(),
+                  scrollBehavior: CustomScrollBehavior(),
                 );
               },
             );

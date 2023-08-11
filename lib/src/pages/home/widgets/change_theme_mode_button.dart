@@ -35,9 +35,9 @@ class _ChangeThemeButton extends StatelessWidget {
 
         return CustomIconButton(
           key: ValueKey(icon.hashCode),
-          tooltip: 'Toggle theme mode',
+          tooltip: Dictums.of(context).toggleThemeModeButtonTooltip,
           icon: icon,
-          type: CustomIconButtonType.outlined,
+          type: context.isSmallScreen ? CustomIconButtonType.outlined : CustomIconButtonType.standard,
           isSelected: false,
           onPressed: () {
             switch (themeMode) {

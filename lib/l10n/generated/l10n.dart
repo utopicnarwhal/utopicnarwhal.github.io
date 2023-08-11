@@ -109,6 +109,16 @@ class Dictums {
       args: [],
     );
   }
+
+  /// `Toggle theme mode`
+  String get toggleThemeModeButtonTooltip {
+    return Intl.message(
+      'Toggle theme mode',
+      name: 'toggleThemeModeButtonTooltip',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<Dictums> {

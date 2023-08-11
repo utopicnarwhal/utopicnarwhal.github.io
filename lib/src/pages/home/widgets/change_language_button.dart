@@ -40,7 +40,7 @@ class _ChangeLanguageButtonState extends State<_ChangeLanguageButton> {
           tooltip: Dictums.of(context).changeLanguageButtonTooltip,
           focusNode: _buttonFocusNode,
           icon: const Icon(Icons.translate_rounded),
-          type: CustomIconButtonType.outlined,
+          type: context.isSmallScreen ? CustomIconButtonType.outlined : CustomIconButtonType.standard,
           isSelected: false,
           onPressed: () {
             if (controller.isOpen) {

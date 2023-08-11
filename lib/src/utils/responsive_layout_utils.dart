@@ -212,4 +212,8 @@ extension BuildContextExtension on BuildContext {
   bool get isSmallScreen {
     return ScreenSize.getBreakpoint(this).index <= Breakpoint.sm.index;
   }
+
+  bool get isExtraLargeScreen {
+    return ScreenSize.getBreakpoint(this).index >= Breakpoint.xl.index;
+  }
 }

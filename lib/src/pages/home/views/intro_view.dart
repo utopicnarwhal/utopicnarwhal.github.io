@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/l10n/generated/l10n.dart';
 import 'package:portfolio/src/global_widgets/card_plus.dart';
+import 'package:portfolio/src/global_widgets/effects.dart';
 import 'package:portfolio/src/global_widgets/layout/custom_sliver_separated_list.dart';
 import 'package:portfolio/src/global_widgets/portfolio_theme/portfolio_theme.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
@@ -40,22 +41,56 @@ class _IntroViewState extends State<IntroView> {
           SliverToBoxAdapter(child: SizedBox(height: edgePadding)),
           CustomSliverSeparatedList(
             everyChildPadding: EdgeInsets.symmetric(horizontal: edgePadding),
-            alignment: Alignment.topLeft,
+            maxWidth: context.isExtraLargeScreen ? 840 : null,
+            alignment: context.isExtraLargeScreen ? Alignment.topCenter : Alignment.topLeft,
             children: [
-              SelectableText(
-                Dictums.of(context).introViewGreeting,
-                style: Theme.of(context).textTheme.displayLarge,
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        SelectableText(
+                          Dictums.of(context).introViewGreeting,
+                          style: Theme.of(context).textTheme.displayLarge,
+                        ),
+                        Divider(
+                          thickness: 1,
+                          height: 32,
+                          color: Theme.of(context).colorScheme.outline,
+                        ),
+                        StyledText.selectable(
+                          text: Dictums.of(context).introViewMyTitleString,
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).hintColor),
+                          tags: getUnifiedStyledTextTags(context),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 200),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(kCardBorderRadius),
+                    child: Image.network(
+                      'https://avatars.githubusercontent.com/u/8808766?v=4',
+                      loadingBuilder: (context, child, loadingProgress) {
+                        return SkeletonAnimationConfiguration.staggeredList(
+                          position: 0,
+                          isLoading: loadingProgress != null &&
+                              loadingProgress.cumulativeBytesLoaded != loadingProgress.expectedTotalBytes,
+                          child: SkeletonLoader(
+                            child: child,
+                          ),
+                        );
+                      },
+                      width: 200,
+                      height: 200,
+                    ),
+                  ),
+                ],
               ),
-              Divider(
-                thickness: 1,
-                height: 32,
-                color: Theme.of(context).colorScheme.outline,
-              ),
-              StyledText.selectable(
-                text: Dictums.of(context).introViewMyTitleString,
-                style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Theme.of(context).hintColor),
-                tags: getUnifiedStyledTextTags(context),
-              ),
+
               const SizedBox(height: 60),
               CardPlus(
                 padding: EdgeInsets.all(edgePadding),
@@ -68,7 +103,7 @@ class _IntroViewState extends State<IntroView> {
                     ),
                     const SizedBox(height: 16),
                     SelectableText(
-                      'Experienced mobile developer with 6+ years of dedicated expertise in crafting Android and iOS apps using Flutter and publishing them into the app stores.',
+                      'Experienced mobile developer with 6+ years of dedicated expertise in crafting Android, iOS, and Web apps using Flutter and publishing them into the app stores. Committed to creating top-notch applications by prioritizing clean, readable code and exceptional user experiences.',
                       style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ],

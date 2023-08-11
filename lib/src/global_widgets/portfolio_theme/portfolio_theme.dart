@@ -280,6 +280,17 @@ abstract class PortfolioTheme {
   }
 }
 
+class CustomScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Widget buildOverscrollIndicator(BuildContext context, Widget child, ScrollableDetails details) {
+    return StretchingOverscrollIndicator(
+      axisDirection: details.direction,
+      clipBehavior: Clip.hardEdge,
+      child: child,
+    );
+  }
+}
+
 double surfaceLevelToElevation(int surfaceLevel) {
   if (surfaceLevel <= 0) {
     return 0;

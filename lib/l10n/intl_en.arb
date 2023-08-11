@@ -11,5 +11,6 @@
   },
   "introViewGreeting": "Hello!\nI’m Sergei.",
   "homePageAppBarTitle": "Portfolio",
-  "introViewMyTitleString": "professional <link href=\"https://flutter.dev/\">flutter</link> developer based in Helsinki, Finland"
+  "introViewMyTitleString": "professional <link href=\"https://flutter.dev/\">flutter</link> developer based in Helsinki, Finland",
+  "toggleThemeModeButtonTooltip": "Toggle theme mode"
 }

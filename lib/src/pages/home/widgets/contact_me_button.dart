@@ -14,6 +14,28 @@ class _ContactMeButton extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 ListTile(
+                  title: const Text('Email'),
+                  subtitle: const Text('gigok100@gmail.com'),
+                  onTap: () {
+                    url_launcher.launchUrl(
+                      Uri.parse('mailto:gigok100@gmail.com'),
+                      mode: LaunchMode.externalApplication,
+                    );
+                  },
+                  trailing: CustomIconButton(
+                    onPressed: () async {
+                      await ClipboardService.copyAndNotify(
+                        context,
+                        'gigok100@gmail.com',
+                      );
+                      if (context.mounted && Navigator.canPop(context)) {
+                        Navigator.pop(context);
+                      }
+                    },
+                    icon: const Icon(Icons.copy_rounded),
+                  ),
+                ),
+                ListTile(
                   title: const Text('Telegram'),
                   subtitle: const Text('t.me/utopic_narwhal'),
                   onTap: () {

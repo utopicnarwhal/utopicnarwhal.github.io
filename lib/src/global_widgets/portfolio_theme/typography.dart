@@ -5,50 +5,47 @@ TextTheme _getTextTheme() {
     displayLarge: TextStyle(
       fontFamily: 'VictorMono',
       fontSize: 57,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w700,
     ),
     displayMedium: TextStyle(
       fontFamily: 'VictorMono',
       fontSize: 45,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w700,
     ),
     displaySmall: TextStyle(
       fontFamily: 'VictorMono',
       fontSize: 36,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w700,
     ),
     headlineLarge: TextStyle(
       fontFamily: 'VictorMono',
       fontSize: 32,
-      fontWeight: FontWeight.normal,
-      fontStyle: FontStyle.italic,
+      fontWeight: FontWeight.w800,
     ),
     headlineMedium: TextStyle(
       fontFamily: 'VictorMono',
       fontSize: 28,
-      fontWeight: FontWeight.normal,
-      fontStyle: FontStyle.italic,
+      fontWeight: FontWeight.w800,
     ),
     headlineSmall: TextStyle(
       fontFamily: 'VictorMono',
       fontSize: 24,
-      fontWeight: FontWeight.normal,
-      fontStyle: FontStyle.italic,
+      fontWeight: FontWeight.w800,
     ),
     titleLarge: TextStyle(
       fontFamily: 'Inter',
       fontSize: 24,
-      fontWeight: FontWeight.normal,
+      fontWeight: FontWeight.w500,
     ),
     titleMedium: TextStyle(
       fontFamily: 'Inter',
       fontSize: 20,
-      fontWeight: FontWeight.normal,
+      fontWeight: FontWeight.w500,
     ),
     titleSmall: TextStyle(
       fontFamily: 'Inter',
       fontSize: 17,
-      fontWeight: FontWeight.normal,
+      fontWeight: FontWeight.w500,
     ),
     labelLarge: TextStyle(
       fontFamily: 'Inter',
@@ -69,6 +66,7 @@ TextTheme _getTextTheme() {
       fontFamily: 'Inter',
       fontSize: 20,
       fontWeight: FontWeight.w300,
+      letterSpacing: 1,
     ),
     bodyMedium: TextStyle(
       fontFamily: 'Inter',
