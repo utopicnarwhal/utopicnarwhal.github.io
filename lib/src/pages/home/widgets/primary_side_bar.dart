@@ -90,7 +90,7 @@ class _PrimarySideBar extends StatelessWidget {
 
           if (menuItem is _MenuFolder) {
             return ExpansionTile(
-              key: ValueKey(menuItemRoutePath),
+              key: PageStorageKey(menuItemRoutePath),
               initiallyExpanded: routeLocation?.startsWith(menuItemRoutePath) == true,
               maintainState: true,
               iconColor: Theme.of(context).hintColor,
@@ -152,6 +152,7 @@ class _PrimarySideBar extends StatelessWidget {
             Scrollbar(
               controller: scrollController,
               child: ListView(
+                physics: kAlwaysBouncingScrollPhysics,
                 controller: scrollController,
                 padding: const EdgeInsets.only(top: 4, bottom: 128),
                 children: buildMenu(context, [

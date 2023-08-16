@@ -9,7 +9,7 @@
 ## Run locally
 
 If you use VScode just press `F5`
-Otherwise run the command in the `example` folder:
+Otherwise run the command in the root folder:
 
 ```
 $ flutter run

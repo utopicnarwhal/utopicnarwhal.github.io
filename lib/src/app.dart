@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:dynamic_color/dynamic_color.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:go_router/go_router.dart';
@@ -73,7 +74,7 @@ class _PortfolioAppState extends State<PortfolioApp> with WidgetsBindingObserver
                   theme: PortfolioTheme.getAppTheme(Brightness.light, lightDynamic),
                   darkTheme: PortfolioTheme.getAppTheme(Brightness.dark, darkDynamic),
                   themeMode: themeMode,
-                  scrollBehavior: CustomScrollBehavior(),
+                  scrollBehavior: AlwaysBouncingScrollBehavior(),
                 );
               },
             );
@@ -81,5 +82,16 @@ class _PortfolioAppState extends State<PortfolioApp> with WidgetsBindingObserver
         );
       },
     );
+  }
+}
+
+class AlwaysBouncingScrollBehavior extends CupertinoScrollBehavior {
+  @override
+  ScrollPhysics getScrollPhysics(context) {
+    // Do not add always scrollable property if the scrolling is inside SelectableText coz it makes all SelectableTexts be always scrollable
+    if (context.findAncestorWidgetOfExactType<SelectableText>() == null) {
+      return kAlwaysBouncingScrollPhysics;
+    }
+    return const BouncingScrollPhysics();
   }
 }

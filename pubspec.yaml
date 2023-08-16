@@ -20,6 +20,7 @@ dependencies:
   # Navigation and layout
   go_router: ^10.0.0
   multi_split_view: ^2.4.0
+  assorted_layout_widgets: ^8.0.4
 
   # Local storage and database
   shared_preferences: ^2.1.1
@@ -46,7 +47,7 @@ dependencies:
   # Animation, images, and other external widgets
   animations: ^2.0.7
   flutter_svg: ^2.0.7
-  lottie: ^2.4.0
+  lottie: ^2.6.0
   styled_text: ^8.1.0
 
   # Open system UI views
@@ -59,9 +60,9 @@ dev_dependencies:
   build_runner: ^2.4.5
   build_verify: ^3.1.0
   json_serializable: ^6.7.0
-  intl_utils: ^2.8.3
+  intl_utils: ^2.8.4
   flutter_gen_runner: ^5.3.1
-  go_router_builder: ^2.2.4
+  go_router_builder: ^2.3.0
 
 # https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl
 flutter_intl:
@@ -84,6 +85,8 @@ flutter:
     - assets/images/third_party/freska-customer-app-icon.svg
     - assets/images/third_party/github-icon.svg
     - assets/images/third_party/freska-f-icon.svg
+
+    - assets/animations/under_construction.json
 
     - assets/fonts/victor_mono/OFL.txt
     - assets/fonts/inter/OFL.txt

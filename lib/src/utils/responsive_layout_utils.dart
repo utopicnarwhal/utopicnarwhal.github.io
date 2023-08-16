@@ -209,14 +209,17 @@ class ResponsiveLayoutBuilder extends StatelessWidget {
 }
 
 extension BuildContextExtension on BuildContext {
+  /// < 600
   bool get isExtraSmallScreen {
     return ScreenSize.getBreakpoint(this).index <= Breakpoint.xs.index;
   }
 
+  /// < 1024
   bool get isSmallScreen {
     return ScreenSize.getBreakpoint(this).index <= Breakpoint.sm.index;
   }
 
+  /// >= 1920
   bool get isExtraLargeScreen {
     return ScreenSize.getBreakpoint(this).index >= Breakpoint.xl.index;
   }

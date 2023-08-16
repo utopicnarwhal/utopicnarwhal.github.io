@@ -1,0 +1,36 @@
+{
+  "contactMeButton": "Ota yhteyttä!",
+  "changeLanguageButtonTooltip": "Vaihda kieli",
+  "copyToClipboardMessage": "\"{text}\" kopioitu leikepöydälle",
+  "@copyToClipboardMessage": {
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "introViewGreeting": "Hei!\nOlen Sergei.",
+  "homePageAppBarTitle": "Portfolio",
+  "introViewMyTitleString": "ammattimainen <link href=\"https://flutter.dev/\">flutter</link>-kehittäjä Helsingistä, Suomi",
+  "toggleThemeModeButtonTooltip": "Vaihda teemavaihtoehdon tila",
+  "professionalSummaryTitle": "Ammattilaisen yhteenveto",
+  "professionalSummaryCardBodyText": "Kokenut mobiilikehittäjä, jolla on yli 6 vuoden omistautunut asiantuntemus Android-, iOS- ja web-sovellusten luomisessa käyttäen Flutteria ja julkaisemisessa sovelluskauppoihin. Sitoutunut luomaan huippuluokan sovelluksia asettamalla puhtaan ja luettavan koodin sekä poikkeuksellisen käyttäjäkokemuksen etusijalle.",
+  "openCvButton": "Katsoa CV:ta",
+  "learnMoreButton": "Learn more",
+  "keySkillsHeadline": "Key skills",
+  "hardSkillsTitle": "Hard skills",
+  "softSkillsTitle": "Soft skills",
+  "softSkillProblemSolving": "Ongelmanratkaisu",
+  "softSkillAdaptability": "Sopeutumiskyky",
+  "softSkillCommunication": "Viestintä",
+  "softSkillTeamwork": "Tiimityö",
+  "softSkillTimeManagement": "Ajanhallinta",
+  "softSkillCreativity": "Luovuus",
+  "softSkillAttentionToDetail": "Huolellisuus",
+  "softSkillCriticalThinking": "Kriittinen ajattelu",
+  "softSkillInitiative": "Aloitteellisuus",
+  "softSkillLeadership": "Johtaminen",
+  "softSkillConflictResolution": "Ristiriitojen ratkaisu",
+  "softSkillClientFocused": "Asiakaskeskeisyys",
+  "softSkillOpenMindedness": "Avoin mieli"
+}

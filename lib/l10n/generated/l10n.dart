@@ -119,6 +119,206 @@ class Dictums {
       args: [],
     );
   }
+
+  /// `Professional Summary`
+  String get professionalSummaryTitle {
+    return Intl.message(
+      'Professional Summary',
+      name: 'professionalSummaryTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skilful mobile developer with 6+ years of dedicated expertise in crafting Android, iOS, and Web apps using Flutter and publishing them into the app stores. Committed to creating top-notch applications by prioritizing clean, readable code and exceptional user experiences.`
+  String get professionalSummaryCardBodyText {
+    return Intl.message(
+      'Skilful mobile developer with 6+ years of dedicated expertise in crafting Android, iOS, and Web apps using Flutter and publishing them into the app stores. Committed to creating top-notch applications by prioritizing clean, readable code and exceptional user experiences.',
+      name: 'professionalSummaryCardBodyText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Open CV`
+  String get openCvButton {
+    return Intl.message(
+      'Open CV',
+      name: 'openCvButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn more`
+  String get learnMoreButton {
+    return Intl.message(
+      'Learn more',
+      name: 'learnMoreButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Key skills`
+  String get keySkillsHeadline {
+    return Intl.message(
+      'Key skills',
+      name: 'keySkillsHeadline',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hard skills`
+  String get hardSkillsTitle {
+    return Intl.message(
+      'Hard skills',
+      name: 'hardSkillsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Soft skills`
+  String get softSkillsTitle {
+    return Intl.message(
+      'Soft skills',
+      name: 'softSkillsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Problem-Solving`
+  String get softSkillProblemSolving {
+    return Intl.message(
+      'Problem-Solving',
+      name: 'softSkillProblemSolving',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adaptability`
+  String get softSkillAdaptability {
+    return Intl.message(
+      'Adaptability',
+      name: 'softSkillAdaptability',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Communication`
+  String get softSkillCommunication {
+    return Intl.message(
+      'Communication',
+      name: 'softSkillCommunication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teamwork`
+  String get softSkillTeamwork {
+    return Intl.message(
+      'Teamwork',
+      name: 'softSkillTeamwork',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time Management`
+  String get softSkillTimeManagement {
+    return Intl.message(
+      'Time Management',
+      name: 'softSkillTimeManagement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Creativity`
+  String get softSkillCreativity {
+    return Intl.message(
+      'Creativity',
+      name: 'softSkillCreativity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attention to Detail`
+  String get softSkillAttentionToDetail {
+    return Intl.message(
+      'Attention to Detail',
+      name: 'softSkillAttentionToDetail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Critical Thinking`
+  String get softSkillCriticalThinking {
+    return Intl.message(
+      'Critical Thinking',
+      name: 'softSkillCriticalThinking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Initiative`
+  String get softSkillInitiative {
+    return Intl.message(
+      'Initiative',
+      name: 'softSkillInitiative',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Leadership`
+  String get softSkillLeadership {
+    return Intl.message(
+      'Leadership',
+      name: 'softSkillLeadership',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Conflict Resolution`
+  String get softSkillConflictResolution {
+    return Intl.message(
+      'Conflict Resolution',
+      name: 'softSkillConflictResolution',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Client-Focused`
+  String get softSkillClientFocused {
+    return Intl.message(
+      'Client-Focused',
+      name: 'softSkillClientFocused',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Open-Mindedness`
+  String get softSkillOpenMindedness {
+    return Intl.message(
+      'Open-Mindedness',
+      name: 'softSkillOpenMindedness',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<Dictums> {
@@ -127,7 +327,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<Dictums> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
-      Locale.fromSubtags(languageCode: 'ru'),
+      Locale.fromSubtags(languageCode: 'fi'),
     ];
   }
 

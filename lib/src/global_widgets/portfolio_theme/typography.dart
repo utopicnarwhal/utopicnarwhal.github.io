@@ -34,49 +34,57 @@ TextTheme _getTextTheme() {
     ),
     titleLarge: TextStyle(
       fontFamily: 'Inter',
-      fontSize: 24,
-      fontWeight: FontWeight.w500,
+      fontSize: 30,
+      fontWeight: FontWeight.w600,
+      letterSpacing: 0.5,
     ),
     titleMedium: TextStyle(
       fontFamily: 'Inter',
-      fontSize: 20,
+      fontSize: 24,
       fontWeight: FontWeight.w500,
+      letterSpacing: 0.5,
     ),
     titleSmall: TextStyle(
       fontFamily: 'Inter',
-      fontSize: 17,
-      fontWeight: FontWeight.w500,
+      fontSize: 20,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.5,
     ),
     labelLarge: TextStyle(
       fontFamily: 'Inter',
       fontSize: 20,
       fontWeight: FontWeight.w600,
+      letterSpacing: 1.2,
     ),
     labelMedium: TextStyle(
       fontFamily: 'Inter',
       fontSize: 17,
       fontWeight: FontWeight.w600,
+      letterSpacing: 1.1,
     ),
     labelSmall: TextStyle(
       fontFamily: 'Inter',
       fontSize: 14,
       fontWeight: FontWeight.w600,
+      letterSpacing: 1,
     ),
     bodyLarge: TextStyle(
       fontFamily: 'Inter',
       fontSize: 20,
       fontWeight: FontWeight.w300,
-      letterSpacing: 1,
+      letterSpacing: 0,
     ),
     bodyMedium: TextStyle(
       fontFamily: 'Inter',
       fontSize: 17,
       fontWeight: FontWeight.w300,
+      letterSpacing: 0,
     ),
     bodySmall: TextStyle(
       fontFamily: 'Inter',
       fontSize: 14,
       fontWeight: FontWeight.w300,
+      letterSpacing: 0,
     ),
   );
 

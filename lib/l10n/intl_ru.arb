@@ -1,8 +1,0 @@
-{
-  "contactMeButton": "Связаться",
-  "changeLanguageButtonTooltip": "Сменить язык",
-  "introViewGreeting": "Привет!\nМеня зовут Сергей.",
-  "homePageAppBarTitle": "Портфолио",
-  "introViewMyTitleString": "профессиональный <link href=\"https://flutter.dev/\">flutter</link>-разработчик в Хельсинки, Финляндия",
-  "toggleThemeModeButtonTooltip": "Toggle theme mode"
-}

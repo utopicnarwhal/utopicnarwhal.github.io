@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a fi locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,57 +18,57 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'fi';
 
-  static String m0(text) => "\"${text}\" copied to your clipboard";
+  static String m0(text) => "\"${text}\" kopioitu leikepöydälle";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "changeLanguageButtonTooltip":
-            MessageLookupByLibrary.simpleMessage("Change language"),
-        "contactMeButton": MessageLookupByLibrary.simpleMessage("Contact me!"),
+            MessageLookupByLibrary.simpleMessage("Vaihda kieli"),
+        "contactMeButton":
+            MessageLookupByLibrary.simpleMessage("Ota yhteyttä!"),
         "copyToClipboardMessage": m0,
         "hardSkillsTitle": MessageLookupByLibrary.simpleMessage("Hard skills"),
         "homePageAppBarTitle":
             MessageLookupByLibrary.simpleMessage("Portfolio"),
         "introViewGreeting":
-            MessageLookupByLibrary.simpleMessage("Hello!\nI’m Sergei."),
+            MessageLookupByLibrary.simpleMessage("Hei!\nOlen Sergei."),
         "introViewMyTitleString": MessageLookupByLibrary.simpleMessage(
-            "professional <link href=\"https://flutter.dev/\">flutter</link> developer based in Helsinki, Finland"),
+            "ammattimainen <link href=\"https://flutter.dev/\">flutter</link>-kehittäjä Helsingistä, Suomi"),
         "keySkillsHeadline": MessageLookupByLibrary.simpleMessage("Key skills"),
         "learnMoreButton": MessageLookupByLibrary.simpleMessage("Learn more"),
-        "openCvButton": MessageLookupByLibrary.simpleMessage("Open CV"),
+        "openCvButton": MessageLookupByLibrary.simpleMessage("Katsoa CV:ta"),
         "professionalSummaryCardBodyText": MessageLookupByLibrary.simpleMessage(
-            "Skilful mobile developer with 6+ years of dedicated expertise in crafting Android, iOS, and Web apps using Flutter and publishing them into the app stores. Committed to creating top-notch applications by prioritizing clean, readable code and exceptional user experiences."),
+            "Kokenut mobiilikehittäjä, jolla on yli 6 vuoden omistautunut asiantuntemus Android-, iOS- ja web-sovellusten luomisessa käyttäen Flutteria ja julkaisemisessa sovelluskauppoihin. Sitoutunut luomaan huippuluokan sovelluksia asettamalla puhtaan ja luettavan koodin sekä poikkeuksellisen käyttäjäkokemuksen etusijalle."),
         "professionalSummaryTitle":
-            MessageLookupByLibrary.simpleMessage("Professional Summary"),
+            MessageLookupByLibrary.simpleMessage("Ammattilaisen yhteenveto"),
         "softSkillAdaptability":
-            MessageLookupByLibrary.simpleMessage("Adaptability"),
+            MessageLookupByLibrary.simpleMessage("Sopeutumiskyky"),
         "softSkillAttentionToDetail":
-            MessageLookupByLibrary.simpleMessage("Attention to Detail"),
+            MessageLookupByLibrary.simpleMessage("Huolellisuus"),
         "softSkillClientFocused":
-            MessageLookupByLibrary.simpleMessage("Client-Focused"),
+            MessageLookupByLibrary.simpleMessage("Asiakaskeskeisyys"),
         "softSkillCommunication":
-            MessageLookupByLibrary.simpleMessage("Communication"),
+            MessageLookupByLibrary.simpleMessage("Viestintä"),
         "softSkillConflictResolution":
-            MessageLookupByLibrary.simpleMessage("Conflict Resolution"),
-        "softSkillCreativity":
-            MessageLookupByLibrary.simpleMessage("Creativity"),
+            MessageLookupByLibrary.simpleMessage("Ristiriitojen ratkaisu"),
+        "softSkillCreativity": MessageLookupByLibrary.simpleMessage("Luovuus"),
         "softSkillCriticalThinking":
-            MessageLookupByLibrary.simpleMessage("Critical Thinking"),
+            MessageLookupByLibrary.simpleMessage("Kriittinen ajattelu"),
         "softSkillInitiative":
-            MessageLookupByLibrary.simpleMessage("Initiative"),
+            MessageLookupByLibrary.simpleMessage("Aloitteellisuus"),
         "softSkillLeadership":
-            MessageLookupByLibrary.simpleMessage("Leadership"),
+            MessageLookupByLibrary.simpleMessage("Johtaminen"),
         "softSkillOpenMindedness":
-            MessageLookupByLibrary.simpleMessage("Open-Mindedness"),
+            MessageLookupByLibrary.simpleMessage("Avoin mieli"),
         "softSkillProblemSolving":
-            MessageLookupByLibrary.simpleMessage("Problem-Solving"),
-        "softSkillTeamwork": MessageLookupByLibrary.simpleMessage("Teamwork"),
+            MessageLookupByLibrary.simpleMessage("Ongelmanratkaisu"),
+        "softSkillTeamwork": MessageLookupByLibrary.simpleMessage("Tiimityö"),
         "softSkillTimeManagement":
-            MessageLookupByLibrary.simpleMessage("Time Management"),
+            MessageLookupByLibrary.simpleMessage("Ajanhallinta"),
         "softSkillsTitle": MessageLookupByLibrary.simpleMessage("Soft skills"),
         "toggleThemeModeButtonTooltip":
-            MessageLookupByLibrary.simpleMessage("Toggle theme mode")
+            MessageLookupByLibrary.simpleMessage("Vaihda teemavaihtoehdon tila")
       };
 }

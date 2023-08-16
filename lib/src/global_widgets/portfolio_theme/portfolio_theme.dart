@@ -19,6 +19,11 @@ const double kPopupBorderRadius = 24;
 /// 16
 const double kTilePadding = 16;
 
+/// iOS scroll physics but also always scrollable to make it look more interactive
+const kAlwaysBouncingScrollPhysics = BouncingScrollPhysics(
+  parent: AlwaysScrollableScrollPhysics(),
+);
+
 abstract class PortfolioTheme {
   static ThemeData getAppTheme(Brightness brightness, ColorScheme? colorScheme) {
     final isDark = brightness == Brightness.dark;
@@ -47,7 +52,7 @@ abstract class PortfolioTheme {
     );
 
     return ThemeData(
-      fontFamily: 'RobotoFlex',
+      fontFamily: 'Inter',
       textTheme: textTheme,
       primaryColor: colorScheme.primary,
       visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -69,6 +74,8 @@ abstract class PortfolioTheme {
       segmentedButtonTheme: _segmentedButtonThemeData(colorScheme),
       expansionTileTheme: _expansionTileThemeData(colorScheme),
       dropdownMenuTheme: _dropdownMenuTheme(inputDecorationTheme),
+      splashFactory: InkSparkle.splashFactory,
+      splashColor: colorScheme.applyTintToSurface(8),
       iconButtonTheme: const IconButtonThemeData(
         style: ButtonStyle(fixedSize: MaterialStatePropertyAll(Size(44, 44))),
       ),
@@ -164,12 +171,13 @@ abstract class PortfolioTheme {
     return ChipThemeData(
       labelStyle: textTheme.labelMedium?.copyWith(color: colorScheme.primary),
       backgroundColor: Colors.transparent,
-      iconTheme: IconThemeData(color: colorScheme.primary, size: 18),
+      iconTheme: IconThemeData(color: colorScheme.primary, size: 20),
       side: BorderSide(
         width: 1,
         strokeAlign: -1 / 2,
         color: colorScheme.surfaceVariant,
       ),
+      padding: const EdgeInsets.all(8),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8),
       ),
@@ -276,17 +284,6 @@ abstract class PortfolioTheme {
     return DropdownMenuThemeData(
       inputDecorationTheme: inputDecorationTheme,
       textStyle: inputDecorationTheme.labelStyle,
-    );
-  }
-}
-
-class CustomScrollBehavior extends MaterialScrollBehavior {
-  @override
-  Widget buildOverscrollIndicator(BuildContext context, Widget child, ScrollableDetails details) {
-    return StretchingOverscrollIndicator(
-      axisDirection: details.direction,
-      clipBehavior: Clip.hardEdge,
-      child: child,
     );
   }
 }

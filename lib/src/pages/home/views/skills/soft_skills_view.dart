@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'package:portfolio/flutter_gen/assets.gen.dart';
 import 'package:portfolio/src/global_widgets/card_plus.dart';
 import 'package:portfolio/src/global_widgets/layout/custom_sliver_separated_list.dart';
+import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 
 class SoftSkillsView extends StatefulWidget {
   const SoftSkillsView({super.key});
@@ -26,6 +29,8 @@ class _SoftSkillsViewState extends State<SoftSkillsView> {
 
   @override
   Widget build(BuildContext context) {
+    final double edgePadding = context.isSmallScreen ? 20 : 40;
+
     return Scrollbar(
       controller: _scrollController,
       child: CustomScrollView(
@@ -42,10 +47,12 @@ class _SoftSkillsViewState extends State<SoftSkillsView> {
                 style: Theme.of(context).textTheme.displayMedium,
               ),
               CardPlus(
-                padding: const EdgeInsets.all(40),
-                child: SelectableText(
-                  'Description',
-                  style: Theme.of(context).textTheme.displayMedium,
+                padding: EdgeInsets.all(edgePadding),
+                child: LottieBuilder.asset(
+                  Assets.animations.underConstruction,
+                  repeat: true,
+                  width: 300,
+                  fit: BoxFit.fitWidth,
                 ),
               ),
             ],

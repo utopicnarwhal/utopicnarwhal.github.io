@@ -29,10 +29,10 @@ class _ChangeLanguageButtonState extends State<_ChangeLanguageButton> {
       menuChildren: [
         for (var supportedLocale in Dictums.delegate.supportedLocales)
           MenuItemButton(
-            child: Text({'en': 'English', 'ru': 'Russian'}[supportedLocale.toLanguageTag()] ?? 'Unknown'),
-            onPressed: () {
-              DynamicLocale.of(context)?.setLocale(supportedLocale);
-            },
+            child: Text(
+              {'en': 'English', 'fi': 'Finnish'}[supportedLocale.toLanguageTag()] ?? 'Unknown',
+            ),
+            onPressed: () => DynamicLocale.of(context)?.setLocale(supportedLocale),
           ),
       ],
       builder: (context, controller, _) {

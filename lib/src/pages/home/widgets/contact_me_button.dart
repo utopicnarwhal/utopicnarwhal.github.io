@@ -14,8 +14,16 @@ class _ContactMeButton extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 ListTile(
-                  title: const Text('Email'),
-                  subtitle: const Text('gigok100@gmail.com'),
+                  title: const Text(
+                    'Email',
+                    maxLines: 1,
+                    overflow: TextOverflow.fade,
+                  ),
+                  subtitle: const Text(
+                    'gigok100@gmail.com',
+                    maxLines: 1,
+                    overflow: TextOverflow.fade,
+                  ),
                   onTap: () {
                     url_launcher.launchUrl(
                       Uri.parse('mailto:gigok100@gmail.com'),
@@ -36,8 +44,16 @@ class _ContactMeButton extends StatelessWidget {
                   ),
                 ),
                 ListTile(
-                  title: const Text('Telegram'),
-                  subtitle: const Text('t.me/utopic_narwhal'),
+                  title: const Text(
+                    'Telegram',
+                    maxLines: 1,
+                    overflow: TextOverflow.fade,
+                  ),
+                  subtitle: const Text(
+                    't.me/utopic_narwhal',
+                    maxLines: 1,
+                    overflow: TextOverflow.fade,
+                  ),
                   onTap: () {
                     url_launcher.launchUrl(
                       Uri.parse('https://t.me/utopic_narwhal'),
@@ -58,8 +74,16 @@ class _ContactMeButton extends StatelessWidget {
                   ),
                 ),
                 ListTile(
-                  title: const Text('LinkedIn'),
-                  subtitle: const Text('linkedin.com/in/sergei-danilov-ab1b64164'),
+                  title: const Text(
+                    'LinkedIn',
+                    maxLines: 1,
+                    overflow: TextOverflow.fade,
+                  ),
+                  subtitle: const Text(
+                    'linkedin.com/in/sergei-danilov-ab1b64164',
+                    maxLines: 1,
+                    overflow: TextOverflow.fade,
+                  ),
                   onTap: () {
                     url_launcher.launchUrl(
                       Uri.parse('https://linkedin.com/in/sergei-danilov-ab1b64164'),
