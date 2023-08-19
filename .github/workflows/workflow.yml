@@ -18,12 +18,12 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2.10.0
       with:
-        flutter-version: '3.10.6'
+        flutter-version: '3.13.0'
         cache: true
         cache-key: 'flutter-:os:-:channel:-:version:-:arch:'
 
     - name: Build the web release
-      run: flutter build web --release --no-tree-shake-icons
+      run: flutter build web --release
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.4.3

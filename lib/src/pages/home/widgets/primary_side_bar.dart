@@ -48,7 +48,7 @@ class _PrimarySideBar extends StatelessWidget {
       yield ListenableBuilder(
         listenable: GoRouter.of(context).routeInformationProvider,
         builder: (context, _) {
-          final routeLocation = GoRouter.of(context).routeInformationProvider.value.location;
+          final routeLocation = GoRouter.of(context).routerDelegate.currentConfiguration.uri.path;
           final menuItemRoutePath = parentDir + menuItem.pathName;
 
           if (menuItem is _MenuDestination) {
@@ -91,7 +91,7 @@ class _PrimarySideBar extends StatelessWidget {
           if (menuItem is _MenuFolder) {
             return ExpansionTile(
               key: PageStorageKey(menuItemRoutePath),
-              initiallyExpanded: routeLocation?.startsWith(menuItemRoutePath) == true,
+              initiallyExpanded: routeLocation.startsWith(menuItemRoutePath) == true,
               maintainState: true,
               iconColor: Theme.of(context).hintColor,
               collapsedIconColor: Theme.of(context).hintColor,

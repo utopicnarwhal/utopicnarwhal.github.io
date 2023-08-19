@@ -4,8 +4,8 @@ publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: ">=3.0.6 <4.0.0"
-  flutter: 3.10.6
+  sdk: ">=3.1.0 <4.0.0"
+  flutter: 3.13.0
 
 dependencies:
   flutter:
@@ -18,7 +18,7 @@ dependencies:
     sdk: flutter
 
   # Navigation and layout
-  go_router: ^10.0.0
+  go_router: ^10.1.0
   multi_split_view: ^2.4.0
   assorted_layout_widgets: ^8.0.4
 
@@ -27,27 +27,20 @@ dependencies:
 
   # Device, package and app utils
   dynamic_color: ^1.6.5
-  material_color_utilities: ^0.2.0
+  material_color_utilities: ^0.5.0
 
   # Types annotations
-  equatable: ^2.0.5
-  json_annotation: ^4.8.0
-  meta: ^1.9.1
 
   # Data types and utils
   rxdart: ^0.27.7
   intl: ^0.18.0
   collection: ^1.16.0
 
-  # State management
-  provider: ^6.0.5
-  flutter_bloc: ^8.1.3
-  bloc: ^8.1.2
-
-  # Animation, images, and other external widgets
+  # Animation, images, videos and other external widgets
   animations: ^2.0.7
   flutter_svg: ^2.0.7
   lottie: ^2.6.0
+  video_player: ^2.7.0
   styled_text: ^8.1.0
 
   # Open system UI views
@@ -59,7 +52,6 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.4.5
   build_verify: ^3.1.0
-  json_serializable: ^6.7.0
   intl_utils: ^2.8.4
   flutter_gen_runner: ^5.3.1
   go_router_builder: ^2.3.0

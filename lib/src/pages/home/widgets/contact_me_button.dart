@@ -18,11 +18,13 @@ class _ContactMeButton extends StatelessWidget {
                     'Email',
                     maxLines: 1,
                     overflow: TextOverflow.fade,
+                    softWrap: false,
                   ),
                   subtitle: const Text(
                     'gigok100@gmail.com',
                     maxLines: 1,
                     overflow: TextOverflow.fade,
+                    softWrap: false,
                   ),
                   onTap: () {
                     url_launcher.launchUrl(
@@ -48,11 +50,13 @@ class _ContactMeButton extends StatelessWidget {
                     'Telegram',
                     maxLines: 1,
                     overflow: TextOverflow.fade,
+                    softWrap: false,
                   ),
                   subtitle: const Text(
                     't.me/utopic_narwhal',
                     maxLines: 1,
                     overflow: TextOverflow.fade,
+                    softWrap: false,
                   ),
                   onTap: () {
                     url_launcher.launchUrl(
@@ -78,11 +82,13 @@ class _ContactMeButton extends StatelessWidget {
                     'LinkedIn',
                     maxLines: 1,
                     overflow: TextOverflow.fade,
+                    softWrap: false,
                   ),
                   subtitle: const Text(
                     'linkedin.com/in/sergei-danilov-ab1b64164',
                     maxLines: 1,
                     overflow: TextOverflow.fade,
+                    softWrap: false,
                   ),
                   onTap: () {
                     url_launcher.launchUrl(
