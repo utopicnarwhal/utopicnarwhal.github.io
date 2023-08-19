@@ -4,6 +4,7 @@ import 'package:portfolio/src/global_widgets/effects.dart';
 import 'package:portfolio/src/global_widgets/layout/custom_primary_view.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 import 'package:video_player/video_player.dart';
+import 'package:video_player_platform_interface/video_player_platform_interface.dart' show VideoPlayerWebOptions;
 
 class HardSkillsView extends StatefulWidget {
   const HardSkillsView({super.key});
@@ -21,11 +22,15 @@ class _HardSkillsViewState extends State<HardSkillsView> {
     super.initState();
     _videoPlayerController = VideoPlayerController.networkUrl(
       Uri.parse('https://storage.googleapis.com/cms-storage-bucket/029113ae2cbbcf9493fe.mp4'),
+      formatHint: VideoFormat.other,
+      videoPlayerOptions: VideoPlayerOptions(webOptions: const VideoPlayerWebOptions(allowRemotePlayback: false)),
     );
     _videoPlayerInitializationFuture = _videoPlayerController.initialize().then((_) async {
-      await _videoPlayerController.setLooping(true);
-      // Attempts to start playing videos with an audio track (or not muted) without user interaction with the site ("user activation") will be prohibited by the browser and cause runtime errors in JS.
-      await _videoPlayerController.setVolume(0).then((_) => _videoPlayerController.play());
+      Future.wait([
+        _videoPlayerController.setLooping(true),
+        // Attempts to start playing videos with an audio track (or not muted) without user interaction with the site ("user activation") will be prohibited by the browser and cause runtime errors in JS.
+        _videoPlayerController.setVolume(0),
+      ]);
     });
   }
 
@@ -79,12 +84,15 @@ class _HardSkillsViewState extends State<HardSkillsView> {
                 future: _videoPlayerInitializationFuture,
                 builder: (context, snapshot) {
                   final isLoading = snapshot.connectionState != ConnectionState.done;
+                  if (!_videoPlayerController.value.isPlaying) {
+                    _videoPlayerController.play();
+                  }
 
-                  return CardPlus(
-                    child: SkeletonAnimationConfiguration.staggeredList(
-                      position: 0,
-                      isLoading: isLoading,
-                      child: SkeletonLoader(
+                  return SkeletonAnimationConfiguration.staggeredList(
+                    position: 0,
+                    isLoading: isLoading,
+                    child: SkeletonLoader(
+                      child: CardPlus(
                         child: AspectRatio(
                           aspectRatio: 1632 / 1080,
                           child: isLoading ? const SizedBox() : VideoPlayer(_videoPlayerController),

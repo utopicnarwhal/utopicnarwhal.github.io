@@ -37,10 +37,11 @@ dependencies:
   collection: ^1.16.0
 
   # Animation, images, videos and other external widgets
+  rive: ^0.11.14
   animations: ^2.0.7
   flutter_svg: ^2.0.7
-  lottie: ^2.6.0
   video_player: ^2.7.0
+  video_player_platform_interface: any # ! Have to use it to reach [VideoPlayerWebOptions]
   styled_text: ^8.1.0
 
   # Open system UI views
@@ -78,7 +79,7 @@ flutter:
     - assets/images/third_party/github-icon.svg
     - assets/images/third_party/freska-f-icon.svg
 
-    - assets/animations/under_construction.json
+    - assets/animations/under_construction.riv
 
     - assets/fonts/victor_mono/OFL.txt
     - assets/fonts/inter/OFL.txt

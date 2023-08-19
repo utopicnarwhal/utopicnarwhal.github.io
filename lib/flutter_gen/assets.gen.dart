@@ -12,8 +12,8 @@ import 'package:flutter/widgets.dart';
 class $AssetsAnimationsGen {
   const $AssetsAnimationsGen();
 
-  /// File path: assets/animations/under_construction.json
-  String get underConstruction => 'assets/animations/under_construction.json';
+  /// File path: assets/animations/under_construction.riv
+  String get underConstruction => 'assets/animations/under_construction.riv';
 
   /// List of all assets
   List<String> get values => [underConstruction];

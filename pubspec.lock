@@ -453,14 +453,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  lottie:
-    dependency: "direct main"
-    description:
-      name: lottie
-      sha256: b8bdd54b488c54068c57d41ae85d02808da09e2bee8b8dd1f59f441e7efa60cd
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.6.0"
   matcher:
     dependency: transitive
     description:
@@ -621,6 +613,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.3"
+  rive:
+    dependency: "direct main"
+    description:
+      name: rive
+      sha256: b7780ebdc56320da1f02a39a18f050a6079cad60c0cb92003c0801cc4eec6673
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.11.14"
+  rive_common:
+    dependency: transitive
+    description:
+      name: rive_common
+      sha256: "1431b99c9f361234cc6fa9aee7987b20030622df25ff64343a4010f9446b275e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.6"
   rxdart:
     dependency: "direct main"
     description:
@@ -979,7 +987,7 @@ packages:
     source: hosted
     version: "2.4.9"
   video_player_platform_interface:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: video_player_platform_interface
       sha256: "1ca9acd7a0fb15fb1a990cb554e6f004465c6f37c99d2285766f08a4b2802988"

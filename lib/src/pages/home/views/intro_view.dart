@@ -1,6 +1,5 @@
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:portfolio/flutter_gen/assets.gen.dart';
 import 'package:portfolio/l10n/generated/l10n.dart';
 import 'package:portfolio/src/global_widgets/card_plus.dart';
@@ -9,6 +8,7 @@ import 'package:portfolio/src/global_widgets/layout/custom_primary_view.dart';
 import 'package:portfolio/src/global_widgets/portfolio_theme/portfolio_theme.dart';
 import 'package:portfolio/src/pages/routes.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
+import 'package:rive/rive.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
@@ -292,11 +292,12 @@ class _IntroViewState extends State<IntroView> {
         const SizedBox(height: 20),
         CardPlus(
           padding: EdgeInsets.all(edgePadding),
-          child: LottieBuilder.asset(
-            Assets.animations.underConstruction,
-            repeat: true,
-            width: 300,
-            fit: BoxFit.fitWidth,
+          child: SizedBox.square(
+            dimension: 200,
+            child: RiveAnimation.asset(
+              Assets.animations.underConstruction,
+              fit: BoxFit.fitWidth,
+            ),
           ),
         ),
       ],

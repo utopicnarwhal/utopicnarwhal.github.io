@@ -26,7 +26,7 @@ More information [here](https://marketplace.visualstudio.com/items?itemName=loca
 ### Build code
 
 ```
-flutter build web --release --no-tree-shake-icons
+flutter build web --release
 ```
 
 ### Generate code
