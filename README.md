@@ -26,7 +26,7 @@ More information [here](https://marketplace.visualstudio.com/items?itemName=loca
 ### Build code
 
 ```
-flutter build web --release --base-href "/"
+flutter build web --release --base-href "/" --web-renderer canvaskit
 ```
 
 ### Generate code

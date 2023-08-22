@@ -23,7 +23,7 @@ jobs:
         cache-key: 'flutter-:os:-:channel:-:version:-:arch:'
 
     - name: Build the web release
-      run: flutter build web --release --base-href "/"
+      run: flutter build web --release --base-href "/" --web-renderer canvaskit
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.4.3

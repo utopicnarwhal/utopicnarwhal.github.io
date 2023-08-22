@@ -215,6 +215,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
                     child: _IllustrationCard(
                       aspectRatio: 600 / 422.5,
                       sourceLink: 'https://firebase.google.com/',
+                      iconsColor: Colors.white70,
                       logomark: SizedBox.square(
                         dimension: 48,
                         child: SvgPicture.asset(
@@ -222,7 +223,12 @@ class _HardSkillsViewState extends State<HardSkillsView> {
                           alignment: Alignment.center,
                         ),
                       ),
-                      child: isLoading ? const SizedBox() : VideoPlayer(_firebaseHeroVideoPlayerController),
+                      child: isLoading
+                          ? const SizedBox()
+                          : Container(
+                              color: const Color(0xFF1c72e8),
+                              child: VideoPlayer(_firebaseHeroVideoPlayerController),
+                            ),
                     ),
                   ),
                 );

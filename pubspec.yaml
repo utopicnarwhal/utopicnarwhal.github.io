@@ -110,8 +110,6 @@ flutter:
     - family: "VictorMono"
       fonts:
         - asset: assets/fonts/victor_mono/VictorMono-VariableFont_wght.ttf
-        - asset: assets/fonts/victor_mono/VictorMono-Italic-VariableFont_wght.ttf
-          style: italic
     - family: "Inter"
       fonts:
         - asset: assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf
