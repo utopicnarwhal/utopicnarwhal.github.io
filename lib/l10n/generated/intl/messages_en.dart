@@ -42,6 +42,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Skilful mobile developer with 6+ years of dedicated expertise in crafting Android, iOS, and Web apps using Flutter and publishing them into the app stores. Committed to creating top-notch applications by prioritizing clean, readable code and exceptional user experiences."),
         "professionalSummaryTitle":
             MessageLookupByLibrary.simpleMessage("Professional Summary"),
+        "projectsShowcaseHeadline":
+            MessageLookupByLibrary.simpleMessage("Projects Showcase"),
         "softSkillAdaptability":
             MessageLookupByLibrary.simpleMessage("Adaptability"),
         "softSkillAttentionToDetail":
@@ -68,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "softSkillTimeManagement":
             MessageLookupByLibrary.simpleMessage("Time Management"),
         "softSkillsTitle": MessageLookupByLibrary.simpleMessage("Soft skills"),
+        "sourceTooltip": MessageLookupByLibrary.simpleMessage("Source"),
         "toggleThemeModeButtonTooltip":
             MessageLookupByLibrary.simpleMessage("Toggle theme mode")
       };

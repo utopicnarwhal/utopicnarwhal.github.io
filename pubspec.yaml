@@ -74,12 +74,34 @@ flutter:
 
   # * Don't forget to run the code generation command after adding a new asset here:
   assets:
+    # Third-party logos
+    - assets/images/third_party/firebase_logomark.svg
+    - assets/images/third_party/google_material_design_logo.svg
+    - assets/images/third_party/git_logomark.svg
+    - assets/images/third_party/logo_dart.svg
+    - assets/images/third_party/github_icon.svg
+    - assets/images/third_party/github_actions_logomark.svg
     - assets/images/third_party/freska-service-workers-app-icon.svg
     - assets/images/third_party/freska-customer-app-icon.svg
-    - assets/images/third_party/github-icon.svg
+    - assets/images/third_party/github_icon.svg
     - assets/images/third_party/freska-f-icon.svg
 
+    - assets/images/illustrations/dart_aot_compile.svg
+    - assets/images/illustrations/cicd.png
+    - assets/images/illustrations/version_control.svg
+    - assets/images/illustrations/material_design.png
+    - assets/images/illustrations/design_system.png
+    - assets/images/illustrations/i18n.svg
+    - assets/images/illustrations/app_deployment.png
+
+    # Animations
     - assets/animations/under_construction.riv
+    - assets/animations/utopic_narwhal.riv
+
+    # Videos
+    - assets/videos/flutter_developing.mp4
+    - assets/videos/responsive_layout.mp4
+    - assets/videos/firebase_hero_loop.webm
 
     - assets/fonts/victor_mono/OFL.txt
     - assets/fonts/inter/OFL.txt

@@ -171,7 +171,7 @@ class _IntroViewState extends State<IntroView> {
                           'Material Design',
                           'Responsive Design',
                           'Design Systems',
-                          'Internationalization (i18n)',
+                          'Internationalization',
                           'Automated Testing',
                           'Performance Optimization',
                           'Effects and Animations',
@@ -286,7 +286,7 @@ class _IntroViewState extends State<IntroView> {
         ),
         const SizedBox(height: 40),
         SelectableText(
-          'Projects',
+          Dictums.of(context).projectsShowcaseHeadline,
           style: Theme.of(context).textTheme.headlineLarge,
         ),
         const SizedBox(height: 20),

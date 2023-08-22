@@ -319,6 +319,26 @@ class Dictums {
       args: [],
     );
   }
+
+  /// `Source`
+  String get sourceTooltip {
+    return Intl.message(
+      'Source',
+      name: 'sourceTooltip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Projects Showcase`
+  String get projectsShowcaseHeadline {
+    return Intl.message(
+      'Projects Showcase',
+      name: 'projectsShowcaseHeadline',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<Dictums> {

@@ -29,7 +29,7 @@ class _ContactMeButton extends StatelessWidget {
                   onTap: () {
                     url_launcher.launchUrl(
                       Uri.parse('mailto:gigok100@gmail.com'),
-                      mode: LaunchMode.externalApplication,
+                      mode: url_launcher.LaunchMode.externalApplication,
                     );
                   },
                   trailing: CustomIconButton(
@@ -61,7 +61,7 @@ class _ContactMeButton extends StatelessWidget {
                   onTap: () {
                     url_launcher.launchUrl(
                       Uri.parse('https://t.me/utopic_narwhal'),
-                      mode: LaunchMode.externalApplication,
+                      mode: url_launcher.LaunchMode.externalApplication,
                     );
                   },
                   trailing: CustomIconButton(
@@ -93,7 +93,7 @@ class _ContactMeButton extends StatelessWidget {
                   onTap: () {
                     url_launcher.launchUrl(
                       Uri.parse('https://linkedin.com/in/sergei-danilov-ab1b64164'),
-                      mode: LaunchMode.externalApplication,
+                      mode: url_launcher.LaunchMode.externalApplication,
                     );
                   },
                   trailing: CustomIconButton(

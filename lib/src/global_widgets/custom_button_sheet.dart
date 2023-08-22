@@ -27,7 +27,7 @@ Future<T?> showCustomModalBottomSheet<T>({
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
     enableDrag: true,
-    elevation: 0,
+    elevation: Theme.of(context).brightness == Brightness.light ? 0 : 12,
     isDismissible: isDismissible,
     builder: (context) {
       final globalMediaQuery = MediaQuery.of(Navigator.of(context).context);

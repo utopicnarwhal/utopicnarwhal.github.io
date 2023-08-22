@@ -1,13 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:portfolio/flutter_gen/assets.gen.dart';
 import 'package:portfolio/src/app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  usePathUrlStrategy();
 
   LicenseRegistry.addLicense(
     () => Stream<LicenseEntry>.fromFutures([

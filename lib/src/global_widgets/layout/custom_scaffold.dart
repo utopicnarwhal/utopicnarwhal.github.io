@@ -35,13 +35,13 @@ class CustomScaffold extends StatelessWidget {
         leadingWidth: drawer == null ? 120 : null,
         actions: actions,
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
       floatingActionButton: drawer != null
           ? FloatingActionButton.small(
               onPressed: () {
                 (scaffoldGlobalKey.currentState as ScaffoldState).openDrawer();
               },
-              child: const Icon(Icons.menu_rounded),
+              child: const Icon(Icons.arrow_forward_rounded),
             )
           : null,
       drawer: drawer,

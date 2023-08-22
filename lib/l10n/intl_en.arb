@@ -32,5 +32,7 @@
   "softSkillLeadership": "Leadership",
   "softSkillConflictResolution": "Conflict Resolution",
   "softSkillClientFocused": "Client-Focused",
-  "softSkillOpenMindedness": "Open-Mindedness"
+  "softSkillOpenMindedness": "Open-Mindedness",
+  "sourceTooltip": "Source",
+  "projectsShowcaseHeadline": "Projects Showcase"
 }

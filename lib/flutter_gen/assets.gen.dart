@@ -15,8 +15,11 @@ class $AssetsAnimationsGen {
   /// File path: assets/animations/under_construction.riv
   String get underConstruction => 'assets/animations/under_construction.riv';
 
+  /// File path: assets/animations/utopic_narwhal.riv
+  String get utopicNarwhal => 'assets/animations/utopic_narwhal.riv';
+
   /// List of all assets
-  List<String> get values => [underConstruction];
+  List<String> get values => [underConstruction, utopicNarwhal];
 }
 
 class $AssetsFontsGen {
@@ -29,7 +32,24 @@ class $AssetsFontsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  $AssetsImagesIllustrationsGen get illustrations => const $AssetsImagesIllustrationsGen();
   $AssetsImagesThirdPartyGen get thirdParty => const $AssetsImagesThirdPartyGen();
+}
+
+class $AssetsVideosGen {
+  const $AssetsVideosGen();
+
+  /// File path: assets/videos/firebase_hero_loop.webm
+  String get firebaseHeroLoop => 'assets/videos/firebase_hero_loop.webm';
+
+  /// File path: assets/videos/flutter_developing.mp4
+  String get flutterDeveloping => 'assets/videos/flutter_developing.mp4';
+
+  /// File path: assets/videos/responsive_layout.mp4
+  String get responsiveLayout => 'assets/videos/responsive_layout.mp4';
+
+  /// List of all assets
+  List<String> get values => [firebaseHeroLoop, flutterDeveloping, responsiveLayout];
 }
 
 class $AssetsFontsInterGen {
@@ -52,8 +72,39 @@ class $AssetsFontsVictorMonoGen {
   List<String> get values => [ofl];
 }
 
+class $AssetsImagesIllustrationsGen {
+  const $AssetsImagesIllustrationsGen();
+
+  /// File path: assets/images/illustrations/app_deployment.png
+  AssetGenImage get appDeployment => const AssetGenImage('assets/images/illustrations/app_deployment.png');
+
+  /// File path: assets/images/illustrations/cicd.png
+  AssetGenImage get cicd => const AssetGenImage('assets/images/illustrations/cicd.png');
+
+  /// File path: assets/images/illustrations/dart_aot_compile.svg
+  String get dartAotCompile => 'assets/images/illustrations/dart_aot_compile.svg';
+
+  /// File path: assets/images/illustrations/design_system.png
+  AssetGenImage get designSystem => const AssetGenImage('assets/images/illustrations/design_system.png');
+
+  /// File path: assets/images/illustrations/i18n.svg
+  String get i18n => 'assets/images/illustrations/i18n.svg';
+
+  /// File path: assets/images/illustrations/material_design.png
+  AssetGenImage get materialDesign => const AssetGenImage('assets/images/illustrations/material_design.png');
+
+  /// File path: assets/images/illustrations/version_control.svg
+  String get versionControl => 'assets/images/illustrations/version_control.svg';
+
+  /// List of all assets
+  List<dynamic> get values => [appDeployment, cicd, dartAotCompile, designSystem, i18n, materialDesign, versionControl];
+}
+
 class $AssetsImagesThirdPartyGen {
   const $AssetsImagesThirdPartyGen();
+
+  /// File path: assets/images/third_party/firebase_logomark.svg
+  String get firebaseLogomark => 'assets/images/third_party/firebase_logomark.svg';
 
   /// File path: assets/images/third_party/freska-customer-app-icon.svg
   String get freskaCustomerAppIcon => 'assets/images/third_party/freska-customer-app-icon.svg';
@@ -64,11 +115,33 @@ class $AssetsImagesThirdPartyGen {
   /// File path: assets/images/third_party/freska-service-workers-app-icon.svg
   String get freskaServiceWorkersAppIcon => 'assets/images/third_party/freska-service-workers-app-icon.svg';
 
-  /// File path: assets/images/third_party/github-icon.svg
-  String get githubIcon => 'assets/images/third_party/github-icon.svg';
+  /// File path: assets/images/third_party/git_logomark.svg
+  String get gitLogomark => 'assets/images/third_party/git_logomark.svg';
+
+  /// File path: assets/images/third_party/github_actions_logomark.svg
+  String get githubActionsLogomark => 'assets/images/third_party/github_actions_logomark.svg';
+
+  /// File path: assets/images/third_party/github_icon.svg
+  String get githubIcon => 'assets/images/third_party/github_icon.svg';
+
+  /// File path: assets/images/third_party/google_material_design_logo.svg
+  String get googleMaterialDesignLogo => 'assets/images/third_party/google_material_design_logo.svg';
+
+  /// File path: assets/images/third_party/logo_dart.svg
+  String get logoDart => 'assets/images/third_party/logo_dart.svg';
 
   /// List of all assets
-  List<String> get values => [freskaCustomerAppIcon, freskaFIcon, freskaServiceWorkersAppIcon, githubIcon];
+  List<String> get values => [
+        firebaseLogomark,
+        freskaCustomerAppIcon,
+        freskaFIcon,
+        freskaServiceWorkersAppIcon,
+        gitLogomark,
+        githubActionsLogomark,
+        githubIcon,
+        googleMaterialDesignLogo,
+        logoDart
+      ];
 }
 
 class Assets {
@@ -77,6 +150,7 @@ class Assets {
   static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsVideosGen videos = $AssetsVideosGen();
 }
 
 class AssetGenImage {

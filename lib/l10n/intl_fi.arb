@@ -32,5 +32,7 @@
   "softSkillLeadership": "Johtaminen",
   "softSkillConflictResolution": "Ristiriitojen ratkaisu",
   "softSkillClientFocused": "Asiakaskeskeisyys",
-  "softSkillOpenMindedness": "Avoin mieli"
+  "softSkillOpenMindedness": "Avoin mieli",
+  "sourceTooltip": "Source",
+  "projectsShowcaseHeadline": "Projects Showcase"
 }

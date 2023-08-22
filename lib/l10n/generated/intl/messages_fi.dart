@@ -43,6 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kokenut mobiilikehittäjä, jolla on yli 6 vuoden omistautunut asiantuntemus Android-, iOS- ja web-sovellusten luomisessa käyttäen Flutteria ja julkaisemisessa sovelluskauppoihin. Sitoutunut luomaan huippuluokan sovelluksia asettamalla puhtaan ja luettavan koodin sekä poikkeuksellisen käyttäjäkokemuksen etusijalle."),
         "professionalSummaryTitle":
             MessageLookupByLibrary.simpleMessage("Ammattilaisen yhteenveto"),
+        "projectsShowcaseHeadline":
+            MessageLookupByLibrary.simpleMessage("Projects Showcase"),
         "softSkillAdaptability":
             MessageLookupByLibrary.simpleMessage("Sopeutumiskyky"),
         "softSkillAttentionToDetail":
@@ -68,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "softSkillTimeManagement":
             MessageLookupByLibrary.simpleMessage("Ajanhallinta"),
         "softSkillsTitle": MessageLookupByLibrary.simpleMessage("Soft skills"),
+        "sourceTooltip": MessageLookupByLibrary.simpleMessage("Source"),
         "toggleThemeModeButtonTooltip":
             MessageLookupByLibrary.simpleMessage("Vaihda teemavaihtoehdon tila")
       };

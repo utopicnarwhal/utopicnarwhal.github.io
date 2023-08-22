@@ -14,7 +14,6 @@ import 'package:portfolio/src/global_widgets/portfolio_theme/portfolio_theme.dar
 import 'package:portfolio/src/services/clipboard_service.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
-import 'package:url_launcher/url_launcher_string.dart';
 
 part 'widgets/change_language_button.dart';
 part 'widgets/change_theme_mode_button.dart';
