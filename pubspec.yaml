@@ -42,7 +42,13 @@ dependencies:
   flutter_svg: ^2.0.7
   video_player: ^2.7.0
   video_player_platform_interface: any # ! Have to use it to reach [VideoPlayerWebOptions]
-  styled_text: ^8.1.0
+
+  # Replace with the original [https://pub.dev/packages/styled_text] when it supports sync parsing. Issue [https://github.com/andyduke/styled_text_package/issues/65]
+  styled_text:
+    git:
+      url: git@github.com:Maatteogekko/styled_text_package.git
+      ref: 57dd8b9
+      path: styled_text
 
   # Open system UI views
   url_launcher: ^6.1.11

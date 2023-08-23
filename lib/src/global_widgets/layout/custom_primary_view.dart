@@ -34,21 +34,18 @@ class _CustomPrimaryViewState extends State<CustomPrimaryView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scrollbar(
+    return CustomScrollView(
       controller: _scrollController,
-      child: CustomScrollView(
-        controller: _scrollController,
-        slivers: [
-          SliverToBoxAdapter(child: SizedBox(height: widget.edgePadding)),
-          CustomSliverSeparatedList(
-            everyChildPadding: EdgeInsets.symmetric(horizontal: widget.edgePadding),
-            maxWidth: context.isExtraLargeScreen ? 900 : null,
-            alignment: context.isExtraLargeScreen ? Alignment.topCenter : Alignment.topLeft,
-            children: widget.children,
-          ),
-          const SliverToBoxAdapter(child: SizedBox(height: 128)),
-        ],
-      ),
+      slivers: [
+        SliverToBoxAdapter(child: SizedBox(height: widget.edgePadding)),
+        CustomSliverSeparatedList(
+          everyChildPadding: EdgeInsets.symmetric(horizontal: widget.edgePadding),
+          maxWidth: context.isExtraLargeScreen ? 900 : null,
+          alignment: context.isExtraLargeScreen ? Alignment.topCenter : Alignment.topLeft,
+          children: widget.children,
+        ),
+        const SliverToBoxAdapter(child: SizedBox(height: 128)),
+      ],
     );
   }
 }

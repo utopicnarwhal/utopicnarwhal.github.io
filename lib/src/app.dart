@@ -94,4 +94,23 @@ class AlwaysBouncingScrollBehavior extends CupertinoScrollBehavior {
     }
     return const BouncingScrollPhysics();
   }
+
+  @override
+  Widget buildScrollbar(BuildContext context, Widget child, ScrollableDetails details) {
+    // Do not show the Scrollbar for desktop platforms coz they have their own. https://docs.flutter.dev/release/breaking-changes/default-desktop-scrollbars
+    switch (getPlatform(context)) {
+      case TargetPlatform.linux:
+      case TargetPlatform.macOS:
+      case TargetPlatform.windows:
+        return child;
+      case TargetPlatform.android:
+      case TargetPlatform.fuchsia:
+      case TargetPlatform.iOS:
+        assert(details.controller != null);
+        return CupertinoScrollbar(
+          controller: details.controller,
+          child: child,
+        );
+    }
+  }
 }

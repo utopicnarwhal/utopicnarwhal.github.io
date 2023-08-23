@@ -149,111 +149,108 @@ class _PrimarySideBar extends StatelessWidget {
         bottom: false,
         child: Stack(
           children: [
-            Scrollbar(
+            ListView(
+              physics: kAlwaysBouncingScrollPhysics,
               controller: scrollController,
-              child: ListView(
-                physics: kAlwaysBouncingScrollPhysics,
-                controller: scrollController,
-                padding: const EdgeInsets.only(top: 4, bottom: 128),
-                children: buildMenu(context, [
-                  _MenuFolder(
-                    iconWidgetBuilder: (context) => Icon(
-                      Icons.cases_rounded,
-                      color: IconTheme.of(context).color,
-                    ),
-                    name: 'projects',
-                    pathName: '/projects',
-                    children: [
-                      _MenuFolder(
-                        iconWidgetBuilder: (context) => SvgPicture.asset(
-                          Assets.images.thirdParty.freskaFIcon,
-                          height: 28,
-                          width: 28,
-                          colorFilter: ColorFilter.mode(IconTheme.of(context).color ?? Colors.black, BlendMode.srcIn),
-                        ),
-                        name: 'at_freska',
-                        pathName: '/at_freska',
-                        children: [
-                          _MenuDestination(
-                            iconWidgetBuilder: (context) => Material(
-                              clipBehavior: Clip.antiAlias,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(6),
-                                side: BorderSide(color: Theme.of(context).dividerColor, strokeAlign: -0.8),
-                              ),
-                              child: SvgPicture.asset(
-                                Assets.images.thirdParty.freskaCustomerAppIcon,
-                                height: 28,
-                                width: 28,
-                              ),
-                            ),
-                            name: 'Freska — Home cleaning.app',
-                            pathName: '/freska_app',
-                          ),
-                          _MenuDestination(
-                            iconWidgetBuilder: (context) => Material(
-                              clipBehavior: Clip.antiAlias,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(6),
-                                side: BorderSide(color: Theme.of(context).dividerColor, strokeAlign: -0.8),
-                              ),
-                              child: SvgPicture.asset(
-                                Assets.images.thirdParty.freskaServiceWorkersAppIcon,
-                                height: 28,
-                                width: 28,
-                              ),
-                            ),
-                            name: 'Freska for Professionals.app',
-                            pathName: '/freska_pro_app',
-                          ),
-                        ],
-                      )
-                    ],
+              padding: const EdgeInsets.only(top: 4, bottom: 128),
+              children: buildMenu(context, [
+                _MenuFolder(
+                  iconWidgetBuilder: (context) => Icon(
+                    Icons.cases_rounded,
+                    color: IconTheme.of(context).color,
                   ),
-                  _MenuFolder(
-                    iconWidgetBuilder: (context) => Icon(
-                      Icons.fact_check_rounded,
-                      color: Colors.green.harmonizeWith(Theme.of(context).primaryColor),
-                    ),
-                    name: 'skills',
-                    pathName: '/skills',
-                    children: [
-                      _MenuDestination(
-                        iconWidgetBuilder: (context) => Icon(
-                          Icons.engineering_rounded,
-                          color: Colors.blueGrey.shade300.harmonizeWith(Theme.of(context).primaryColor),
-                        ),
-                        name: 'hard.md',
-                        pathName: '/hard',
+                  name: 'projects',
+                  pathName: '/projects',
+                  children: [
+                    _MenuFolder(
+                      iconWidgetBuilder: (context) => SvgPicture.asset(
+                        Assets.images.thirdParty.freskaFIcon,
+                        height: 28,
+                        width: 28,
+                        colorFilter: ColorFilter.mode(IconTheme.of(context).color ?? Colors.black, BlendMode.srcIn),
                       ),
-                      _MenuDestination(
-                        iconWidgetBuilder: (context) => Icon(
-                          Icons.diversity_1_rounded,
-                          color: Colors.pink.harmonizeWith(Theme.of(context).primaryColor),
+                      name: 'at_freska',
+                      pathName: '/at_freska',
+                      children: [
+                        _MenuDestination(
+                          iconWidgetBuilder: (context) => Material(
+                            clipBehavior: Clip.antiAlias,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(6),
+                              side: BorderSide(color: Theme.of(context).dividerColor, strokeAlign: -0.8),
+                            ),
+                            child: SvgPicture.asset(
+                              Assets.images.thirdParty.freskaCustomerAppIcon,
+                              height: 28,
+                              width: 28,
+                            ),
+                          ),
+                          name: 'Freska — Home cleaning.app',
+                          pathName: '/freska_app',
                         ),
-                        name: 'soft.md',
-                        pathName: '/soft',
+                        _MenuDestination(
+                          iconWidgetBuilder: (context) => Material(
+                            clipBehavior: Clip.antiAlias,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(6),
+                              side: BorderSide(color: Theme.of(context).dividerColor, strokeAlign: -0.8),
+                            ),
+                            child: SvgPicture.asset(
+                              Assets.images.thirdParty.freskaServiceWorkersAppIcon,
+                              height: 28,
+                              width: 28,
+                            ),
+                          ),
+                          name: 'Freska for Professionals.app',
+                          pathName: '/freska_pro_app',
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+                _MenuFolder(
+                  iconWidgetBuilder: (context) => Icon(
+                    Icons.fact_check_rounded,
+                    color: Colors.green.harmonizeWith(Theme.of(context).primaryColor),
+                  ),
+                  name: 'skills',
+                  pathName: '/skills',
+                  children: [
+                    _MenuDestination(
+                      iconWidgetBuilder: (context) => Icon(
+                        Icons.engineering_rounded,
+                        color: Colors.blueGrey.shade300.harmonizeWith(Theme.of(context).primaryColor),
                       ),
-                    ],
-                  ),
-                  _MenuDestination(
-                    iconWidgetBuilder: (context) => Icon(
-                      Icons.workspace_premium_rounded,
-                      color: Colors.orange.harmonizeWith(Theme.of(context).primaryColor),
+                      name: 'hard.md',
+                      pathName: '/hard',
                     ),
-                    name: 'LICENSES',
-                    pathName: '/licenses',
-                  ),
-                  _MenuDestination(
-                    iconWidgetBuilder: (context) => Icon(
-                      Icons.info_rounded,
-                      color: Colors.blue.harmonizeWith(Theme.of(context).primaryColor),
+                    _MenuDestination(
+                      iconWidgetBuilder: (context) => Icon(
+                        Icons.diversity_1_rounded,
+                        color: Colors.pink.harmonizeWith(Theme.of(context).primaryColor),
+                      ),
+                      name: 'soft.md',
+                      pathName: '/soft',
                     ),
-                    name: 'README.md',
-                    pathName: '/',
+                  ],
+                ),
+                _MenuDestination(
+                  iconWidgetBuilder: (context) => Icon(
+                    Icons.workspace_premium_rounded,
+                    color: Colors.orange.harmonizeWith(Theme.of(context).primaryColor),
                   ),
-                ]).toList(),
-              ),
+                  name: 'LICENSES',
+                  pathName: '/licenses',
+                ),
+                _MenuDestination(
+                  iconWidgetBuilder: (context) => Icon(
+                    Icons.info_rounded,
+                    color: Colors.blue.harmonizeWith(Theme.of(context).primaryColor),
+                  ),
+                  name: 'README.md',
+                  pathName: '/',
+                ),
+              ]).toList(),
             ),
             Align(
               alignment: Alignment.bottomLeft,

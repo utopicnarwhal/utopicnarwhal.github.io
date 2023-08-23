@@ -74,7 +74,7 @@ abstract class PortfolioTheme {
       segmentedButtonTheme: _segmentedButtonThemeData(colorScheme),
       expansionTileTheme: _expansionTileThemeData(colorScheme),
       dropdownMenuTheme: _dropdownMenuTheme(inputDecorationTheme),
-      splashFactory: InkSplash.splashFactory,
+      splashFactory: InkSparkle.splashFactory,
       splashColor: colorScheme.applyTintToSurface(8),
       iconButtonTheme: const IconButtonThemeData(
         style: ButtonStyle(fixedSize: MaterialStatePropertyAll(Size(44, 44))),

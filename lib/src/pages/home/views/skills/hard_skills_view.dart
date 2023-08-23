@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/flutter_gen/assets.gen.dart';
@@ -12,6 +13,7 @@ import 'package:portfolio/src/global_widgets/layout/responsive_flex.dart';
 import 'package:portfolio/src/global_widgets/portfolio_theme/portfolio_theme.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 import 'package:rive/rive.dart' as rive;
+import 'package:rxdart/rxdart.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
 import 'package:video_player/video_player.dart';
@@ -31,6 +33,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
   late Future<void> _responsiveLayoutVideoPlayerInitializationFuture;
   late VideoPlayerController _firebaseHeroVideoPlayerController;
   late Future<void> _firebaseHeroVideoPlayerInitializationFuture;
+  late BehaviorSubject<bool> _isMouseDetectedController;
 
   @override
   void initState() {
@@ -69,6 +72,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
         _firebaseHeroVideoPlayerController.setVolume(0),
       ]);
     });
+    _isMouseDetectedController = BehaviorSubject.seeded(false);
   }
 
   @override
@@ -79,6 +83,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
     _responsiveLayoutVideoPlayerController.dispose();
     _firebaseHeroVideoPlayerInitializationFuture.ignore();
     _firebaseHeroVideoPlayerController.dispose();
+    _isMouseDetectedController.close();
     super.dispose();
   }
 
@@ -337,13 +342,56 @@ class _HardSkillsViewState extends State<HardSkillsView> {
               body:
                   'Skill in crafting engaging user experiences through dynamic effects and animations, enhancing app interactivity and user delight by seamlessly integrating motion design principles into the user interface.',
             ),
-            _IllustrationCard(
-              aspectRatio: 1,
-              child: rive.RiveAnimation.asset(
-                Assets.animations.utopicNarwhal,
-                fit: BoxFit.fitWidth,
-                stateMachines: const ['State Machine 1'],
-              ),
+            StreamBuilder<bool>(
+              initialData: _isMouseDetectedController.value,
+              stream: _isMouseDetectedController,
+              builder: (context, isMouseDetectedSnapshot) {
+                final cardWithAnimation = Hero(
+                  tag: Assets.animations.utopicNarwhal,
+                  child: _IllustrationCard(
+                    aspectRatio: 1,
+                    child: rive.RiveAnimation.asset(
+                      Assets.animations.utopicNarwhal,
+                      fit: BoxFit.fitWidth,
+                      stateMachines: const ['State Machine 1'],
+                    ),
+                  ),
+                );
+
+                return MouseRegion(
+                  hitTestBehavior: HitTestBehavior.translucent,
+                  onHover: (event) {
+                    if (isMouseDetectedSnapshot.data == false && event.kind == PointerDeviceKind.mouse) {
+                      _isMouseDetectedController.add(true);
+                    }
+                    if (isMouseDetectedSnapshot.data == true && event.kind == PointerDeviceKind.touch) {
+                      _isMouseDetectedController.add(false);
+                    }
+                  },
+                  child: GestureDetector(
+                    behavior: HitTestBehavior.translucent,
+                    onTap: isMouseDetectedSnapshot.data == false
+                        ? () {
+                            Navigator.of(context).push(
+                              DialogRoute(
+                                context: context,
+                                builder: (context) {
+                                  return Dialog(
+                                    insetAnimationDuration: MaterialDurations.extraLong1,
+                                    child: cardWithAnimation,
+                                  );
+                                },
+                              ),
+                            );
+                          }
+                        : null,
+                    child: IgnorePointer(
+                      ignoring: isMouseDetectedSnapshot.data == false,
+                      child: cardWithAnimation,
+                    ),
+                  ),
+                );
+              },
             ),
           ],
         ),
