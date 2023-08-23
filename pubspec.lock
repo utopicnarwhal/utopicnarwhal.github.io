@@ -808,7 +808,7 @@ packages:
       path: styled_text
       ref: "57dd8b9"
       resolved-ref: "57dd8b99842031e26c6c061365a91ce42e91d8a6"
-      url: "git@github.com:Maatteogekko/styled_text_package.git"
+      url: "https://github.com/Maatteogekko/styled_text_package.git"
     source: git
     version: "8.1.0"
   term_glyph:

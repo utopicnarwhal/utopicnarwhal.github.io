@@ -46,7 +46,7 @@ dependencies:
   # Replace with the original [https://pub.dev/packages/styled_text] when it supports sync parsing. Issue [https://github.com/andyduke/styled_text_package/issues/65]
   styled_text:
     git:
-      url: git@github.com:Maatteogekko/styled_text_package.git
+      url: https://github.com/Maatteogekko/styled_text_package.git
       ref: 57dd8b9
       path: styled_text
 
