@@ -14,8 +14,8 @@ class _ContactMeButton extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 ListTile(
-                  title: const Text(
-                    'Email',
+                  title: Text(
+                    Dictums.of(context).emailTitle,
                     maxLines: 1,
                     overflow: TextOverflow.fade,
                     softWrap: false,

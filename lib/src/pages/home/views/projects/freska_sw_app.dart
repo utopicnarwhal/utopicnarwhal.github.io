@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/flutter_gen/assets.gen.dart';
-import 'package:portfolio/src/global_widgets/card_plus.dart';
-import 'package:portfolio/src/global_widgets/layout/custom_primary_view.dart';
+import 'package:portfolio/src/design_system/components/card_plus.dart';
+import 'package:portfolio/src/design_system/layout/custom_primary_view.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 import 'package:rive/rive.dart';
 

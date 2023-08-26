@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/src/global_widgets/layout/custom_sliver_separated_list.dart';
+import 'package:portfolio/src/design_system/layout/custom_sliver_separated_list.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 
 /// Widgets that handles scrolling, constraints and alignment of the primary view of the [CustomScaffold]

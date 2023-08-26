@@ -24,13 +24,51 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "appDeploymentHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Experience with deploying Flutter apps to the Google Play Store and Apple App Store, including code signing and release management, and leveraging the <link href=\"https://fastlane.tools/\">fastlane.tools</link> to streamline and automate the deployment process, ensuring seamless and consistent delivery of app updates to both platforms."),
+        "appDeploymentHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("App Deployment"),
         "changeLanguageButtonTooltip":
             MessageLookupByLibrary.simpleMessage("Change language"),
+        "cicdHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Familiar with the process of establishing and effectively employing CI/CD pipelines to automate key aspects of software development, including building, testing, and deploying applications. I have hands-on experience utilizing popular tools like <link href=\"https://circleci.com/\">Circle CI</link> and <link href=\"https://github.com/features/actions\">GitHub Actions</link> to streamline development workflows, enhance code quality through automated testing, and ensure swift and reliable deployment of software updates."),
+        "cicdHardSkillTitle": MessageLookupByLibrary.simpleMessage(
+            "Continuous Integration and Continuous Delivery"),
         "contactMeButton": MessageLookupByLibrary.simpleMessage("Contact me!"),
         "copyToClipboardMessage": m0,
+        "dartProgrammingLanguageHardSkillBody":
+            MessageLookupByLibrary.simpleMessage(
+                "Proficient with a strong command of the Dart programming language, showcasing expertise in syntax, data manipulation, object-oriented principles, functions, and efficient utilization of language features. Experienced in designing and implementing robust, performant software solutions, including frontend and backend logic as well as utility scripts, harnessing Dart\'s versatile capabilities."),
+        "dartProgrammingLanguageHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Dart Programming Language"),
+        "designSystemsHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Experience in creating, maintaining, and testing design systems, ensuring consistent visual elements, typography, and UI components across multiple projects for enhanced brand identity and streamlined development."),
+        "designSystemsHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Design Systems"),
+        "effectsAndAnimationsHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Have crafted captivating user experiences through the development and seamless integration of animations and transition effects within apps. Leveraging the versatile <link href=\"https://rive.app/\">Rive</link> animation format, which supports the import of <link href=\"https://lottiefiles.com/\">Lottie</link> animations and allows for interactive animations. Feel free to explore these interactions firsthand in the next card by simply clicking on it or hovering your mouse cursor over it."),
+        "effectsAndAnimationsHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Effects and Animations"),
+        "emailTitle": MessageLookupByLibrary.simpleMessage("Email"),
+        "firebaseToolsHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "I\'m comfortable with a range of Firebase services that improve apps. This includes Firebase App Distribution, which makes sharing test versions simple, and Firebase Remote Config, allowing apps to change without updates. I\'m also familiar with Analytics for insights and Cloud Messaging (FCM) for push notifications, helping me create apps with real-time updates and enhanced user engagement."),
+        "firebaseToolsHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Firebase Tools"),
+        "flutterFrameworkHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Proficiency in building mobile applications using the Flutter framework, including knowledge of architecture, theming, routing, animations, advanced scrolling, UI components, etc. By the way, this web app is also built with Flutter."),
+        "flutterFrameworkTitle":
+            MessageLookupByLibrary.simpleMessage("Flutter Framework"),
+        "googleMaterialDesignHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Skilled in adeptly crafting user interfaces that adhere to the foundational principles of Material Design. Leveraging its elegant and intuitive design language, I consistently deliver visually captivating and user-centric applications. My deep understanding of Material Design guidelines and best practices ensures the creation of cohesive and delightful user experiences. By thoughtfully integrating typography, color, and motion, I contribute to the development of applications that resonate with modern design sensibilities while maintaining user-friendliness."),
+        "googleMaterialDesignHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Google Material Design"),
         "hardSkillsTitle": MessageLookupByLibrary.simpleMessage("Hard skills"),
         "homePageAppBarTitle":
             MessageLookupByLibrary.simpleMessage("Portfolio"),
+        "internationalizationHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Experienced in integrating language options and localized content using the \'intl\' package for Flutter apps. Used POEditor to manage translations efficiently. Skilled in utilizing \'.arb\' files to automatically update app interfaces and content in various languages, ensuring enhanced user-friendliness for a diverse audience."),
+        "internationalizationHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Internationalization"),
         "introViewGreeting":
             MessageLookupByLibrary.simpleMessage("Hello!\nI’m Sergei."),
         "introViewMyTitleString": MessageLookupByLibrary.simpleMessage(
@@ -44,34 +82,52 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Professional Summary"),
         "projectsShowcaseHeadline":
             MessageLookupByLibrary.simpleMessage("Projects Showcase"),
+        "responsiveDesignHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Proficient in the art of designing responsive UI layouts that seamlessly adjust to diverse screen dimensions and orientations. With a keen eye for detail and a deep understanding of design principles, I consistently develop interfaces that maintain visual coherence and functionality across various devices. This expertise also involves taking into consideration possible inputs like mouse or touch interactions, ensuring a smooth and intuitive user experience regardless of the device in use."),
+        "responsiveDesignHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Responsive Design"),
         "softSkillAdaptability":
             MessageLookupByLibrary.simpleMessage("Adaptability"),
+        "softSkillAdaptabilityBody": MessageLookupByLibrary.simpleMessage(
+            "I thrive in dynamic environments, swiftly adjusting my strategies to meet evolving challenges, and embracing change as an opportunity for growth and learning."),
         "softSkillAttentionToDetail":
             MessageLookupByLibrary.simpleMessage("Attention to Detail"),
-        "softSkillClientFocused":
-            MessageLookupByLibrary.simpleMessage("Client-Focused"),
+        "softSkillAttentionToDetailBody": MessageLookupByLibrary.simpleMessage(
+            "Meticulous and thorough in my work, I meticulously attend to even the smallest elements, upholding a standard of excellence and delivering precision-driven outcomes."),
         "softSkillCommunication":
             MessageLookupByLibrary.simpleMessage("Communication"),
-        "softSkillConflictResolution":
-            MessageLookupByLibrary.simpleMessage("Conflict Resolution"),
+        "softSkillCommunicationBody": MessageLookupByLibrary.simpleMessage(
+            "With a strong ability to articulate ideas clearly and listen actively, I foster effective collaboration and ensure that all stakeholders are well-informed and engaged in the discourse."),
         "softSkillCreativity":
             MessageLookupByLibrary.simpleMessage("Creativity"),
-        "softSkillCriticalThinking":
-            MessageLookupByLibrary.simpleMessage("Critical Thinking"),
+        "softSkillCreativityBody": MessageLookupByLibrary.simpleMessage(
+            "I harness my imaginative thinking to develop original concepts and approaches, enriching projects with fresh ideas that stand out and captivate audiences."),
         "softSkillInitiative":
             MessageLookupByLibrary.simpleMessage("Initiative"),
-        "softSkillLeadership":
-            MessageLookupByLibrary.simpleMessage("Leadership"),
+        "softSkillInitiativeBody": MessageLookupByLibrary.simpleMessage(
+            "I proactively identify opportunities for improvement and take the lead in implementing effective strategies, demonstrating a strong drive to exceed expectations and make a meaningful impact."),
         "softSkillOpenMindedness":
             MessageLookupByLibrary.simpleMessage("Open-Mindedness"),
+        "softSkillOpenMindednessBody": MessageLookupByLibrary.simpleMessage(
+            "Embracing diverse perspectives and alternative viewpoints, I foster an inclusive environment that encourages the exploration of new ideas and promotes innovative thinking."),
         "softSkillProblemSolving":
             MessageLookupByLibrary.simpleMessage("Problem-Solving"),
+        "softSkillProblemSolvingBody": MessageLookupByLibrary.simpleMessage(
+            "I excel at analyzing complex issues and formulating innovative solutions through a methodical approach, combining critical thinking with a knack for thinking outside the box."),
         "softSkillTeamwork": MessageLookupByLibrary.simpleMessage("Teamwork"),
+        "softSkillTeamworkBody": MessageLookupByLibrary.simpleMessage(
+            "Recognizing the strength of diverse perspectives, I actively contribute my skills while also valuing and integrating the contributions of others, thereby creating a harmonious and productive team environment."),
         "softSkillTimeManagement":
             MessageLookupByLibrary.simpleMessage("Time Management"),
+        "softSkillTimeManagementBody": MessageLookupByLibrary.simpleMessage(
+            "I adeptly organize and prioritize tasks to meet deadlines without compromising quality, ensuring efficient workflows and consistently delivering results."),
         "softSkillsTitle": MessageLookupByLibrary.simpleMessage("Soft skills"),
         "sourceTooltip": MessageLookupByLibrary.simpleMessage("Source"),
         "toggleThemeModeButtonTooltip":
-            MessageLookupByLibrary.simpleMessage("Toggle theme mode")
+            MessageLookupByLibrary.simpleMessage("Toggle theme mode"),
+        "versionControlHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Knowledgeable in using version control systems like Git for collaborative development and code management. I also find great value in the user-friendly <link href=\"https://www.gitkraken.com/\">GitKraken</link> client app for its smooth interface and powerful features."),
+        "versionControlHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Version Control")
       };
 }

@@ -1,4 +1,4 @@
-part of 'portfolio_theme.dart';
+part of '../../design_system/styles/portfolio_theme.dart';
 
 TextTheme _getTextTheme() {
   const textTheme = TextTheme(

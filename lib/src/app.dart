@@ -1,13 +1,13 @@
 import 'package:collection/collection.dart';
 import 'package:dynamic_color/dynamic_color.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:go_router/go_router.dart';
 import 'package:portfolio/l10n/generated/l10n.dart';
-import 'package:portfolio/src/global_widgets/dynamic_locale.dart';
-import 'package:portfolio/src/global_widgets/dynamic_theme_mode.dart';
-import 'package:portfolio/src/global_widgets/portfolio_theme/portfolio_theme.dart';
+import 'package:portfolio/src/common_widgets/dynamic_locale.dart';
+import 'package:portfolio/src/common_widgets/dynamic_theme_mode.dart';
+import 'package:portfolio/src/design_system/styles/always_bouncing_scrolling.dart';
+import 'package:portfolio/src/design_system/styles/portfolio_theme.dart';
 import 'package:portfolio/src/pages/routes.dart';
 
 class PortfolioApp extends StatefulWidget {
@@ -82,35 +82,5 @@ class _PortfolioAppState extends State<PortfolioApp> with WidgetsBindingObserver
         );
       },
     );
-  }
-}
-
-class AlwaysBouncingScrollBehavior extends CupertinoScrollBehavior {
-  @override
-  ScrollPhysics getScrollPhysics(context) {
-    // Do not add always scrollable property if the scrolling is inside SelectableText coz it makes all SelectableTexts be always scrollable
-    if (context.findAncestorWidgetOfExactType<SelectableText>() == null) {
-      return kAlwaysBouncingScrollPhysics;
-    }
-    return const BouncingScrollPhysics();
-  }
-
-  @override
-  Widget buildScrollbar(BuildContext context, Widget child, ScrollableDetails details) {
-    // Do not show the Scrollbar for desktop platforms coz they have their own. https://docs.flutter.dev/release/breaking-changes/default-desktop-scrollbars
-    switch (getPlatform(context)) {
-      case TargetPlatform.linux:
-      case TargetPlatform.macOS:
-      case TargetPlatform.windows:
-        return child;
-      case TargetPlatform.android:
-      case TargetPlatform.fuchsia:
-      case TargetPlatform.iOS:
-        assert(details.controller != null);
-        return CupertinoScrollbar(
-          controller: details.controller,
-          child: child,
-        );
-    }
   }
 }

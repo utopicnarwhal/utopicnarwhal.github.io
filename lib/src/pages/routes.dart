@@ -1,7 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:portfolio/src/global_widgets/effects.dart';
+import 'package:portfolio/src/design_system/styles/motion/easing_and_durations.dart';
 import 'package:portfolio/src/pages/home/home_page.dart';
 import 'package:portfolio/src/pages/home/views/intro_view.dart';
 import 'package:portfolio/src/pages/home/views/projects/freska_customer_app.dart';

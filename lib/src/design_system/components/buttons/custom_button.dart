@@ -1,5 +1,5 @@
-import 'package:portfolio/src/global_widgets/portfolio_theme/portfolio_theme.dart';
-import 'package:portfolio/src/global_widgets/indicators/loading_widget.dart';
+import 'package:portfolio/src/design_system/styles/portfolio_theme.dart';
+import 'package:portfolio/src/design_system/components/indicators/loading_widget.dart';
 import 'package:flutter/material.dart';
 
 enum CustomButtonType {

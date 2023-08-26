@@ -150,7 +150,6 @@ class _PrimarySideBar extends StatelessWidget {
         child: Stack(
           children: [
             ListView(
-              physics: kAlwaysBouncingScrollPhysics,
               controller: scrollController,
               padding: const EdgeInsets.only(top: 4, bottom: 128),
               children: buildMenu(context, [

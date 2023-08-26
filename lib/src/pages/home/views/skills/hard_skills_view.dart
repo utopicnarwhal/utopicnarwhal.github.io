@@ -5,17 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/flutter_gen/assets.gen.dart';
 import 'package:portfolio/l10n/generated/l10n.dart';
-import 'package:portfolio/src/global_widgets/buttons/custom_icon_button.dart';
-import 'package:portfolio/src/global_widgets/card_plus.dart';
-import 'package:portfolio/src/global_widgets/effects.dart';
-import 'package:portfolio/src/global_widgets/layout/custom_primary_view.dart';
-import 'package:portfolio/src/global_widgets/layout/responsive_flex.dart';
-import 'package:portfolio/src/global_widgets/portfolio_theme/portfolio_theme.dart';
+import 'package:portfolio/src/common_widgets/compositions/illustration_card.dart';
+import 'package:portfolio/src/common_widgets/compositions/text_passage_card.dart';
+import 'package:portfolio/src/design_system/layout/custom_primary_view.dart';
+import 'package:portfolio/src/design_system/layout/responsive_flex.dart';
+import 'package:portfolio/src/design_system/styles/motion/transitions.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 import 'package:rive/rive.dart' as rive;
 import 'package:rxdart/rxdart.dart';
-import 'package:styled_text/styled_text.dart';
-import 'package:url_launcher/url_launcher.dart' as url_launcher;
 import 'package:video_player/video_player.dart';
 import 'package:video_player_platform_interface/video_player_platform_interface.dart' show VideoPlayerWebOptions;
 
@@ -101,10 +98,9 @@ class _HardSkillsViewState extends State<HardSkillsView> {
         const SizedBox(height: 20),
         ResponsiveFlex(
           children: [
-            const _DescriptionCard(
-              title: 'Flutter Framework',
-              body:
-                  'Proficiency in building mobile applications using the Flutter framework, including knowledge of widgets, animations, and UI components.',
+            TextPassageCard(
+              title: Dictums.of(context).flutterFrameworkTitle,
+              body: Dictums.of(context).flutterFrameworkHardSkillBody,
             ),
             FutureBuilder(
               future: _flutterDevVideoPlayerInitializationFuture,
@@ -118,7 +114,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
                   position: 0,
                   isLoading: isLoading,
                   child: SkeletonLoader(
-                    child: _IllustrationCard(
+                    child: IllustrationCard(
                       aspectRatio: 1632 / 1080,
                       logomark: const FlutterLogo(size: 48),
                       sourceLink: 'https://flutter.dev',
@@ -134,46 +130,57 @@ class _HardSkillsViewState extends State<HardSkillsView> {
         const SizedBox(height: 40),
         ResponsiveFlex(
           children: [
-            const _DescriptionCard(
-              title: 'Dart Programming Language',
-              body:
-                  'Strong command of the Dart programming language, including its syntax, data types, functions, and object-oriented concepts.',
+            TextPassageCard(
+              title: Dictums.of(context).dartProgrammingLanguageHardSkillTitle,
+              body: Dictums.of(context).dartProgrammingLanguageHardSkillBody,
             ),
-            _IllustrationCard(
+            IllustrationCard(
               aspectRatio: 815 / 644,
               logomark: SvgPicture.asset(Assets.images.thirdParty.logoDart, height: 48, width: 48),
               sourceLink: 'https://dart.dev',
               iconsColor: Colors.white70,
-              child: SvgPicture.asset(Assets.images.illustrations.dartAotCompile),
+              child: SvgPicture.asset(
+                Assets.images.illustrations.dartAotCompile,
+                placeholderBuilder: (context) => SkeletonAnimationConfiguration.staggeredList(
+                  position: 1,
+                  isLoading: true,
+                  child: SkeletonLoader(child: Container()),
+                ),
+              ),
             ),
           ],
         ),
         const SizedBox(height: 40),
         ResponsiveFlex(
           children: [
-            const _DescriptionCard(
-              title: 'Version Control/Git',
-              body:
-                  'Proficient in using version control systems like Git for collaborative development and code management. My favorite clinet app for Git is <link href="https://www.gitkraken.com/">GitKraken</link>.',
+            TextPassageCard(
+              title: Dictums.of(context).versionControlHardSkillTitle,
+              body: Dictums.of(context).versionControlHardSkillBody,
             ),
-            _IllustrationCard(
+            IllustrationCard(
               aspectRatio: 337.718 / 262.979,
               logomark: SvgPicture.asset(Assets.images.thirdParty.gitLogomark, height: 48, width: 48),
               sourceLink: 'https://pixabay.com/vectors/code-software-development-git-7522129/',
               iconsColor: Colors.white70,
-              child: SvgPicture.asset(Assets.images.illustrations.versionControl),
+              child: SvgPicture.asset(
+                Assets.images.illustrations.versionControl,
+                placeholderBuilder: (context) => SkeletonAnimationConfiguration.staggeredList(
+                  position: 2,
+                  isLoading: true,
+                  child: SkeletonLoader(child: Container()),
+                ),
+              ),
             ),
           ],
         ),
         const SizedBox(height: 40),
         ResponsiveFlex(
           children: [
-            const _DescriptionCard(
-              title: 'Continuous Integration/Delivery (CI/CD)',
-              body:
-                  'Knowledge of setting up and using CI/CD pipelines for automated builds, testing, and deployment using tools like Circle CI or GitHub Actions.',
+            TextPassageCard(
+              title: Dictums.of(context).cicdHardSkillTitle,
+              body: Dictums.of(context).cicdHardSkillBody,
             ),
-            _IllustrationCard(
+            IllustrationCard(
               aspectRatio: 12 / 9,
               logomark: SvgPicture.asset(Assets.images.thirdParty.githubActionsLogomark, height: 48, width: 48),
               sourceLink: 'https://github.com/features/actions',
@@ -190,6 +197,13 @@ class _HardSkillsViewState extends State<HardSkillsView> {
                       width: 1280,
                       height: 1500,
                       fit: BoxFit.contain,
+                      frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
+                          ? child
+                          : SkeletonAnimationConfiguration.staggeredList(
+                              position: 3,
+                              isLoading: true,
+                              child: SkeletonLoader(child: Container()),
+                            ),
                     ),
                   ),
                 ),
@@ -200,10 +214,9 @@ class _HardSkillsViewState extends State<HardSkillsView> {
         const SizedBox(height: 40),
         ResponsiveFlex(
           children: [
-            const _DescriptionCard(
-              title: 'Firebase',
-              body:
-                  'Familiarity with Firebase services, including Firestore, Authentication, Analytics, Dynamic Links, and Cloud Messaging (FCM) for real-time data and push notifications.',
+            TextPassageCard(
+              title: Dictums.of(context).firebaseToolsHardSkillTitle,
+              body: Dictums.of(context).firebaseToolsHardSkillBody,
             ),
             FutureBuilder(
               future: _firebaseHeroVideoPlayerInitializationFuture,
@@ -214,10 +227,10 @@ class _HardSkillsViewState extends State<HardSkillsView> {
                 }
 
                 return SkeletonAnimationConfiguration.staggeredList(
-                  position: 0,
+                  position: 4,
                   isLoading: isLoading,
                   child: SkeletonLoader(
-                    child: _IllustrationCard(
+                    child: IllustrationCard(
                       aspectRatio: 600 / 422.5,
                       sourceLink: 'https://firebase.google.com/',
                       iconsColor: Colors.white70,
@@ -244,28 +257,35 @@ class _HardSkillsViewState extends State<HardSkillsView> {
         const SizedBox(height: 40),
         ResponsiveFlex(
           children: [
-            const _DescriptionCard(
-              title: 'Material Design',
-              body:
-                  'Proficiency in implementing user interfaces following the principles of Material Design, utilizing its clean and intuitive design language to create visually appealing and user-friendly mobile applications.',
+            TextPassageCard(
+              title: Dictums.of(context).googleMaterialDesignHardSkillTitle,
+              body: Dictums.of(context).googleMaterialDesignHardSkillBody,
             ),
-            _IllustrationCard(
+            IllustrationCard(
               aspectRatio: 1400 / 915,
               logomark: SvgPicture.asset(Assets.images.thirdParty.googleMaterialDesignLogo, height: 48, width: 48),
               sourceLink: 'https://material.io/blog/material-3-figma-design-kit',
               iconsColor: Colors.black54,
               addOutline: true,
-              child: Image.asset(Assets.images.illustrations.materialDesign.path),
+              child: Image.asset(
+                Assets.images.illustrations.materialDesign.path,
+                frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
+                    ? child
+                    : SkeletonAnimationConfiguration.staggeredList(
+                        position: 5,
+                        isLoading: true,
+                        child: SkeletonLoader(child: Container()),
+                      ),
+              ),
             ),
           ],
         ),
         const SizedBox(height: 40),
         ResponsiveFlex(
           children: [
-            const _DescriptionCard(
-              title: 'Responsive Design',
-              body:
-                  'Expertise in creating responsive UI layouts that adapt to different screen sizes and orientations.',
+            TextPassageCard(
+              title: Dictums.of(context).responsiveDesignHardSkillTitle,
+              body: Dictums.of(context).responsiveDesignHardSkillBody,
             ),
             FutureBuilder(
               future: _responsiveLayoutVideoPlayerInitializationFuture,
@@ -276,10 +296,10 @@ class _HardSkillsViewState extends State<HardSkillsView> {
                 }
 
                 return SkeletonAnimationConfiguration.staggeredList(
-                  position: 0,
+                  position: 6,
                   isLoading: isLoading,
                   child: SkeletonLoader(
-                    child: _IllustrationCard(
+                    child: IllustrationCard(
                       aspectRatio: 2048 / 1378,
                       sourceLink: 'https://m3.material.io/components/navigation-bar/guidelines',
                       iconsColor: Colors.black54,
@@ -295,52 +315,59 @@ class _HardSkillsViewState extends State<HardSkillsView> {
         const SizedBox(height: 40),
         ResponsiveFlex(
           children: [
-            const _DescriptionCard(
-              title: 'Design Systems',
-              body:
-                  'Experience in creating, maintaining, and testing design systems, ensuring consistent visual elements, typography, and UI components across multiple projects for enhanced brand identity and streamlined development.',
+            TextPassageCard(
+              title: Dictums.of(context).designSystemsHardSkillTitle,
+              body: Dictums.of(context).designSystemsHardSkillBody,
             ),
-            _IllustrationCard(
+            IllustrationCard(
               aspectRatio: 1534 / 911,
               sourceLink: 'https://dribbble.com/shots/17451985-Design-system-in-Figma',
               iconsColor: Colors.black54,
               addOutline: true,
-              child: Image.asset(Assets.images.illustrations.designSystem.path),
-            ),
-          ],
-        ),
-        const SizedBox(height: 40),
-        ResponsiveFlex(
-          children: [
-            const _DescriptionCard(
-              title: 'Internationalization (i18n)',
-              body:
-                  'Experience with implementing internationalization and localization in Flutter apps using the intl package.',
-            ),
-            _IllustrationCard(
-              aspectRatio: 1534 / 911,
-              sourceLink: 'https://localizely.com/',
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: SvgPicture.asset(Assets.images.illustrations.i18n),
+              child: Image.asset(
+                Assets.images.illustrations.designSystem.path,
+                frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
+                    ? child
+                    : SkeletonAnimationConfiguration.staggeredList(
+                        position: 7,
+                        isLoading: true,
+                        child: SkeletonLoader(child: Container()),
+                      ),
               ),
             ),
           ],
         ),
         const SizedBox(height: 40),
-        const _DescriptionCard(
-          title: 'Automated Testing',
-          body:
-              'Experience with unit testing using Flutter\'s built-in testing framework or packages like flutter_test.',
+        ResponsiveFlex(
+          children: [
+            TextPassageCard(
+              title: Dictums.of(context).internationalizationHardSkillTitle,
+              body: Dictums.of(context).internationalizationHardSkillBody,
+            ),
+            IllustrationCard(
+              aspectRatio: 1534 / 911,
+              sourceLink: 'https://localizely.com/',
+              child: Padding(
+                padding: const EdgeInsets.all(20),
+                child: SvgPicture.asset(
+                  Assets.images.illustrations.i18n,
+                  placeholderBuilder: (context) => SkeletonAnimationConfiguration.staggeredList(
+                    position: 8,
+                    isLoading: true,
+                    child: SkeletonLoader(child: Container()),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
         const SizedBox(height: 40),
         ResponsiveFlex(
           flexes: const [2, 1],
           children: [
-            const _DescriptionCard(
-              title: 'Effects and Animations',
-              body:
-                  'Skill in crafting engaging user experiences through dynamic effects and animations, enhancing app interactivity and user delight by seamlessly integrating motion design principles into the user interface.',
+            TextPassageCard(
+              title: Dictums.of(context).effectsAndAnimationsHardSkillTitle,
+              body: Dictums.of(context).effectsAndAnimationsHardSkillBody,
             ),
             StreamBuilder<bool>(
               initialData: _isMouseDetectedController.value,
@@ -348,12 +375,17 @@ class _HardSkillsViewState extends State<HardSkillsView> {
               builder: (context, isMouseDetectedSnapshot) {
                 final cardWithAnimation = Hero(
                   tag: Assets.animations.utopicNarwhal,
-                  child: _IllustrationCard(
+                  child: IllustrationCard(
                     aspectRatio: 1,
                     child: rive.RiveAnimation.asset(
                       Assets.animations.utopicNarwhal,
                       fit: BoxFit.fitWidth,
                       stateMachines: const ['State Machine 1'],
+                      placeHolder: SkeletonAnimationConfiguration.staggeredList(
+                        position: 9,
+                        isLoading: true,
+                        child: SkeletonLoader(child: Container()),
+                      ),
                     ),
                   ),
                 );
@@ -375,9 +407,9 @@ class _HardSkillsViewState extends State<HardSkillsView> {
                             Navigator.of(context).push(
                               DialogRoute(
                                 context: context,
+                                barrierColor: Theme.of(context).colorScheme.scrim,
                                 builder: (context) {
                                   return Dialog(
-                                    insetAnimationDuration: MaterialDurations.extraLong1,
                                     child: cardWithAnimation,
                                   );
                                 },
@@ -396,117 +428,31 @@ class _HardSkillsViewState extends State<HardSkillsView> {
           ],
         ),
         const SizedBox(height: 40),
-        const _DescriptionCard(
-          title: 'Performance Optimization',
-          body:
-              'Understanding of performance optimization techniques, such as reducing app size, optimizing animations, and efficient widget rendering.',
-        ),
-        const SizedBox(height: 40),
         ResponsiveFlex(
           flexes: const [2, 1],
           children: [
-            const _DescriptionCard(
-              title: 'App Deployment',
-              body:
-                  'Experience with deploying Flutter apps to the Google Play Store and Apple App Store, including code signing and release management.',
+            TextPassageCard(
+              title: Dictums.of(context).appDeploymentHardSkillTitle,
+              body: Dictums.of(context).appDeploymentHardSkillBody,
             ),
-            _IllustrationCard(
+            IllustrationCard(
               aspectRatio: 503 / 440,
               iconsColor: Colors.black54,
               addOutline: true,
-              child: Image.asset(Assets.images.illustrations.appDeployment.path),
+              child: Image.asset(
+                Assets.images.illustrations.appDeployment.path,
+                frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
+                    ? child
+                    : SkeletonAnimationConfiguration.staggeredList(
+                        position: 10,
+                        isLoading: true,
+                        child: SkeletonLoader(child: Container()),
+                      ),
+              ),
             ),
           ],
         ),
       ],
-    );
-  }
-}
-
-class _DescriptionCard extends StatelessWidget {
-  const _DescriptionCard({required this.title, required this.body});
-
-  final String title;
-  final String body;
-
-  @override
-  Widget build(BuildContext context) {
-    final double edgePadding = context.isSmallScreen ? 20 : 40;
-
-    return CardPlus(
-      padding: EdgeInsets.all(edgePadding),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SelectableText(
-            title,
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          const SizedBox(height: 10),
-          StyledText.selectable(
-            text: body,
-            style: Theme.of(context).textTheme.bodyLarge,
-            tags: getUnifiedStyledTextTags(context),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _IllustrationCard extends StatelessWidget {
-  const _IllustrationCard({
-    required this.aspectRatio,
-    required this.child,
-    this.background,
-    this.logomark,
-    this.sourceLink,
-    this.iconsColor,
-    this.addOutline = false,
-  });
-
-  final Widget child;
-  final double aspectRatio;
-  final Widget? logomark;
-  final Widget? background;
-  final String? sourceLink;
-  final Color? iconsColor;
-  final bool addOutline;
-
-  @override
-  Widget build(BuildContext context) {
-    return CardPlus(
-      addOutline: addOutline,
-      child: Stack(
-        children: [
-          if (background != null) Positioned.fill(child: background!),
-          AspectRatio(
-            aspectRatio: aspectRatio,
-            child: child,
-          ),
-          if (logomark != null)
-            Positioned(
-              top: 10,
-              left: 10,
-              child: logomark!,
-            ),
-          if (sourceLink != null)
-            Positioned(
-              bottom: 0,
-              right: 0,
-              child: CustomIconButton(
-                onPressed: () {
-                  url_launcher.launchUrl(Uri.parse(sourceLink!));
-                },
-                tooltip: Dictums.of(context).sourceTooltip,
-                icon: Icon(
-                  Icons.art_track_rounded,
-                  color: iconsColor,
-                ),
-              ),
-            ),
-        ],
-      ),
     );
   }
 }

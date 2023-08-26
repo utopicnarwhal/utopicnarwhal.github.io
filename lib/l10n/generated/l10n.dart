@@ -260,51 +260,11 @@ class Dictums {
     );
   }
 
-  /// `Critical Thinking`
-  String get softSkillCriticalThinking {
-    return Intl.message(
-      'Critical Thinking',
-      name: 'softSkillCriticalThinking',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Initiative`
   String get softSkillInitiative {
     return Intl.message(
       'Initiative',
       name: 'softSkillInitiative',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Leadership`
-  String get softSkillLeadership {
-    return Intl.message(
-      'Leadership',
-      name: 'softSkillLeadership',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Conflict Resolution`
-  String get softSkillConflictResolution {
-    return Intl.message(
-      'Conflict Resolution',
-      name: 'softSkillConflictResolution',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Client-Focused`
-  String get softSkillClientFocused {
-    return Intl.message(
-      'Client-Focused',
-      name: 'softSkillClientFocused',
       desc: '',
       args: [],
     );
@@ -335,6 +295,326 @@ class Dictums {
     return Intl.message(
       'Projects Showcase',
       name: 'projectsShowcaseHeadline',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flutter Framework`
+  String get flutterFrameworkTitle {
+    return Intl.message(
+      'Flutter Framework',
+      name: 'flutterFrameworkTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proficiency in building mobile applications using the Flutter framework, including knowledge of architecture, theming, routing, animations, advanced scrolling, UI components, etc. By the way, this web app is also built with Flutter.`
+  String get flutterFrameworkHardSkillBody {
+    return Intl.message(
+      'Proficiency in building mobile applications using the Flutter framework, including knowledge of architecture, theming, routing, animations, advanced scrolling, UI components, etc. By the way, this web app is also built with Flutter.',
+      name: 'flutterFrameworkHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dart Programming Language`
+  String get dartProgrammingLanguageHardSkillTitle {
+    return Intl.message(
+      'Dart Programming Language',
+      name: 'dartProgrammingLanguageHardSkillTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proficient with a strong command of the Dart programming language, showcasing expertise in syntax, data manipulation, object-oriented principles, functions, and efficient utilization of language features. Experienced in designing and implementing robust, performant software solutions, including frontend and backend logic as well as utility scripts, harnessing Dart's versatile capabilities.`
+  String get dartProgrammingLanguageHardSkillBody {
+    return Intl.message(
+      'Proficient with a strong command of the Dart programming language, showcasing expertise in syntax, data manipulation, object-oriented principles, functions, and efficient utilization of language features. Experienced in designing and implementing robust, performant software solutions, including frontend and backend logic as well as utility scripts, harnessing Dart\'s versatile capabilities.',
+      name: 'dartProgrammingLanguageHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version Control`
+  String get versionControlHardSkillTitle {
+    return Intl.message(
+      'Version Control',
+      name: 'versionControlHardSkillTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Knowledgeable in using version control systems like Git for collaborative development and code management. I also find great value in the user-friendly <link href="https://www.gitkraken.com/">GitKraken</link> client app for its smooth interface and powerful features.`
+  String get versionControlHardSkillBody {
+    return Intl.message(
+      'Knowledgeable in using version control systems like Git for collaborative development and code management. I also find great value in the user-friendly <link href="https://www.gitkraken.com/">GitKraken</link> client app for its smooth interface and powerful features.',
+      name: 'versionControlHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continuous Integration and Continuous Delivery`
+  String get cicdHardSkillTitle {
+    return Intl.message(
+      'Continuous Integration and Continuous Delivery',
+      name: 'cicdHardSkillTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Familiar with the process of establishing and effectively employing CI/CD pipelines to automate key aspects of software development, including building, testing, and deploying applications. I have hands-on experience utilizing popular tools like <link href="https://circleci.com/">Circle CI</link> and <link href="https://github.com/features/actions">GitHub Actions</link> to streamline development workflows, enhance code quality through automated testing, and ensure swift and reliable deployment of software updates.`
+  String get cicdHardSkillBody {
+    return Intl.message(
+      'Familiar with the process of establishing and effectively employing CI/CD pipelines to automate key aspects of software development, including building, testing, and deploying applications. I have hands-on experience utilizing popular tools like <link href="https://circleci.com/">Circle CI</link> and <link href="https://github.com/features/actions">GitHub Actions</link> to streamline development workflows, enhance code quality through automated testing, and ensure swift and reliable deployment of software updates.',
+      name: 'cicdHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Firebase Tools`
+  String get firebaseToolsHardSkillTitle {
+    return Intl.message(
+      'Firebase Tools',
+      name: 'firebaseToolsHardSkillTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I'm comfortable with a range of Firebase services that improve apps. This includes Firebase App Distribution, which makes sharing test versions simple, and Firebase Remote Config, allowing apps to change without updates. I'm also familiar with Analytics for insights and Cloud Messaging (FCM) for push notifications, helping me create apps with real-time updates and enhanced user engagement.`
+  String get firebaseToolsHardSkillBody {
+    return Intl.message(
+      'I\'m comfortable with a range of Firebase services that improve apps. This includes Firebase App Distribution, which makes sharing test versions simple, and Firebase Remote Config, allowing apps to change without updates. I\'m also familiar with Analytics for insights and Cloud Messaging (FCM) for push notifications, helping me create apps with real-time updates and enhanced user engagement.',
+      name: 'firebaseToolsHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Google Material Design`
+  String get googleMaterialDesignHardSkillTitle {
+    return Intl.message(
+      'Google Material Design',
+      name: 'googleMaterialDesignHardSkillTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skilled in adeptly crafting user interfaces that adhere to the foundational principles of Material Design. Leveraging its elegant and intuitive design language, I consistently deliver visually captivating and user-centric applications. My deep understanding of Material Design guidelines and best practices ensures the creation of cohesive and delightful user experiences. By thoughtfully integrating typography, color, and motion, I contribute to the development of applications that resonate with modern design sensibilities while maintaining user-friendliness.`
+  String get googleMaterialDesignHardSkillBody {
+    return Intl.message(
+      'Skilled in adeptly crafting user interfaces that adhere to the foundational principles of Material Design. Leveraging its elegant and intuitive design language, I consistently deliver visually captivating and user-centric applications. My deep understanding of Material Design guidelines and best practices ensures the creation of cohesive and delightful user experiences. By thoughtfully integrating typography, color, and motion, I contribute to the development of applications that resonate with modern design sensibilities while maintaining user-friendliness.',
+      name: 'googleMaterialDesignHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Responsive Design`
+  String get responsiveDesignHardSkillTitle {
+    return Intl.message(
+      'Responsive Design',
+      name: 'responsiveDesignHardSkillTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proficient in the art of designing responsive UI layouts that seamlessly adjust to diverse screen dimensions and orientations. With a keen eye for detail and a deep understanding of design principles, I consistently develop interfaces that maintain visual coherence and functionality across various devices. This expertise also involves taking into consideration possible inputs like mouse or touch interactions, ensuring a smooth and intuitive user experience regardless of the device in use.`
+  String get responsiveDesignHardSkillBody {
+    return Intl.message(
+      'Proficient in the art of designing responsive UI layouts that seamlessly adjust to diverse screen dimensions and orientations. With a keen eye for detail and a deep understanding of design principles, I consistently develop interfaces that maintain visual coherence and functionality across various devices. This expertise also involves taking into consideration possible inputs like mouse or touch interactions, ensuring a smooth and intuitive user experience regardless of the device in use.',
+      name: 'responsiveDesignHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Design Systems`
+  String get designSystemsHardSkillTitle {
+    return Intl.message(
+      'Design Systems',
+      name: 'designSystemsHardSkillTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Experience in creating, maintaining, and testing design systems, ensuring consistent visual elements, typography, and UI components across multiple projects for enhanced brand identity and streamlined development.`
+  String get designSystemsHardSkillBody {
+    return Intl.message(
+      'Experience in creating, maintaining, and testing design systems, ensuring consistent visual elements, typography, and UI components across multiple projects for enhanced brand identity and streamlined development.',
+      name: 'designSystemsHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Internationalization`
+  String get internationalizationHardSkillTitle {
+    return Intl.message(
+      'Internationalization',
+      name: 'internationalizationHardSkillTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Experienced in integrating language options and localized content using the 'intl' package for Flutter apps. Used POEditor to manage translations efficiently. Skilled in utilizing '.arb' files to automatically update app interfaces and content in various languages, ensuring enhanced user-friendliness for a diverse audience.`
+  String get internationalizationHardSkillBody {
+    return Intl.message(
+      'Experienced in integrating language options and localized content using the \'intl\' package for Flutter apps. Used POEditor to manage translations efficiently. Skilled in utilizing \'.arb\' files to automatically update app interfaces and content in various languages, ensuring enhanced user-friendliness for a diverse audience.',
+      name: 'internationalizationHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Effects and Animations`
+  String get effectsAndAnimationsHardSkillTitle {
+    return Intl.message(
+      'Effects and Animations',
+      name: 'effectsAndAnimationsHardSkillTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Have crafted captivating user experiences through the development and seamless integration of animations and transition effects within apps. Leveraging the versatile <link href="https://rive.app/">Rive</link> animation format, which supports the import of <link href="https://lottiefiles.com/">Lottie</link> animations and allows for interactive animations. Feel free to explore these interactions firsthand in the next card by simply clicking on it or hovering your mouse cursor over it.`
+  String get effectsAndAnimationsHardSkillBody {
+    return Intl.message(
+      'Have crafted captivating user experiences through the development and seamless integration of animations and transition effects within apps. Leveraging the versatile <link href="https://rive.app/">Rive</link> animation format, which supports the import of <link href="https://lottiefiles.com/">Lottie</link> animations and allows for interactive animations. Feel free to explore these interactions firsthand in the next card by simply clicking on it or hovering your mouse cursor over it.',
+      name: 'effectsAndAnimationsHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `App Deployment`
+  String get appDeploymentHardSkillTitle {
+    return Intl.message(
+      'App Deployment',
+      name: 'appDeploymentHardSkillTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Experience with deploying Flutter apps to the Google Play Store and Apple App Store, including code signing and release management, and leveraging the <link href="https://fastlane.tools/">fastlane.tools</link> to streamline and automate the deployment process, ensuring seamless and consistent delivery of app updates to both platforms.`
+  String get appDeploymentHardSkillBody {
+    return Intl.message(
+      'Experience with deploying Flutter apps to the Google Play Store and Apple App Store, including code signing and release management, and leveraging the <link href="https://fastlane.tools/">fastlane.tools</link> to streamline and automate the deployment process, ensuring seamless and consistent delivery of app updates to both platforms.',
+      name: 'appDeploymentHardSkillBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get emailTitle {
+    return Intl.message(
+      'Email',
+      name: 'emailTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I excel at analyzing complex issues and formulating innovative solutions through a methodical approach, combining critical thinking with a knack for thinking outside the box.`
+  String get softSkillProblemSolvingBody {
+    return Intl.message(
+      'I excel at analyzing complex issues and formulating innovative solutions through a methodical approach, combining critical thinking with a knack for thinking outside the box.',
+      name: 'softSkillProblemSolvingBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I thrive in dynamic environments, swiftly adjusting my strategies to meet evolving challenges, and embracing change as an opportunity for growth and learning.`
+  String get softSkillAdaptabilityBody {
+    return Intl.message(
+      'I thrive in dynamic environments, swiftly adjusting my strategies to meet evolving challenges, and embracing change as an opportunity for growth and learning.',
+      name: 'softSkillAdaptabilityBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `With a strong ability to articulate ideas clearly and listen actively, I foster effective collaboration and ensure that all stakeholders are well-informed and engaged in the discourse.`
+  String get softSkillCommunicationBody {
+    return Intl.message(
+      'With a strong ability to articulate ideas clearly and listen actively, I foster effective collaboration and ensure that all stakeholders are well-informed and engaged in the discourse.',
+      name: 'softSkillCommunicationBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recognizing the strength of diverse perspectives, I actively contribute my skills while also valuing and integrating the contributions of others, thereby creating a harmonious and productive team environment.`
+  String get softSkillTeamworkBody {
+    return Intl.message(
+      'Recognizing the strength of diverse perspectives, I actively contribute my skills while also valuing and integrating the contributions of others, thereby creating a harmonious and productive team environment.',
+      name: 'softSkillTeamworkBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I adeptly organize and prioritize tasks to meet deadlines without compromising quality, ensuring efficient workflows and consistently delivering results.`
+  String get softSkillTimeManagementBody {
+    return Intl.message(
+      'I adeptly organize and prioritize tasks to meet deadlines without compromising quality, ensuring efficient workflows and consistently delivering results.',
+      name: 'softSkillTimeManagementBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I harness my imaginative thinking to develop original concepts and approaches, enriching projects with fresh ideas that stand out and captivate audiences.`
+  String get softSkillCreativityBody {
+    return Intl.message(
+      'I harness my imaginative thinking to develop original concepts and approaches, enriching projects with fresh ideas that stand out and captivate audiences.',
+      name: 'softSkillCreativityBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Meticulous and thorough in my work, I meticulously attend to even the smallest elements, upholding a standard of excellence and delivering precision-driven outcomes.`
+  String get softSkillAttentionToDetailBody {
+    return Intl.message(
+      'Meticulous and thorough in my work, I meticulously attend to even the smallest elements, upholding a standard of excellence and delivering precision-driven outcomes.',
+      name: 'softSkillAttentionToDetailBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I proactively identify opportunities for improvement and take the lead in implementing effective strategies, demonstrating a strong drive to exceed expectations and make a meaningful impact.`
+  String get softSkillInitiativeBody {
+    return Intl.message(
+      'I proactively identify opportunities for improvement and take the lead in implementing effective strategies, demonstrating a strong drive to exceed expectations and make a meaningful impact.',
+      name: 'softSkillInitiativeBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Embracing diverse perspectives and alternative viewpoints, I foster an inclusive environment that encourages the exploration of new ideas and promotes innovative thinking.`
+  String get softSkillOpenMindednessBody {
+    return Intl.message(
+      'Embracing diverse perspectives and alternative viewpoints, I foster an inclusive environment that encourages the exploration of new ideas and promotes innovative thinking.',
+      name: 'softSkillOpenMindednessBody',
       desc: '',
       args: [],
     );

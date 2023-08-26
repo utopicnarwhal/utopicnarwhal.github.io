@@ -2,10 +2,10 @@ import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/flutter_gen/assets.gen.dart';
 import 'package:portfolio/l10n/generated/l10n.dart';
-import 'package:portfolio/src/global_widgets/card_plus.dart';
-import 'package:portfolio/src/global_widgets/effects.dart';
-import 'package:portfolio/src/global_widgets/layout/custom_primary_view.dart';
-import 'package:portfolio/src/global_widgets/portfolio_theme/portfolio_theme.dart';
+import 'package:portfolio/src/design_system/styles/motion/transitions.dart';
+import 'package:portfolio/src/design_system/components/card_plus.dart';
+import 'package:portfolio/src/design_system/layout/custom_primary_view.dart';
+import 'package:portfolio/src/design_system/styles/portfolio_theme.dart';
 import 'package:portfolio/src/pages/routes.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 import 'package:rive/rive.dart';
@@ -163,19 +163,17 @@ class _IntroViewState extends State<IntroView> {
                       lineSpacing: 8,
                       children: [
                         for (var skillName in [
-                          'Flutter SDK',
-                          'Dart lang',
-                          'Git',
-                          'CI/CD',
-                          'Firebase',
-                          'Material Design',
-                          'Responsive Design',
-                          'Design Systems',
-                          'Internationalization',
-                          'Automated Testing',
-                          'Performance Optimization',
-                          'Effects and Animations',
-                          'App Deployment',
+                          Dictums.of(context).flutterFrameworkTitle,
+                          Dictums.of(context).dartProgrammingLanguageHardSkillTitle,
+                          Dictums.of(context).versionControlHardSkillTitle,
+                          Dictums.of(context).cicdHardSkillTitle,
+                          Dictums.of(context).firebaseToolsHardSkillTitle,
+                          Dictums.of(context).googleMaterialDesignHardSkillTitle,
+                          Dictums.of(context).responsiveDesignHardSkillTitle,
+                          Dictums.of(context).designSystemsHardSkillTitle,
+                          Dictums.of(context).internationalizationHardSkillTitle,
+                          Dictums.of(context).effectsAndAnimationsHardSkillTitle,
+                          Dictums.of(context).appDeploymentHardSkillTitle,
                         ])
                           Material(
                             color: Colors.transparent,
@@ -238,11 +236,7 @@ class _IntroViewState extends State<IntroView> {
                           Dictums.of(context).softSkillTimeManagement,
                           Dictums.of(context).softSkillCreativity,
                           Dictums.of(context).softSkillAttentionToDetail,
-                          Dictums.of(context).softSkillCriticalThinking,
                           Dictums.of(context).softSkillInitiative,
-                          Dictums.of(context).softSkillLeadership,
-                          Dictums.of(context).softSkillConflictResolution,
-                          Dictums.of(context).softSkillClientFocused,
                           Dictums.of(context).softSkillOpenMindedness,
                         ])
                           Material(

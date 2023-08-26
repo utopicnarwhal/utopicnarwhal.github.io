@@ -19,11 +19,6 @@ const double kPopupBorderRadius = 24;
 /// 16
 const double kTilePadding = 16;
 
-/// iOS scroll physics but also always scrollable to make it look more interactive
-const kAlwaysBouncingScrollPhysics = BouncingScrollPhysics(
-  parent: AlwaysScrollableScrollPhysics(),
-);
-
 abstract class PortfolioTheme {
   static ThemeData getAppTheme(Brightness brightness, ColorScheme? colorScheme) {
     final isDark = brightness == Brightness.dark;

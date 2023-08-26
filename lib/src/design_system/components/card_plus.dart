@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/src/global_widgets/portfolio_theme/portfolio_theme.dart';
+import 'package:portfolio/src/design_system/styles/portfolio_theme.dart';
 
 /// This class has everything that the default [Card] has. But also it has predefined [addOutline] param
 /// and [InkWell] for handling gestures

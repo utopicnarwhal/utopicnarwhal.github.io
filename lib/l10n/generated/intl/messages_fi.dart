@@ -24,54 +24,113 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "appDeploymentHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Kokemusta Flutter-sovellusten julkaisemisesta Google Play -kauppaan ja Apple App Storeen, mukaan lukien koodin allekirjoitus ja julkaisun hallinta. Käytetty <link href=\"https://fastlane.tools/\">fastlane.tools</link>-työkalua prosessin virtaviivaistamiseen ja automatisointiin, varmistaen sovelluspäivitysten saumattoman ja yhtenäisen toimittamisen molemmille alustoille."),
+        "appDeploymentHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Sovelluksen julkaisu"),
         "changeLanguageButtonTooltip":
             MessageLookupByLibrary.simpleMessage("Vaihda kieli"),
+        "cicdHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Tutustuminen jatkuvaan integrointiin ja jatkuvaan toimitukseen liittyvään prosessiin, mukaan lukien CI/CD-putkien luominen ja tehokas käyttö ohjelmistokehityksen keskeisten osa-alueiden automatisoimiseksi, kuten sovellusten rakentaminen, testaus ja julkaisu. Käytännön kokemus suosittujen työkalujen, kuten <link href=\"https://circleci.com/\">Circle CI</link> ja <link href=\"https://github.com/features/actions\">GitHub Actions</link>, käytöstä kehitysprosessien virtaviivaistamiseksi, koodin laadun parantamiseksi automaattisella testauksella sekä varmistaakseen ohjelmistopäivitysten nopean ja luotettavan julkaisun."),
+        "cicdHardSkillTitle": MessageLookupByLibrary.simpleMessage(
+            "Jatkuva integrointi ja jatkuva toimitus"),
         "contactMeButton":
             MessageLookupByLibrary.simpleMessage("Ota yhteyttä!"),
         "copyToClipboardMessage": m0,
-        "hardSkillsTitle": MessageLookupByLibrary.simpleMessage("Hard skills"),
+        "dartProgrammingLanguageHardSkillBody":
+            MessageLookupByLibrary.simpleMessage(
+                "Taitava, vahva osaaminen Dart-ohjelmointikielellä, näyttäen asiantuntemusta syntaksista, datan manipuloinnista, olioperiaatteista, funktioista ja kielen ominaisuuksien tehokkaasta käytöstä. Kokemusta vankkojen ja suorituskykyisten ohjelmistoratkaisujen suunnittelusta ja toteuttamisesta, mukaan lukien frontend- ja backend-logiikka sekä apuohjelmaskriptit, hyödyntäen Dartin monipuolisia kykyjä."),
+        "dartProgrammingLanguageHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Dart-ohjelmointikieli"),
+        "designSystemsHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Kokemusta suunnittelujärjestelmien luomisesta, ylläpitämisestä ja testaamisesta, varmistaen yhtenäiset visuaaliset elementit, typografian ja käyttöliittymäkomponentit useissa projekteissa parannetun brändi-identiteetin ja virtaviivaistetun kehityksen saavuttamiseksi."),
+        "designSystemsHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Suunnittelujärjestelmät"),
+        "effectsAndAnimationsHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Olen luonut vangitsevia käyttäjäkokemuksia kehittämällä ja saumattomasti integroimalla animaatioita ja siirtymäefektejä sovelluksiin. Hyödynnän monipuolista <link href=\"https://rive.app/\">Rive</link>-animaatioformaattia, joka tukee <link href=\"https://lottiefiles.com/\">Lottie</link>-animaatioiden tuontia ja interaktiivisten animaatioiden luontia. Voit tutkia näitä vuorovaikutuksia ensikäden kokemuksella seuraavassa kortissa napsauttamalla sitä tai liikuttamalla hiiren kursoria sen yli."),
+        "effectsAndAnimationsHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Tehosteet ja animaatiot"),
+        "emailTitle": MessageLookupByLibrary.simpleMessage("Sähköposti"),
+        "firebaseToolsHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Olen mukavuudella käyttänyt erilaisia Firebase-palveluita, jotka parantavat sovelluksia. Tämä sisältää Firebase App Distributionin, joka helpottaa testiversioiden jakamista, ja Firebase Remote Configin, joka mahdollistaa sovellusten muuttamisen ilman päivityksiä. Tunnen myös Analyticsin, joka tarjoaa oivalluksia, ja Cloud Messaging (FCM) -palvelun push-ilmoituksille, jotka auttavat minua luomaan sovelluksia reaaliaikaisilla päivityksillä ja parannetulla käyttäjäsitoutumuksella."),
+        "firebaseToolsHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Firebase-työkalut"),
+        "flutterFrameworkHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Taidot rakentaa mobiilisovelluksia Flutter-kehystä käyttäen, mukaan lukien arkkitehtuuri, teema, reititys, animaatiot, edistynyt vieritys, käyttöliittymäkomponentit jne. Muuten, tämä verkkosovellus on myös rakennettu Flutterilla."),
+        "flutterFrameworkTitle":
+            MessageLookupByLibrary.simpleMessage("Flutter-kehys"),
+        "googleMaterialDesignHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Taito luoda käyttöliittymiä, jotka noudattavat Material Designin perusperiaatteita. Hyödyntäen sen tyylikästä ja intuitiivista suunnittelukieltä, tuotan johdonmukaisesti visuaalisesti lumoavia ja käyttäjäkeskeisiä sovelluksia. Syvä ymmärrykseni Material Designin ohjeista ja parhaista käytännöistä varmistaa yhtenäisten ja ilahduttavien käyttäjäkokemusten luomisen. Huolellisesti yhdistämällä typografiaa, väriä ja liikettä osallistun sovellusten kehitykseen, jotka resonoi modernien suunnittelutottumusten kanssa säilyttäen samalla käyttäjäystävällisyyden."),
+        "googleMaterialDesignHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Google Material Design"),
+        "hardSkillsTitle":
+            MessageLookupByLibrary.simpleMessage("Tekniset taidot"),
         "homePageAppBarTitle":
             MessageLookupByLibrary.simpleMessage("Portfolio"),
+        "internationalizationHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Kokemusta kieliopintojen ja lokalisoitujen sisältöjen integroinnista Flutter-sovelluksiin \'intl\'-paketin avulla. Käytetty POEditoria tehokkaaseen käännösten hallintaan. Taitava \'.arb\'-tiedostojen käyttämisessä sovellusten käyttöliittymien ja sisällön automaattiseen päivittämiseen eri kielillä, varmistaen parannetun käyttäjäystävällisyyden monimuotoiselle yleisölle."),
+        "internationalizationHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Kansainvälistäminen"),
         "introViewGreeting":
             MessageLookupByLibrary.simpleMessage("Hei!\nOlen Sergei."),
         "introViewMyTitleString": MessageLookupByLibrary.simpleMessage(
             "ammattimainen <link href=\"https://flutter.dev/\">flutter</link>-kehittäjä Helsingistä, Suomi"),
-        "keySkillsHeadline": MessageLookupByLibrary.simpleMessage("Key skills"),
-        "learnMoreButton": MessageLookupByLibrary.simpleMessage("Learn more"),
+        "keySkillsHeadline":
+            MessageLookupByLibrary.simpleMessage("Avainosaamiset"),
+        "learnMoreButton": MessageLookupByLibrary.simpleMessage("Lisätietoja"),
         "openCvButton": MessageLookupByLibrary.simpleMessage("Katsoa CV:ta"),
         "professionalSummaryCardBodyText": MessageLookupByLibrary.simpleMessage(
             "Kokenut mobiilikehittäjä, jolla on yli 6 vuoden omistautunut asiantuntemus Android-, iOS- ja web-sovellusten luomisessa käyttäen Flutteria ja julkaisemisessa sovelluskauppoihin. Sitoutunut luomaan huippuluokan sovelluksia asettamalla puhtaan ja luettavan koodin sekä poikkeuksellisen käyttäjäkokemuksen etusijalle."),
         "professionalSummaryTitle":
             MessageLookupByLibrary.simpleMessage("Ammattilaisen yhteenveto"),
         "projectsShowcaseHeadline":
-            MessageLookupByLibrary.simpleMessage("Projects Showcase"),
+            MessageLookupByLibrary.simpleMessage("Projektien Esittely"),
+        "responsiveDesignHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Taitava suunnittelemaan responsiivisia käyttöliittymien ulkoasuja, jotka mukautuvat saumattomasti erilaisiin näyttökoon ja suuntaan. Tarkalla silmällä yksityiskohtiin ja syvällä ymmärryksellä suunnitteluperiaatteista kehitän jatkuvasti käyttöliittymiä, jotka säilyttävät visuaalisen yhtenäisyyden ja toimivuuden erilaisilla laitteilla. Tähän osaamiseen kuuluu myös mahdollisten syötteiden, kuten hiiren tai kosketusinteraktioiden, huomioiminen, varmistaen sujuvan ja intuitiivisen käyttökokemuksen laitteesta riippumatta."),
+        "responsiveDesignHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Vastuullinen suunnittelu"),
         "softSkillAdaptability":
             MessageLookupByLibrary.simpleMessage("Sopeutumiskyky"),
+        "softSkillAdaptabilityBody": MessageLookupByLibrary.simpleMessage(
+            "Kukoistan dynaamisissa ympäristöissä, mukautan strategioitani nopeasti vastaamaan muuttuvia haasteita ja omaksun muutoksen mahdollisuutena kasvuun ja oppimiseen."),
         "softSkillAttentionToDetail":
             MessageLookupByLibrary.simpleMessage("Huolellisuus"),
-        "softSkillClientFocused":
-            MessageLookupByLibrary.simpleMessage("Asiakaskeskeisyys"),
+        "softSkillAttentionToDetailBody": MessageLookupByLibrary.simpleMessage(
+            "Tarkkaavainen ja perusteellinen työssäni, kiinnitän huolellisesti huomiota jopa pienimpiin yksityiskohtiin, ylläpitäen erinomaisuuden tasoa ja tuottaen tarkkuusvetoisia tuloksia."),
         "softSkillCommunication":
             MessageLookupByLibrary.simpleMessage("Viestintä"),
-        "softSkillConflictResolution":
-            MessageLookupByLibrary.simpleMessage("Ristiriitojen ratkaisu"),
+        "softSkillCommunicationBody": MessageLookupByLibrary.simpleMessage(
+            "Vahvan kyvyni ilmaista ideoita selkeästi ja kuunnella aktiivisesti edistää tehokasta yhteistyötä ja varmistan, että kaikki sidosryhmät ovat hyvin informoituja ja osallistuneita keskusteluun."),
         "softSkillCreativity": MessageLookupByLibrary.simpleMessage("Luovuus"),
-        "softSkillCriticalThinking":
-            MessageLookupByLibrary.simpleMessage("Kriittinen ajattelu"),
+        "softSkillCreativityBody": MessageLookupByLibrary.simpleMessage(
+            "Hyödynnän mielikuvituksellista ajatteluani kehittääkseni alkuperäisiä käsitteitä ja lähestymistapoja, rikastuttaen projekteja tuoreilla ideoilla, jotka erottuvat ja vangitsevat yleisön huomion."),
         "softSkillInitiative":
             MessageLookupByLibrary.simpleMessage("Aloitteellisuus"),
-        "softSkillLeadership":
-            MessageLookupByLibrary.simpleMessage("Johtaminen"),
+        "softSkillInitiativeBody": MessageLookupByLibrary.simpleMessage(
+            "Tunnistan aloitteellisesti parannusmahdollisuudet ja otan johdon tehokkaiden strategioiden toteuttamisessa, osoittaen vahvaa pyrkimystä ylittää odotukset ja tehdä merkityksellinen vaikutus."),
         "softSkillOpenMindedness":
             MessageLookupByLibrary.simpleMessage("Avoin mieli"),
+        "softSkillOpenMindednessBody": MessageLookupByLibrary.simpleMessage(
+            "Omaksuen monipuoliset näkökulmat ja vaihtoehtoiset näkemykset, edistän inklusiivista ympäristöä, joka rohkaisee uusien ideoiden tutkimista ja edistää innovatiivista ajattelua."),
         "softSkillProblemSolving":
             MessageLookupByLibrary.simpleMessage("Ongelmanratkaisu"),
+        "softSkillProblemSolvingBody": MessageLookupByLibrary.simpleMessage(
+            "Osaan erinomaisesti analysoida monimutkaisia ongelmia ja laatia innovatiivisia ratkaisuja järjestelmällisen lähestymistavan avulla yhdistämällä kriittistä ajattelua kykyyn ajatella laatikon ulkopuolella."),
         "softSkillTeamwork": MessageLookupByLibrary.simpleMessage("Tiimityö"),
+        "softSkillTeamworkBody": MessageLookupByLibrary.simpleMessage(
+            "Tunnustaen monipuolisten näkökulmien voiman osallistun aktiivisesti taitojeni tuomiseen esiin ja arvostan sekä integroin muiden panosta, luoden näin harmonisen ja tuottavan tiimi-ilmapiirin."),
         "softSkillTimeManagement":
             MessageLookupByLibrary.simpleMessage("Ajanhallinta"),
-        "softSkillsTitle": MessageLookupByLibrary.simpleMessage("Soft skills"),
-        "sourceTooltip": MessageLookupByLibrary.simpleMessage("Source"),
-        "toggleThemeModeButtonTooltip":
-            MessageLookupByLibrary.simpleMessage("Vaihda teemavaihtoehdon tila")
+        "softSkillTimeManagementBody": MessageLookupByLibrary.simpleMessage(
+            "Järjestän ja priorisoin tehtäviä taitavasti täyttääkseni määräajat tinkimättä laadusta, varmistaen tehokkaat työnkulut ja johdonmukaisesti tuottavat tulokset."),
+        "softSkillsTitle":
+            MessageLookupByLibrary.simpleMessage("Ihmissuhdetaidot"),
+        "sourceTooltip": MessageLookupByLibrary.simpleMessage("Lähde"),
+        "toggleThemeModeButtonTooltip": MessageLookupByLibrary.simpleMessage(
+            "Vaihda teemavaihtoehdon tila"),
+        "versionControlHardSkillBody": MessageLookupByLibrary.simpleMessage(
+            "Tuntemus versionhallintajärjestelmien käytöstä, kuten Git, yhteistyöhön perustuvassa kehityksessä ja koodin hallinnassa. Arvostan myös käyttäjäystävällisen <link href=\"https://www.gitkraken.com/\">GitKraken</link> -asiakasohjelman tuomaa sujuvaa käyttöliittymää ja tehokkaita ominaisuuksia."),
+        "versionControlHardSkillTitle":
+            MessageLookupByLibrary.simpleMessage("Versiohallinta")
       };
 }

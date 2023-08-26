@@ -1,8 +1,8 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/src/global_widgets/card_plus.dart';
-import 'package:portfolio/src/global_widgets/portfolio_theme/portfolio_theme.dart';
+import 'package:portfolio/src/design_system/components/card_plus.dart';
+import 'package:portfolio/src/design_system/styles/portfolio_theme.dart';
 
 Future<T?> showCustomModalBottomSheet<T>({
   required BuildContext context,
@@ -27,31 +27,21 @@ Future<T?> showCustomModalBottomSheet<T>({
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
     enableDrag: true,
-    elevation: Theme.of(context).brightness == Brightness.light ? 0 : 12,
+    elevation: 0,
     isDismissible: isDismissible,
     builder: (context) {
       final globalMediaQuery = MediaQuery.of(Navigator.of(context).context);
       final bottomPadding = globalMediaQuery.padding.bottom + globalMediaQuery.viewInsets.bottom;
-      final calcCardBackgroundColor = Theme.of(context).useMaterial3
-          ? Theme.of(context).colorScheme.applyTintToSurface(0)
-          : ElevationOverlay.applyOverlay(context, Theme.of(context).cardColor, 1);
+      final calcCardBackgroundColor =
+          Theme.of(context).colorScheme.applyTintToSurface(Theme.of(context).brightness == Brightness.light ? 0 : 12);
 
       return CardPlus(
-        surfaceLevel: Theme.of(context).useMaterial3 ? 0 : 1,
-        margin: floating
-            ? EdgeInsets.fromLTRB(
-                20,
-                0,
-                20,
-                math.max(20, bottomPadding),
-              )
-            : EdgeInsets.zero,
+        color: calcCardBackgroundColor,
+        margin: floating ? EdgeInsets.fromLTRB(20, 0, 20, math.max(20, bottomPadding)) : EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: floating
               ? BorderRadius.circular(kCardBorderRadius)
-              : const BorderRadius.vertical(
-                  top: Radius.circular(kCardBorderRadius),
-                ),
+              : const BorderRadius.vertical(top: Radius.circular(kCardBorderRadius)),
         ),
         padding: EdgeInsets.only(bottom: !floating ? bottomPadding : 0),
         child: Stack(
