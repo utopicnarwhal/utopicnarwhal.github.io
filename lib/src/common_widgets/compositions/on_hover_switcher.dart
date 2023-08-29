@@ -34,6 +34,8 @@ class _OnHoverSwitcherState extends State<OnHoverSwitcher> {
       mouseCursor: MouseCursor.defer,
       onTap: () {},
       onHover: _hoverController.add,
+      splashFactory: NoSplash.splashFactory,
+      canRequestFocus: false,
       onTapUp: (eventDetails) {
         if (eventDetails.kind == PointerDeviceKind.touch) {
           _hoverController.add(false);
