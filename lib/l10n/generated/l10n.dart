@@ -619,6 +619,226 @@ class Dictums {
       args: [],
     );
   }
+
+  /// `Freska — Home cleaning`
+  String get freskaCustomerAppName {
+    return Intl.message(
+      'Freska — Home cleaning',
+      name: 'freskaCustomerAppName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Freska for Professionals`
+  String get freskaProAppName {
+    return Intl.message(
+      'Freska for Professionals',
+      name: 'freskaProAppName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile app for customers`
+  String get mobileAppForCustomersTitle {
+    return Intl.message(
+      'Mobile app for customers',
+      name: 'mobileAppForCustomersTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `<link href="https://freska.fi">Freska</link> is a home services company currently disrupting the traditional home services industry in the Nordics. With a focus on service quality, process optimisation, and digitalization, together with strong values that form a coherent company culture, Freska has rapidly taken a lead in the Finnish, Norwegian, and Swedish markets.`
+  String get aboutFreskaDescription {
+    return Intl.message(
+      '<link href="https://freska.fi">Freska</link> is a home services company currently disrupting the traditional home services industry in the Nordics. With a focus on service quality, process optimisation, and digitalization, together with strong values that form a coherent company culture, Freska has rapidly taken a lead in the Finnish, Norwegian, and Swedish markets.',
+      name: 'aboutFreskaDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Improvements`
+  String get improvementsTitle {
+    return Intl.message(
+      'Improvements',
+      name: 'improvementsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I joined Freska’s tech team and started to work on their existing mobile app in October 2020. The app had already been in production for one and a half years straight. It already had a decent amount of features, but I was able to improve the performance and make it more user-friendly.\n\nYou can <bold>tap</bold> or <bold>hover</bold> over the screenshots to see how it looked like!`
+  String get joinFreskaTechTeamAndImproveTheAppDescription {
+    return Intl.message(
+      'I joined Freska’s tech team and started to work on their existing mobile app in October 2020. The app had already been in production for one and a half years straight. It already had a decent amount of features, but I was able to improve the performance and make it more user-friendly.\n\nYou can <bold>tap</bold> or <bold>hover</bold> over the screenshots to see how it looked like!',
+      name: 'joinFreskaTechTeamAndImproveTheAppDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Features and Functionality`
+  String get featuresAndFunctionalityTitle {
+    return Intl.message(
+      'Features and Functionality',
+      name: 'featuresAndFunctionalityTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `iOS and Android Platforms`
+  String get featuresAndFunctionalityIosAndAndroidPlatforms {
+    return Intl.message(
+      'iOS and Android Platforms',
+      name: 'featuresAndFunctionalityIosAndAndroidPlatforms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Authentication`
+  String get featuresAndFunctionalityUserAuthentication {
+    return Intl.message(
+      'User Authentication',
+      name: 'featuresAndFunctionalityUserAuthentication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Booking/Subscription Management`
+  String get featuresAndFunctionalityBookingSubscriptionManagement {
+    return Intl.message(
+      'Booking/Subscription Management',
+      name: 'featuresAndFunctionalityBookingSubscriptionManagement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile Management`
+  String get featuresAndFunctionalityProfileManagement {
+    return Intl.message(
+      'Profile Management',
+      name: 'featuresAndFunctionalityProfileManagement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Referral Program Page`
+  String get featuresAndFunctionalityReferralProgramPage {
+    return Intl.message(
+      'Referral Program Page',
+      name: 'featuresAndFunctionalityReferralProgramPage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Communication and Special Instructions`
+  String get featuresAndFunctionalityCommunicationAndSpecialInstructions {
+    return Intl.message(
+      'Communication and Special Instructions',
+      name: 'featuresAndFunctionalityCommunicationAndSpecialInstructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Support Center`
+  String get featuresAndFunctionalitySupportCenter {
+    return Intl.message(
+      'Support Center',
+      name: 'featuresAndFunctionalitySupportCenter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Push Notifications`
+  String get featuresAndFunctionalityPushNotifications {
+    return Intl.message(
+      'Push Notifications',
+      name: 'featuresAndFunctionalityPushNotifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Method Management`
+  String get featuresAndFunctionalityPaymentMethodManagement {
+    return Intl.message(
+      'Payment Method Management',
+      name: 'featuresAndFunctionalityPaymentMethodManagement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dynamic Links Support`
+  String get featuresAndFunctionalityDynamicLinksSupport {
+    return Intl.message(
+      'Dynamic Links Support',
+      name: 'featuresAndFunctionalityDynamicLinksSupport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark/Light Theme`
+  String get featuresAndFunctionalityDarklightTheme {
+    return Intl.message(
+      'Dark/Light Theme',
+      name: 'featuresAndFunctionalityDarklightTheme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Configurability and Analytics`
+  String get featuresAndFunctionalityConfigurabilityAndAnalytics {
+    return Intl.message(
+      'Configurability and Analytics',
+      name: 'featuresAndFunctionalityConfigurabilityAndAnalytics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Multilingual Support`
+  String get featuresAndFunctionalityMultilingualSupport {
+    return Intl.message(
+      'Multilingual Support',
+      name: 'featuresAndFunctionalityMultilingualSupport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Achivements`
+  String get achivementsTitle {
+    return Intl.message(
+      'Achivements',
+      name: 'achivementsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `• Successfully created a dedicated package for shareable code and UI library components, resulting in accelerated development and enhanced component testability. Additionally, designed an interactive demo page using Flutter web to showcase these components, further improving accessibility and usability.\n• Improved the CI/CD pipeline scripts with GitHub Actions, which led to an average 38% decrease in the time needed to build and deploy the app.\n• Optimized the mobile application for different devices and screen sizes, resulting in improved usability and more pleasing visual experience.`
+  String get freskaCustomerAppAchivements {
+    return Intl.message(
+      '• Successfully created a dedicated package for shareable code and UI library components, resulting in accelerated development and enhanced component testability. Additionally, designed an interactive demo page using Flutter web to showcase these components, further improving accessibility and usability.\n• Improved the CI/CD pipeline scripts with GitHub Actions, which led to an average 38% decrease in the time needed to build and deploy the app.\n• Optimized the mobile application for different devices and screen sizes, resulting in improved usability and more pleasing visual experience.',
+      name: 'freskaCustomerAppAchivements',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<Dictums> {

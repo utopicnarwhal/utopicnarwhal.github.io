@@ -24,6 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aboutFreskaDescription": MessageLookupByLibrary.simpleMessage(
+            "<link href=\"https://freska.fi\">Freska</link> is a home services company currently disrupting the traditional home services industry in the Nordics. With a focus on service quality, process optimisation, and digitalization, together with strong values that form a coherent company culture, Freska has rapidly taken a lead in the Finnish, Norwegian, and Swedish markets."),
+        "achivementsTitle": MessageLookupByLibrary.simpleMessage("Achivements"),
         "appDeploymentHardSkillBody": MessageLookupByLibrary.simpleMessage(
             "Experience with deploying Flutter apps to the Google Play Store and Apple App Store, including code signing and release management, and leveraging the <link href=\"https://fastlane.tools/\">fastlane.tools</link> to streamline and automate the deployment process, ensuring seamless and consistent delivery of app updates to both platforms."),
         "appDeploymentHardSkillTitle":
@@ -50,6 +53,37 @@ class MessageLookup extends MessageLookupByLibrary {
         "effectsAndAnimationsHardSkillTitle":
             MessageLookupByLibrary.simpleMessage("Effects and Animations"),
         "emailTitle": MessageLookupByLibrary.simpleMessage("Email"),
+        "featuresAndFunctionalityBookingSubscriptionManagement":
+            MessageLookupByLibrary.simpleMessage(
+                "Booking/Subscription Management"),
+        "featuresAndFunctionalityCommunicationAndSpecialInstructions":
+            MessageLookupByLibrary.simpleMessage(
+                "Communication and Special Instructions"),
+        "featuresAndFunctionalityConfigurabilityAndAnalytics":
+            MessageLookupByLibrary.simpleMessage(
+                "Configurability and Analytics"),
+        "featuresAndFunctionalityDarklightTheme":
+            MessageLookupByLibrary.simpleMessage("Dark/Light Theme"),
+        "featuresAndFunctionalityDynamicLinksSupport":
+            MessageLookupByLibrary.simpleMessage("Dynamic Links Support"),
+        "featuresAndFunctionalityIosAndAndroidPlatforms":
+            MessageLookupByLibrary.simpleMessage("iOS and Android Platforms"),
+        "featuresAndFunctionalityMultilingualSupport":
+            MessageLookupByLibrary.simpleMessage("Multilingual Support"),
+        "featuresAndFunctionalityPaymentMethodManagement":
+            MessageLookupByLibrary.simpleMessage("Payment Method Management"),
+        "featuresAndFunctionalityProfileManagement":
+            MessageLookupByLibrary.simpleMessage("Profile Management"),
+        "featuresAndFunctionalityPushNotifications":
+            MessageLookupByLibrary.simpleMessage("Push Notifications"),
+        "featuresAndFunctionalityReferralProgramPage":
+            MessageLookupByLibrary.simpleMessage("Referral Program Page"),
+        "featuresAndFunctionalitySupportCenter":
+            MessageLookupByLibrary.simpleMessage("Support Center"),
+        "featuresAndFunctionalityTitle":
+            MessageLookupByLibrary.simpleMessage("Features and Functionality"),
+        "featuresAndFunctionalityUserAuthentication":
+            MessageLookupByLibrary.simpleMessage("User Authentication"),
         "firebaseToolsHardSkillBody": MessageLookupByLibrary.simpleMessage(
             "I\'m comfortable with a range of Firebase services that improve apps. This includes Firebase App Distribution, which makes sharing test versions simple, and Firebase Remote Config, allowing apps to change without updates. I\'m also familiar with Analytics for insights and Cloud Messaging (FCM) for push notifications, helping me create apps with real-time updates and enhanced user engagement."),
         "firebaseToolsHardSkillTitle":
@@ -58,6 +92,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Proficiency in building mobile applications using the Flutter framework, including knowledge of architecture, theming, routing, animations, advanced scrolling, UI components, etc. By the way, this web app is also built with Flutter."),
         "flutterFrameworkTitle":
             MessageLookupByLibrary.simpleMessage("Flutter Framework"),
+        "freskaCustomerAppAchivements": MessageLookupByLibrary.simpleMessage(
+            "• Successfully created a dedicated package for shareable code and UI library components, resulting in accelerated development and enhanced component testability. Additionally, designed an interactive demo page using Flutter web to showcase these components, further improving accessibility and usability.\n• Improved the CI/CD pipeline scripts with GitHub Actions, which led to an average 38% decrease in the time needed to build and deploy the app.\n• Optimized the mobile application for different devices and screen sizes, resulting in improved usability and more pleasing visual experience."),
+        "freskaCustomerAppName":
+            MessageLookupByLibrary.simpleMessage("Freska — Home cleaning"),
+        "freskaProAppName":
+            MessageLookupByLibrary.simpleMessage("Freska for Professionals"),
         "googleMaterialDesignHardSkillBody": MessageLookupByLibrary.simpleMessage(
             "Skilled in adeptly crafting user interfaces that adhere to the foundational principles of Material Design. Leveraging its elegant and intuitive design language, I consistently deliver visually captivating and user-centric applications. My deep understanding of Material Design guidelines and best practices ensures the creation of cohesive and delightful user experiences. By thoughtfully integrating typography, color, and motion, I contribute to the development of applications that resonate with modern design sensibilities while maintaining user-friendliness."),
         "googleMaterialDesignHardSkillTitle":
@@ -65,6 +105,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "hardSkillsTitle": MessageLookupByLibrary.simpleMessage("Hard skills"),
         "homePageAppBarTitle":
             MessageLookupByLibrary.simpleMessage("Portfolio"),
+        "improvementsTitle":
+            MessageLookupByLibrary.simpleMessage("Improvements"),
         "internationalizationHardSkillBody": MessageLookupByLibrary.simpleMessage(
             "Experienced in integrating language options and localized content using the \'intl\' package for Flutter apps. Used POEditor to manage translations efficiently. Skilled in utilizing \'.arb\' files to automatically update app interfaces and content in various languages, ensuring enhanced user-friendliness for a diverse audience."),
         "internationalizationHardSkillTitle":
@@ -73,8 +115,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Hello!\nI’m Sergei."),
         "introViewMyTitleString": MessageLookupByLibrary.simpleMessage(
             "professional <link href=\"https://flutter.dev/\">flutter</link> developer based in Helsinki, Finland"),
+        "joinFreskaTechTeamAndImproveTheAppDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "I joined Freska’s tech team and started to work on their existing mobile app in October 2020. The app had already been in production for one and a half years straight. It already had a decent amount of features, but I was able to improve the performance and make it more user-friendly.\n\nYou can <bold>tap</bold> or <bold>hover</bold> over the screenshots to see how it looked like!"),
         "keySkillsHeadline": MessageLookupByLibrary.simpleMessage("Key skills"),
         "learnMoreButton": MessageLookupByLibrary.simpleMessage("Learn more"),
+        "mobileAppForCustomersTitle":
+            MessageLookupByLibrary.simpleMessage("Mobile app for customers"),
         "openCvButton": MessageLookupByLibrary.simpleMessage("Open CV"),
         "professionalSummaryCardBodyText": MessageLookupByLibrary.simpleMessage(
             "Skilful mobile developer with 6+ years of dedicated expertise in crafting Android, iOS, and Web apps using Flutter and publishing them into the app stores. Committed to creating top-notch applications by prioritizing clean, readable code and exceptional user experiences."),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/flutter_gen/assets.gen.dart';
+import 'package:portfolio/l10n/generated/l10n.dart';
 import 'package:portfolio/src/design_system/components/card_plus.dart';
 import 'package:portfolio/src/design_system/layout/custom_primary_view.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
@@ -21,7 +22,7 @@ class _FreskaServiceWorkersAppViewState extends State<FreskaServiceWorkersAppVie
       edgePadding: edgePadding,
       children: [
         SelectableText(
-          'Freska Pro app',
+          Dictums.of(context).freskaProAppName,
           style: Theme.of(context).textTheme.displayMedium,
         ),
         const SizedBox(height: 20),

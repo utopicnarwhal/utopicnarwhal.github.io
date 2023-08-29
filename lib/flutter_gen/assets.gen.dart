@@ -75,33 +75,16 @@ class $AssetsFontsVictorMonoGen {
 class $AssetsImagesIllustrationsGen {
   const $AssetsImagesIllustrationsGen();
 
-  /// File path: assets/images/illustrations/app_deployment.png
-  AssetGenImage get appDeployment => const AssetGenImage('assets/images/illustrations/app_deployment.png');
-
-  /// File path: assets/images/illustrations/cicd.png
-  AssetGenImage get cicd => const AssetGenImage('assets/images/illustrations/cicd.png');
-
-  /// File path: assets/images/illustrations/dart_aot_compile.svg
-  String get dartAotCompile => 'assets/images/illustrations/dart_aot_compile.svg';
-
-  /// File path: assets/images/illustrations/design_system.png
-  AssetGenImage get designSystem => const AssetGenImage('assets/images/illustrations/design_system.png');
-
-  /// File path: assets/images/illustrations/i18n.svg
-  String get i18n => 'assets/images/illustrations/i18n.svg';
-
-  /// File path: assets/images/illustrations/material_design.png
-  AssetGenImage get materialDesign => const AssetGenImage('assets/images/illustrations/material_design.png');
-
-  /// File path: assets/images/illustrations/version_control.svg
-  String get versionControl => 'assets/images/illustrations/version_control.svg';
-
-  /// List of all assets
-  List<dynamic> get values => [appDeployment, cicd, dartAotCompile, designSystem, i18n, materialDesign, versionControl];
+  $AssetsImagesIllustrationsFreskaAppGen get freskaApp => const $AssetsImagesIllustrationsFreskaAppGen();
+  $AssetsImagesIllustrationsFreskaProAppGen get freskaProApp => const $AssetsImagesIllustrationsFreskaProAppGen();
+  $AssetsImagesIllustrationsHardSkillsGen get hardSkills => const $AssetsImagesIllustrationsHardSkillsGen();
 }
 
 class $AssetsImagesThirdPartyGen {
   const $AssetsImagesThirdPartyGen();
+
+  /// File path: assets/images/third_party/app_store_logomark.svg
+  String get appStoreLogomark => 'assets/images/third_party/app_store_logomark.svg';
 
   /// File path: assets/images/third_party/firebase_logomark.svg
   String get firebaseLogomark => 'assets/images/third_party/firebase_logomark.svg';
@@ -127,11 +110,15 @@ class $AssetsImagesThirdPartyGen {
   /// File path: assets/images/third_party/google_material_design_logo.svg
   String get googleMaterialDesignLogo => 'assets/images/third_party/google_material_design_logo.svg';
 
+  /// File path: assets/images/third_party/google_play_logomark.svg
+  String get googlePlayLogomark => 'assets/images/third_party/google_play_logomark.svg';
+
   /// File path: assets/images/third_party/logo_dart.svg
   String get logoDart => 'assets/images/third_party/logo_dart.svg';
 
   /// List of all assets
   List<String> get values => [
+        appStoreLogomark,
         firebaseLogomark,
         freskaCustomerAppIcon,
         freskaFIcon,
@@ -140,8 +127,110 @@ class $AssetsImagesThirdPartyGen {
         githubActionsLogomark,
         githubIcon,
         googleMaterialDesignLogo,
+        googlePlayLogomark,
         logoDart
       ];
+}
+
+class $AssetsImagesIllustrationsFreskaAppGen {
+  const $AssetsImagesIllustrationsFreskaAppGen();
+
+  /// File path: assets/images/illustrations/freska_app/account_details_after.png
+  AssetGenImage get accountDetailsAfter =>
+      const AssetGenImage('assets/images/illustrations/freska_app/account_details_after.png');
+
+  /// File path: assets/images/illustrations/freska_app/account_details_before.png
+  AssetGenImage get accountDetailsBefore =>
+      const AssetGenImage('assets/images/illustrations/freska_app/account_details_before.png');
+
+  /// File path: assets/images/illustrations/freska_app/booking_details_after.png
+  AssetGenImage get bookingDetailsAfter =>
+      const AssetGenImage('assets/images/illustrations/freska_app/booking_details_after.png');
+
+  /// File path: assets/images/illustrations/freska_app/booking_details_before.png
+  AssetGenImage get bookingDetailsBefore =>
+      const AssetGenImage('assets/images/illustrations/freska_app/booking_details_before.png');
+
+  /// File path: assets/images/illustrations/freska_app/home_page_after.png
+  AssetGenImage get homePageAfter => const AssetGenImage('assets/images/illustrations/freska_app/home_page_after.png');
+
+  /// File path: assets/images/illustrations/freska_app/home_page_before.png
+  AssetGenImage get homePageBefore =>
+      const AssetGenImage('assets/images/illustrations/freska_app/home_page_before.png');
+
+  /// File path: assets/images/illustrations/freska_app/preview.png
+  AssetGenImage get preview => const AssetGenImage('assets/images/illustrations/freska_app/preview.png');
+
+  /// File path: assets/images/illustrations/freska_app/preview2.png
+  AssetGenImage get preview2 => const AssetGenImage('assets/images/illustrations/freska_app/preview2.png');
+
+  /// File path: assets/images/illustrations/freska_app/rescheduling_after.png
+  AssetGenImage get reschedulingAfter =>
+      const AssetGenImage('assets/images/illustrations/freska_app/rescheduling_after.png');
+
+  /// File path: assets/images/illustrations/freska_app/rescheduling_before.png
+  AssetGenImage get reschedulingBefore =>
+      const AssetGenImage('assets/images/illustrations/freska_app/rescheduling_before.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        accountDetailsAfter,
+        accountDetailsBefore,
+        bookingDetailsAfter,
+        bookingDetailsBefore,
+        homePageAfter,
+        homePageBefore,
+        preview,
+        preview2,
+        reschedulingAfter,
+        reschedulingBefore
+      ];
+}
+
+class $AssetsImagesIllustrationsFreskaProAppGen {
+  const $AssetsImagesIllustrationsFreskaProAppGen();
+
+  /// File path: assets/images/illustrations/freska_pro_app/booking_details.png
+  AssetGenImage get bookingDetails =>
+      const AssetGenImage('assets/images/illustrations/freska_pro_app/booking_details.png');
+
+  /// File path: assets/images/illustrations/freska_pro_app/preview.png
+  AssetGenImage get preview => const AssetGenImage('assets/images/illustrations/freska_pro_app/preview.png');
+
+  /// File path: assets/images/illustrations/freska_pro_app/schedule.png
+  AssetGenImage get schedule => const AssetGenImage('assets/images/illustrations/freska_pro_app/schedule.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [bookingDetails, preview, schedule];
+}
+
+class $AssetsImagesIllustrationsHardSkillsGen {
+  const $AssetsImagesIllustrationsHardSkillsGen();
+
+  /// File path: assets/images/illustrations/hard_skills/app_deployment.png
+  AssetGenImage get appDeployment => const AssetGenImage('assets/images/illustrations/hard_skills/app_deployment.png');
+
+  /// File path: assets/images/illustrations/hard_skills/cicd.png
+  AssetGenImage get cicd => const AssetGenImage('assets/images/illustrations/hard_skills/cicd.png');
+
+  /// File path: assets/images/illustrations/hard_skills/dart_aot_compile.svg
+  String get dartAotCompile => 'assets/images/illustrations/hard_skills/dart_aot_compile.svg';
+
+  /// File path: assets/images/illustrations/hard_skills/design_system.png
+  AssetGenImage get designSystem => const AssetGenImage('assets/images/illustrations/hard_skills/design_system.png');
+
+  /// File path: assets/images/illustrations/hard_skills/i18n.svg
+  String get i18n => 'assets/images/illustrations/hard_skills/i18n.svg';
+
+  /// File path: assets/images/illustrations/hard_skills/material_design.png
+  AssetGenImage get materialDesign =>
+      const AssetGenImage('assets/images/illustrations/hard_skills/material_design.png');
+
+  /// File path: assets/images/illustrations/hard_skills/version_control.svg
+  String get versionControl => 'assets/images/illustrations/hard_skills/version_control.svg';
+
+  /// List of all assets
+  List<dynamic> get values => [appDeployment, cicd, dartAotCompile, designSystem, i18n, materialDesign, versionControl];
 }
 
 class Assets {

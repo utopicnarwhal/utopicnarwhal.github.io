@@ -24,6 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aboutFreskaDescription": MessageLookupByLibrary.simpleMessage(
+            "<link href=\"https://freska.fi\">Freska</link> on kotipalveluyritys, joka mullistaa perinteistä kotipalvelualaa Pohjoismaissa. Freskalla on vahva painotus palvelun laatuun, prosessien optimointiin ja digitalisaatioon. Yhdessä vahvojen arvojen kanssa, jotka muodostavat johdonmukaisen yrityskulttuurin, Freska on nopeasti noussut johtavaksi toimijaksi Suomen, Norjan ja Ruotsin markkinoilla."),
+        "achivementsTitle": MessageLookupByLibrary.simpleMessage("Saavutukset"),
         "appDeploymentHardSkillBody": MessageLookupByLibrary.simpleMessage(
             "Kokemusta Flutter-sovellusten julkaisemisesta Google Play -kauppaan ja Apple App Storeen, mukaan lukien koodin allekirjoitus ja julkaisun hallinta. Käytetty <link href=\"https://fastlane.tools/\">fastlane.tools</link>-työkalua prosessin virtaviivaistamiseen ja automatisointiin, varmistaen sovelluspäivitysten saumattoman ja yhtenäisen toimittamisen molemmille alustoille."),
         "appDeploymentHardSkillTitle":
@@ -51,6 +54,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "effectsAndAnimationsHardSkillTitle":
             MessageLookupByLibrary.simpleMessage("Tehosteet ja animaatiot"),
         "emailTitle": MessageLookupByLibrary.simpleMessage("Sähköposti"),
+        "featuresAndFunctionalityBookingSubscriptionManagement":
+            MessageLookupByLibrary.simpleMessage(
+                "Varausten/tilausten hallinta"),
+        "featuresAndFunctionalityConfigurabilityAndAnalytics":
+            MessageLookupByLibrary.simpleMessage(
+                "Mukautettavuus ja analytiikka"),
+        "featuresAndFunctionalityDarklightTheme":
+            MessageLookupByLibrary.simpleMessage("Pimeä/vaalea teema"),
+        "featuresAndFunctionalityDynamicLinksSupport":
+            MessageLookupByLibrary.simpleMessage("Dynamic Links -tuki"),
+        "featuresAndFunctionalityIosAndAndroidPlatforms":
+            MessageLookupByLibrary.simpleMessage("iOS- ja Android-alustoilla"),
+        "featuresAndFunctionalityMultilingualSupport":
+            MessageLookupByLibrary.simpleMessage("Monikielinen tuki"),
+        "featuresAndFunctionalityPaymentMethodManagement":
+            MessageLookupByLibrary.simpleMessage("Maksutapahallinta"),
+        "featuresAndFunctionalityProfileManagement":
+            MessageLookupByLibrary.simpleMessage("Profiilin hallinta"),
+        "featuresAndFunctionalityPushNotifications":
+            MessageLookupByLibrary.simpleMessage("Push-ilmoitukset"),
+        "featuresAndFunctionalityReferralProgramPage":
+            MessageLookupByLibrary.simpleMessage("Viestintä ja erityisohjeet"),
+        "featuresAndFunctionalitySupportCenter":
+            MessageLookupByLibrary.simpleMessage("Tukikeskus"),
+        "featuresAndFunctionalityTitle":
+            MessageLookupByLibrary.simpleMessage("Ominaisuudet ja toiminnot"),
+        "featuresAndFunctionalityUserAuthentication":
+            MessageLookupByLibrary.simpleMessage("Käyttäjätodentaminen"),
         "firebaseToolsHardSkillBody": MessageLookupByLibrary.simpleMessage(
             "Olen mukavuudella käyttänyt erilaisia Firebase-palveluita, jotka parantavat sovelluksia. Tämä sisältää Firebase App Distributionin, joka helpottaa testiversioiden jakamista, ja Firebase Remote Configin, joka mahdollistaa sovellusten muuttamisen ilman päivityksiä. Tunnen myös Analyticsin, joka tarjoaa oivalluksia, ja Cloud Messaging (FCM) -palvelun push-ilmoituksille, jotka auttavat minua luomaan sovelluksia reaaliaikaisilla päivityksillä ja parannetulla käyttäjäsitoutumuksella."),
         "firebaseToolsHardSkillTitle":
@@ -59,6 +90,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Taidot rakentaa mobiilisovelluksia Flutter-kehystä käyttäen, mukaan lukien arkkitehtuuri, teema, reititys, animaatiot, edistynyt vieritys, käyttöliittymäkomponentit jne. Muuten, tämä verkkosovellus on myös rakennettu Flutterilla."),
         "flutterFrameworkTitle":
             MessageLookupByLibrary.simpleMessage("Flutter-kehys"),
+        "freskaCustomerAppAchivements": MessageLookupByLibrary.simpleMessage(
+            "• Luotiin onnistuneesti oma paketti jaettaville koodeille ja UI-kirjastokomponenteille, mikä nopeutti kehitystä ja parantui komponenttien testattavuutta. Lisäksi suunniteltiin Flutter-verkkoa käyttävä interaktiivinen demosivu näiden komponenttien esittelemiseksi, mikä parantaa entisestään saavutettavuutta ja käytettävyyttä.\n• Parannettiin CI/CD-pipeline-skriptejä GitHub Actionsilla, mikä johti keskimäärin 38 %:n vähenemiseen sovelluksen rakentamisen ja jakelun ajassa.\n• Optimoitiin mobiilisovellus eri laitteille ja näyttökokoille, mikä parantaa käytettävyyttä ja antaa miellyttävämmän visuaalisen kokemuksen."),
+        "freskaCustomerAppName":
+            MessageLookupByLibrary.simpleMessage("Freska — Home cleaning"),
+        "freskaProAppName":
+            MessageLookupByLibrary.simpleMessage("Freska for Professionals"),
         "googleMaterialDesignHardSkillBody": MessageLookupByLibrary.simpleMessage(
             "Taito luoda käyttöliittymiä, jotka noudattavat Material Designin perusperiaatteita. Hyödyntäen sen tyylikästä ja intuitiivista suunnittelukieltä, tuotan johdonmukaisesti visuaalisesti lumoavia ja käyttäjäkeskeisiä sovelluksia. Syvä ymmärrykseni Material Designin ohjeista ja parhaista käytännöistä varmistaa yhtenäisten ja ilahduttavien käyttäjäkokemusten luomisen. Huolellisesti yhdistämällä typografiaa, väriä ja liikettä osallistun sovellusten kehitykseen, jotka resonoi modernien suunnittelutottumusten kanssa säilyttäen samalla käyttäjäystävällisyyden."),
         "googleMaterialDesignHardSkillTitle":
@@ -67,6 +104,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tekniset taidot"),
         "homePageAppBarTitle":
             MessageLookupByLibrary.simpleMessage("Portfolio"),
+        "improvementsTitle":
+            MessageLookupByLibrary.simpleMessage("Parannukset"),
         "internationalizationHardSkillBody": MessageLookupByLibrary.simpleMessage(
             "Kokemusta kieliopintojen ja lokalisoitujen sisältöjen integroinnista Flutter-sovelluksiin \'intl\'-paketin avulla. Käytetty POEditoria tehokkaaseen käännösten hallintaan. Taitava \'.arb\'-tiedostojen käyttämisessä sovellusten käyttöliittymien ja sisällön automaattiseen päivittämiseen eri kielillä, varmistaen parannetun käyttäjäystävällisyyden monimuotoiselle yleisölle."),
         "internationalizationHardSkillTitle":
@@ -75,9 +114,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Hei!\nOlen Sergei."),
         "introViewMyTitleString": MessageLookupByLibrary.simpleMessage(
             "ammattimainen <link href=\"https://flutter.dev/\">flutter</link>-kehittäjä Helsingistä, Suomi"),
+        "joinFreskaTechTeamAndImproveTheAppDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Liityin Freskan tiimiin ja aloitin työskentelyn olemassa olevassa mobiilisovelluksessa lokakuussa 2020. Sovellus oli jo ollut tuotannossa yhtä ja puoli vuotta. Sovelluksessa oli jo jonkin verran ominaisuuksia, mutta pystyin parantamaan sen suorituskykyä ja tekemään siitä käyttäjäystävällisemmän.\n\nVoit <bold>napauttaa</bold> tai <bold>viiruttaa</bold> kuvakaappausten yli nähdäksesi, miltä se näytti!"),
         "keySkillsHeadline":
             MessageLookupByLibrary.simpleMessage("Avainosaamiset"),
         "learnMoreButton": MessageLookupByLibrary.simpleMessage("Lisätietoja"),
+        "mobileAppForCustomersTitle":
+            MessageLookupByLibrary.simpleMessage("Asiakkaiden mobiilisovellus"),
         "openCvButton": MessageLookupByLibrary.simpleMessage("Katsoa CV:ta"),
         "professionalSummaryCardBodyText": MessageLookupByLibrary.simpleMessage(
             "Kokenut mobiilikehittäjä, jolla on yli 6 vuoden omistautunut asiantuntemus Android-, iOS- ja web-sovellusten luomisessa käyttäen Flutteria ja julkaisemisessa sovelluskauppoihin. Sitoutunut luomaan huippuluokan sovelluksia asettamalla puhtaan ja luettavan koodin sekä poikkeuksellisen käyttäjäkokemuksen etusijalle."),

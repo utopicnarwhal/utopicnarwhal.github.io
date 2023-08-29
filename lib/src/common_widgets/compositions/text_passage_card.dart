@@ -5,10 +5,11 @@ import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 import 'package:styled_text/styled_text.dart';
 
 class TextPassageCard extends StatelessWidget {
-  const TextPassageCard({super.key, required this.title, required this.body});
+  const TextPassageCard({super.key, required this.title, required this.body, this.footer});
 
   final String title;
   final String body;
+  final Widget? footer;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,10 @@ class TextPassageCard extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyLarge,
             tags: getUnifiedStyledTextTags(context),
           ),
+          if (footer != null) ...[
+            SizedBox(height: edgePadding / 2),
+            footer!,
+          ],
         ],
       ),
     );

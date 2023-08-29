@@ -1,18 +1,17 @@
 import 'dart:math' as math;
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/flutter_gen/assets.gen.dart';
 import 'package:portfolio/l10n/generated/l10n.dart';
 import 'package:portfolio/src/common_widgets/compositions/illustration_card.dart';
 import 'package:portfolio/src/common_widgets/compositions/text_passage_card.dart';
+import 'package:portfolio/src/common_widgets/mouse_detector.dart';
 import 'package:portfolio/src/design_system/layout/custom_primary_view.dart';
 import 'package:portfolio/src/design_system/layout/responsive_flex.dart';
 import 'package:portfolio/src/design_system/styles/motion/transitions.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 import 'package:rive/rive.dart' as rive;
-import 'package:rxdart/rxdart.dart';
 import 'package:video_player/video_player.dart';
 import 'package:video_player_platform_interface/video_player_platform_interface.dart' show VideoPlayerWebOptions;
 
@@ -30,7 +29,6 @@ class _HardSkillsViewState extends State<HardSkillsView> {
   late Future<void> _responsiveLayoutVideoPlayerInitializationFuture;
   late VideoPlayerController _firebaseHeroVideoPlayerController;
   late Future<void> _firebaseHeroVideoPlayerInitializationFuture;
-  late BehaviorSubject<bool> _isMouseDetectedController;
 
   @override
   void initState() {
@@ -69,7 +67,6 @@ class _HardSkillsViewState extends State<HardSkillsView> {
         _firebaseHeroVideoPlayerController.setVolume(0),
       ]);
     });
-    _isMouseDetectedController = BehaviorSubject.seeded(false);
   }
 
   @override
@@ -80,7 +77,6 @@ class _HardSkillsViewState extends State<HardSkillsView> {
     _responsiveLayoutVideoPlayerController.dispose();
     _firebaseHeroVideoPlayerInitializationFuture.ignore();
     _firebaseHeroVideoPlayerController.dispose();
-    _isMouseDetectedController.close();
     super.dispose();
   }
 
@@ -140,7 +136,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
               sourceLink: 'https://dart.dev',
               iconsColor: Colors.white70,
               child: SvgPicture.asset(
-                Assets.images.illustrations.dartAotCompile,
+                Assets.images.illustrations.hardSkills.dartAotCompile,
                 placeholderBuilder: (context) => SkeletonAnimationConfiguration.staggeredList(
                   position: 1,
                   isLoading: true,
@@ -163,7 +159,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
               sourceLink: 'https://pixabay.com/vectors/code-software-development-git-7522129/',
               iconsColor: Colors.white70,
               child: SvgPicture.asset(
-                Assets.images.illustrations.versionControl,
+                Assets.images.illustrations.hardSkills.versionControl,
                 placeholderBuilder: (context) => SkeletonAnimationConfiguration.staggeredList(
                   position: 2,
                   isLoading: true,
@@ -193,7 +189,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
                   child: Transform.rotate(
                     angle: 15 * (math.pi / 180),
                     child: Image.asset(
-                      Assets.images.illustrations.cicd.path,
+                      Assets.images.illustrations.hardSkills.cicd.path,
                       width: 1280,
                       height: 1500,
                       fit: BoxFit.contain,
@@ -268,7 +264,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
               iconsColor: Colors.black54,
               addOutline: true,
               child: Image.asset(
-                Assets.images.illustrations.materialDesign.path,
+                Assets.images.illustrations.hardSkills.materialDesign.path,
                 frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
                     ? child
                     : SkeletonAnimationConfiguration.staggeredList(
@@ -325,7 +321,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
               iconsColor: Colors.black54,
               addOutline: true,
               child: Image.asset(
-                Assets.images.illustrations.designSystem.path,
+                Assets.images.illustrations.hardSkills.designSystem.path,
                 frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
                     ? child
                     : SkeletonAnimationConfiguration.staggeredList(
@@ -350,7 +346,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
               child: Padding(
                 padding: const EdgeInsets.all(20),
                 child: SvgPicture.asset(
-                  Assets.images.illustrations.i18n,
+                  Assets.images.illustrations.hardSkills.i18n,
                   placeholderBuilder: (context) => SkeletonAnimationConfiguration.staggeredList(
                     position: 8,
                     isLoading: true,
@@ -369,61 +365,47 @@ class _HardSkillsViewState extends State<HardSkillsView> {
               title: Dictums.of(context).effectsAndAnimationsHardSkillTitle,
               body: Dictums.of(context).effectsAndAnimationsHardSkillBody,
             ),
-            StreamBuilder<bool>(
-              initialData: _isMouseDetectedController.value,
-              stream: _isMouseDetectedController,
-              builder: (context, isMouseDetectedSnapshot) {
-                final cardWithAnimation = Hero(
-                  tag: Assets.animations.utopicNarwhal,
-                  child: IllustrationCard(
-                    aspectRatio: 1,
-                    child: rive.RiveAnimation.asset(
-                      Assets.animations.utopicNarwhal,
-                      fit: BoxFit.fitWidth,
-                      stateMachines: const ['State Machine 1'],
-                      placeHolder: SkeletonAnimationConfiguration.staggeredList(
-                        position: 9,
-                        isLoading: true,
-                        child: SkeletonLoader(child: Container()),
-                      ),
-                    ),
-                  ),
-                );
-
-                return MouseRegion(
-                  hitTestBehavior: HitTestBehavior.translucent,
-                  onHover: (event) {
-                    if (isMouseDetectedSnapshot.data == false && event.kind == PointerDeviceKind.mouse) {
-                      _isMouseDetectedController.add(true);
-                    }
-                    if (isMouseDetectedSnapshot.data == true && event.kind == PointerDeviceKind.touch) {
-                      _isMouseDetectedController.add(false);
-                    }
-                  },
-                  child: GestureDetector(
-                    behavior: HitTestBehavior.translucent,
-                    onTap: isMouseDetectedSnapshot.data == false
-                        ? () {
-                            Navigator.of(context).push(
-                              DialogRoute(
-                                context: context,
-                                barrierColor: Theme.of(context).colorScheme.scrim,
-                                builder: (context) {
-                                  return Dialog(
-                                    child: cardWithAnimation,
-                                  );
-                                },
-                              ),
-                            );
-                          }
-                        : null,
-                    child: IgnorePointer(
-                      ignoring: isMouseDetectedSnapshot.data == false,
-                      child: cardWithAnimation,
-                    ),
+            MouseDetector(
+              builder: (context, isMouseDetected, child) {
+                return GestureDetector(
+                  behavior: HitTestBehavior.translucent,
+                  onTap: isMouseDetected
+                      ? null
+                      : () {
+                          Navigator.of(context).push(
+                            DialogRoute(
+                              context: context,
+                              barrierColor: Theme.of(context).colorScheme.scrim,
+                              builder: (context) {
+                                return Dialog(
+                                  child: child,
+                                );
+                              },
+                            ),
+                          );
+                        },
+                  child: IgnorePointer(
+                    ignoring: !isMouseDetected,
+                    child: child,
                   ),
                 );
               },
+              child: Hero(
+                tag: Assets.animations.utopicNarwhal,
+                child: IllustrationCard(
+                  aspectRatio: 1,
+                  child: rive.RiveAnimation.asset(
+                    Assets.animations.utopicNarwhal,
+                    fit: BoxFit.fitWidth,
+                    stateMachines: const ['State Machine 1'],
+                    placeHolder: SkeletonAnimationConfiguration.staggeredList(
+                      position: 9,
+                      isLoading: true,
+                      child: SkeletonLoader(child: Container()),
+                    ),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
@@ -440,7 +422,7 @@ class _HardSkillsViewState extends State<HardSkillsView> {
               iconsColor: Colors.black54,
               addOutline: true,
               child: Image.asset(
-                Assets.images.illustrations.appDeployment.path,
+                Assets.images.illustrations.hardSkills.appDeployment.path,
                 frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
                     ? child
                     : SkeletonAnimationConfiguration.staggeredList(

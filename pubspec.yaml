@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
+  vector_math: any
 
   # Localization
   flutter_localizations:
@@ -86,19 +87,36 @@ flutter:
     - assets/images/third_party/git_logomark.svg
     - assets/images/third_party/logo_dart.svg
     - assets/images/third_party/github_icon.svg
+    - assets/images/third_party/google_play_logomark.svg
+    - assets/images/third_party/app_store_logomark.svg
     - assets/images/third_party/github_actions_logomark.svg
     - assets/images/third_party/freska-service-workers-app-icon.svg
     - assets/images/third_party/freska-customer-app-icon.svg
     - assets/images/third_party/github_icon.svg
     - assets/images/third_party/freska-f-icon.svg
 
-    - assets/images/illustrations/dart_aot_compile.svg
-    - assets/images/illustrations/cicd.png
-    - assets/images/illustrations/version_control.svg
-    - assets/images/illustrations/material_design.png
-    - assets/images/illustrations/design_system.png
-    - assets/images/illustrations/i18n.svg
-    - assets/images/illustrations/app_deployment.png
+    - assets/images/illustrations/hard_skills/dart_aot_compile.svg
+    - assets/images/illustrations/hard_skills/cicd.png
+    - assets/images/illustrations/hard_skills/version_control.svg
+    - assets/images/illustrations/hard_skills/material_design.png
+    - assets/images/illustrations/hard_skills/design_system.png
+    - assets/images/illustrations/hard_skills/i18n.svg
+    - assets/images/illustrations/hard_skills/app_deployment.png
+
+    - assets/images/illustrations/freska_app/preview.png
+    - assets/images/illustrations/freska_app/preview2.png
+    - assets/images/illustrations/freska_app/home_page_before.png
+    - assets/images/illustrations/freska_app/home_page_after.png
+    - assets/images/illustrations/freska_app/booking_details_before.png
+    - assets/images/illustrations/freska_app/booking_details_after.png
+    - assets/images/illustrations/freska_app/account_details_before.png
+    - assets/images/illustrations/freska_app/account_details_after.png
+    - assets/images/illustrations/freska_app/rescheduling_before.png
+    - assets/images/illustrations/freska_app/rescheduling_after.png
+
+    - assets/images/illustrations/freska_pro_app/preview.png
+    - assets/images/illustrations/freska_pro_app/booking_details.png
+    - assets/images/illustrations/freska_pro_app/schedule.png
 
     # Animations
     - assets/animations/under_construction.riv

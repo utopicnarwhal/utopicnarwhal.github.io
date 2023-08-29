@@ -1,14 +1,16 @@
-import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/flutter_gen/assets.gen.dart';
 import 'package:portfolio/l10n/generated/l10n.dart';
-import 'package:portfolio/src/design_system/styles/motion/transitions.dart';
+import 'package:portfolio/src/common_widgets/compositions/project_preview_card.dart';
+import 'package:portfolio/src/common_widgets/compositions/tag_chips_wrap.dart';
+import 'package:portfolio/src/common_widgets/compositions/text_passage_card.dart';
 import 'package:portfolio/src/design_system/components/card_plus.dart';
 import 'package:portfolio/src/design_system/layout/custom_primary_view.dart';
+import 'package:portfolio/src/design_system/layout/responsive_flex.dart';
+import 'package:portfolio/src/design_system/styles/motion/transitions.dart';
 import 'package:portfolio/src/design_system/styles/portfolio_theme.dart';
 import 'package:portfolio/src/pages/routes.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
-import 'package:rive/rive.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
@@ -100,37 +102,23 @@ class _IntroViewState extends State<IntroView> {
           ],
         ),
         const SizedBox(height: 40),
-        CardPlus(
-          padding: EdgeInsets.all(edgePadding),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+        TextPassageCard(
+          title: Dictums.of(context).professionalSummaryTitle,
+          body: Dictums.of(context).professionalSummaryCardBodyText,
+          footer: Wrap(
+            runSpacing: 10,
+            spacing: 10,
+            alignment: WrapAlignment.end,
             children: [
-              SelectableText(
-                Dictums.of(context).professionalSummaryTitle,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const SizedBox(height: 10),
-              SelectableText(
-                Dictums.of(context).professionalSummaryCardBodyText,
-                style: Theme.of(context).textTheme.bodyLarge,
-              ),
-              const SizedBox(height: 20),
-              Wrap(
-                runSpacing: 10,
-                spacing: 10,
-                alignment: WrapAlignment.end,
-                children: [
-                  ActionChip(
-                    avatar: const Icon(Icons.description_rounded),
-                    label: Text(Dictums.of(context).openCvButton),
-                    onPressed: () {
-                      url_launcher.launchUrl(
-                        Uri.parse('${Uri.base}sergei_danilov_CV.pdf'),
-                        mode: url_launcher.LaunchMode.externalApplication,
-                      );
-                    },
-                  ),
-                ],
+              ActionChip(
+                avatar: const Icon(Icons.description_rounded),
+                label: Text(Dictums.of(context).openCvButton),
+                onPressed: () {
+                  url_launcher.launchUrl(
+                    Uri.parse('${Uri.base}sergei_danilov_CV.pdf'),
+                    mode: url_launcher.LaunchMode.externalApplication,
+                  );
+                },
               ),
             ],
           ),
@@ -141,139 +129,90 @@ class _IntroViewState extends State<IntroView> {
           style: Theme.of(context).textTheme.headlineLarge,
         ),
         const SizedBox(height: 20),
-        Flex(
-          mainAxisSize: context.isExtraSmallScreen ? MainAxisSize.min : MainAxisSize.max,
-          crossAxisAlignment: context.isExtraSmallScreen ? CrossAxisAlignment.stretch : CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          direction: context.isExtraSmallScreen ? Axis.vertical : Axis.horizontal,
+        ResponsiveFlex(
           children: [
-            Flexible(
-              child: CardPlus(
-                padding: EdgeInsets.all(edgePadding),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    SelectableText(
-                      Dictums.of(context).hardSkillsTitle,
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                    const SizedBox(height: 20),
-                    WrapSuper(
-                      spacing: 8,
-                      lineSpacing: 8,
-                      children: [
-                        for (var skillName in [
-                          Dictums.of(context).flutterFrameworkTitle,
-                          Dictums.of(context).dartProgrammingLanguageHardSkillTitle,
-                          Dictums.of(context).versionControlHardSkillTitle,
-                          Dictums.of(context).cicdHardSkillTitle,
-                          Dictums.of(context).firebaseToolsHardSkillTitle,
-                          Dictums.of(context).googleMaterialDesignHardSkillTitle,
-                          Dictums.of(context).responsiveDesignHardSkillTitle,
-                          Dictums.of(context).designSystemsHardSkillTitle,
-                          Dictums.of(context).internationalizationHardSkillTitle,
-                          Dictums.of(context).effectsAndAnimationsHardSkillTitle,
-                          Dictums.of(context).appDeploymentHardSkillTitle,
-                        ])
-                          Material(
-                            color: Colors.transparent,
-                            shape: StadiumBorder(
-                              side: BorderSide(color: Theme.of(context).colorScheme.outlineVariant, width: 1),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(12, 4, 8, 4),
-                              child: SelectableText(
-                                skillName,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .labelSmall
-                                    ?.copyWith(color: Theme.of(context).hintColor),
-                              ),
-                            ),
-                          ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    Wrap(
-                      runSpacing: 10,
-                      spacing: 10,
-                      alignment: WrapAlignment.end,
-                      children: [
-                        ActionChip(
-                          avatar: const Icon(Icons.keyboard_double_arrow_right_outlined),
-                          label: Text(Dictums.of(context).learnMoreButton),
-                          onPressed: () {
-                            const HardSkillsRoute().go(context);
-                          },
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+            CardPlus(
+              padding: EdgeInsets.all(edgePadding),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  SelectableText(
+                    Dictums.of(context).hardSkillsTitle,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  const SizedBox(height: 20),
+                  TagChipsWrap(
+                    strings: [
+                      Dictums.of(context).flutterFrameworkTitle,
+                      Dictums.of(context).dartProgrammingLanguageHardSkillTitle,
+                      Dictums.of(context).versionControlHardSkillTitle,
+                      Dictums.of(context).cicdHardSkillTitle,
+                      Dictums.of(context).firebaseToolsHardSkillTitle,
+                      Dictums.of(context).googleMaterialDesignHardSkillTitle,
+                      Dictums.of(context).responsiveDesignHardSkillTitle,
+                      Dictums.of(context).designSystemsHardSkillTitle,
+                      Dictums.of(context).internationalizationHardSkillTitle,
+                      Dictums.of(context).effectsAndAnimationsHardSkillTitle,
+                      Dictums.of(context).appDeploymentHardSkillTitle,
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Wrap(
+                    runSpacing: 10,
+                    spacing: 10,
+                    alignment: WrapAlignment.end,
+                    children: [
+                      ActionChip(
+                        avatar: const Icon(Icons.keyboard_double_arrow_right_outlined),
+                        label: Text(Dictums.of(context).learnMoreButton),
+                        onPressed: () {
+                          const HardSkillsRoute().go(context);
+                        },
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
-            SizedBox.square(dimension: edgePadding),
-            Flexible(
-              child: CardPlus(
-                padding: EdgeInsets.all(edgePadding),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    SelectableText(
-                      Dictums.of(context).softSkillsTitle,
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                    const SizedBox(height: 20),
-                    WrapSuper(
-                      spacing: 8,
-                      lineSpacing: 8,
-                      children: [
-                        for (var skillName in [
-                          Dictums.of(context).softSkillProblemSolving,
-                          Dictums.of(context).softSkillAdaptability,
-                          Dictums.of(context).softSkillCommunication,
-                          Dictums.of(context).softSkillTeamwork,
-                          Dictums.of(context).softSkillTimeManagement,
-                          Dictums.of(context).softSkillCreativity,
-                          Dictums.of(context).softSkillAttentionToDetail,
-                          Dictums.of(context).softSkillInitiative,
-                          Dictums.of(context).softSkillOpenMindedness,
-                        ])
-                          Material(
-                            color: Colors.transparent,
-                            shape: StadiumBorder(
-                              side: BorderSide(color: Theme.of(context).colorScheme.outlineVariant, width: 1),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(12, 4, 8, 4),
-                              child: SelectableText(
-                                skillName,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .labelSmall
-                                    ?.copyWith(color: Theme.of(context).hintColor),
-                              ),
-                            ),
-                          ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    Wrap(
-                      runSpacing: 10,
-                      spacing: 10,
-                      alignment: WrapAlignment.end,
-                      children: [
-                        ActionChip(
-                          avatar: const Icon(Icons.keyboard_double_arrow_right_outlined),
-                          label: Text(Dictums.of(context).learnMoreButton),
-                          onPressed: () {
-                            const SoftSkillsRoute().go(context);
-                          },
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+            CardPlus(
+              padding: EdgeInsets.all(edgePadding),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  SelectableText(
+                    Dictums.of(context).softSkillsTitle,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  const SizedBox(height: 20),
+                  TagChipsWrap(
+                    strings: [
+                      Dictums.of(context).softSkillProblemSolving,
+                      Dictums.of(context).softSkillAdaptability,
+                      Dictums.of(context).softSkillCommunication,
+                      Dictums.of(context).softSkillTeamwork,
+                      Dictums.of(context).softSkillTimeManagement,
+                      Dictums.of(context).softSkillCreativity,
+                      Dictums.of(context).softSkillAttentionToDetail,
+                      Dictums.of(context).softSkillInitiative,
+                      Dictums.of(context).softSkillOpenMindedness,
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Wrap(
+                    runSpacing: 10,
+                    spacing: 10,
+                    alignment: WrapAlignment.end,
+                    children: [
+                      ActionChip(
+                        avatar: const Icon(Icons.keyboard_double_arrow_right_outlined),
+                        label: Text(Dictums.of(context).learnMoreButton),
+                        onPressed: () {
+                          const SoftSkillsRoute().go(context);
+                        },
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ],
@@ -284,15 +223,56 @@ class _IntroViewState extends State<IntroView> {
           style: Theme.of(context).textTheme.headlineLarge,
         ),
         const SizedBox(height: 20),
-        CardPlus(
-          padding: EdgeInsets.all(edgePadding),
-          child: SizedBox.square(
-            dimension: 200,
-            child: RiveAnimation.asset(
-              Assets.animations.underConstruction,
-              fit: BoxFit.fitWidth,
+        ResponsiveFlex(
+          children: [
+            ProjectPreviewCard(
+              onTap: () => FreskaCustomerAppProjectRoute().go(context),
+              mediaAspectRatio: 890 / 544,
+              title: Dictums.of(context).freskaCustomerAppName,
+              medias: [
+                Image.asset(
+                  Assets.images.illustrations.freskaApp.preview.path,
+                  key: ValueKey(Assets.images.illustrations.freskaApp.preview.hashCode),
+                  frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
+                      ? child
+                      : SkeletonAnimationConfiguration.staggeredList(
+                          position: 1,
+                          isLoading: true,
+                          child: SkeletonLoader(child: Container()),
+                        ),
+                ),
+                Image.asset(
+                  Assets.images.illustrations.freskaApp.preview2.path,
+                  key: ValueKey(Assets.images.illustrations.freskaApp.preview2.hashCode),
+                  frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
+                      ? child
+                      : SkeletonAnimationConfiguration.staggeredList(
+                          position: 1,
+                          isLoading: true,
+                          child: SkeletonLoader(child: Container()),
+                        ),
+                ),
+              ],
             ),
-          ),
+            ProjectPreviewCard(
+              onTap: () => FreskaServiceWorkersAppProjectRoute().go(context),
+              mediaAspectRatio: 1780 / 1088,
+              title: Dictums.of(context).freskaProAppName,
+              medias: [
+                Image.asset(
+                  Assets.images.illustrations.freskaProApp.preview.path,
+                  key: ValueKey(Assets.images.illustrations.freskaProApp.preview.hashCode),
+                  frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
+                      ? child
+                      : SkeletonAnimationConfiguration.staggeredList(
+                          position: 1,
+                          isLoading: true,
+                          child: SkeletonLoader(child: Container()),
+                        ),
+                ),
+              ],
+            ),
+          ],
         ),
       ],
     );
