@@ -53,16 +53,30 @@ class _OnHoverSwitcherState extends State<OnHoverSwitcher> {
         initialData: _hoverController.value,
         stream: _hoverController,
         builder: (context, hoverSnapshot) {
-          final childToShow = hoverSnapshot.data == true ? widget.hoverChild : widget.regularChild;
-
-          return AnimatedSwitcher(
-            duration: MaterialDurations.medium4,
-            switchInCurve: MaterialEasing.standard,
-            switchOutCurve: MaterialEasing.standard,
-            child: KeyedSubtree(
-              key: UniqueKey(), // https://github.com/flutter/flutter/issues/121336
-              child: childToShow,
-            ),
+          return AnimatedCrossFade(
+            firstChild: widget.regularChild,
+            secondChild: widget.hoverChild,
+            crossFadeState: hoverSnapshot.data == true ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+            duration: MaterialDurations.medium2,
+            firstCurve: MaterialEasing.standardAccelerate,
+            secondCurve: MaterialEasing.standardAccelerate,
+            alignment: Alignment.center,
+            layoutBuilder: (topChild, topChildKey, bottomChild, bottomChildKey) {
+              return Stack(
+                clipBehavior: Clip.none,
+                alignment: Alignment.center,
+                children: [
+                  KeyedSubtree(
+                    key: bottomChildKey,
+                    child: bottomChild,
+                  ),
+                  KeyedSubtree(
+                    key: topChildKey,
+                    child: topChild,
+                  ),
+                ],
+              );
+            },
           );
         },
       ),
