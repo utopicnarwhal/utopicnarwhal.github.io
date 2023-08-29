@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/src/design_system/styles/motion/easing_and_durations.dart';
 import 'package:rxdart/rxdart.dart';
@@ -33,6 +34,19 @@ class _OnHoverSwitcherState extends State<OnHoverSwitcher> {
       mouseCursor: MouseCursor.defer,
       onTap: () {},
       onHover: _hoverController.add,
+      onTapUp: (eventDetails) {
+        if (eventDetails.kind == PointerDeviceKind.touch) {
+          _hoverController.add(false);
+        }
+      },
+      onTapDown: (eventDetails) {
+        if (eventDetails.kind == PointerDeviceKind.touch) {
+          _hoverController.add(true);
+        }
+      },
+      onTapCancel: () {
+        _hoverController.add(false);
+      },
       child: StreamBuilder<bool>(
         initialData: _hoverController.value,
         stream: _hoverController,
