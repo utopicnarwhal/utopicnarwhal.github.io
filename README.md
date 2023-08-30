@@ -15,6 +15,12 @@ Otherwise run the command in the root folder:
 $ flutter run
 ```
 
+### Host locally
+
+```
+$ flutter run -d web-server --web-renderer canvaskit --web-hostname localhost --web-port 8080
+```
+
 ## Development
 
 ### Localization

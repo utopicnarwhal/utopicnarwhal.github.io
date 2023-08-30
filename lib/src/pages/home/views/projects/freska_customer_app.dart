@@ -93,9 +93,9 @@ class _FreskaCustomerAppViewState extends State<FreskaCustomerAppView> {
               aspectRatio: 1,
               child: ScreenshotStand(
                 aspectRatio: 515 / 1072,
-                child: OnHoverSwitcher(
-                  regularChild: Image.asset(Assets.images.illustrations.freskaApp.homePageAfter.path),
-                  hoverChild: Image.asset(Assets.images.illustrations.freskaApp.homePageBefore.path),
+                child: ImageHoverSwitcher(
+                  regularImageAssetPath: Assets.images.illustrations.freskaApp.homePageAfter.path,
+                  hoverImageAssetPath: Assets.images.illustrations.freskaApp.homePageBefore.path,
                 ),
               ),
             ),
@@ -110,9 +110,9 @@ class _FreskaCustomerAppViewState extends State<FreskaCustomerAppView> {
               child: ScreenshotStand(
                 aspectRatio: 515 / 1072,
                 orientedToTheLeft: false,
-                child: OnHoverSwitcher(
-                  regularChild: Image.asset(Assets.images.illustrations.freskaApp.accountDetailsAfter.path),
-                  hoverChild: Image.asset(Assets.images.illustrations.freskaApp.accountDetailsBefore.path),
+                child: ImageHoverSwitcher(
+                  regularImageAssetPath: Assets.images.illustrations.freskaApp.accountDetailsAfter.path,
+                  hoverImageAssetPath: Assets.images.illustrations.freskaApp.accountDetailsBefore.path,
                 ),
               ),
             ),
@@ -160,9 +160,9 @@ class _FreskaCustomerAppViewState extends State<FreskaCustomerAppView> {
               aspectRatio: 1,
               child: ScreenshotStand(
                 aspectRatio: 515 / 1072,
-                child: OnHoverSwitcher(
-                  regularChild: Image.asset(Assets.images.illustrations.freskaApp.bookingDetailsAfter.path),
-                  hoverChild: Image.asset(Assets.images.illustrations.freskaApp.bookingDetailsBefore.path),
+                child: ImageHoverSwitcher(
+                  regularImageAssetPath: Assets.images.illustrations.freskaApp.bookingDetailsAfter.path,
+                  hoverImageAssetPath: Assets.images.illustrations.freskaApp.bookingDetailsBefore.path,
                 ),
               ),
             ),
@@ -177,9 +177,9 @@ class _FreskaCustomerAppViewState extends State<FreskaCustomerAppView> {
               child: ScreenshotStand(
                 aspectRatio: 515 / 1072,
                 orientedToTheLeft: false,
-                child: OnHoverSwitcher(
-                  regularChild: Image.asset(Assets.images.illustrations.freskaApp.reschedulingAfter.path),
-                  hoverChild: Image.asset(Assets.images.illustrations.freskaApp.reschedulingBefore.path),
+                child: ImageHoverSwitcher(
+                  regularImageAssetPath: Assets.images.illustrations.freskaApp.reschedulingAfter.path,
+                  hoverImageAssetPath: Assets.images.illustrations.freskaApp.reschedulingBefore.path,
                 ),
               ),
             ),

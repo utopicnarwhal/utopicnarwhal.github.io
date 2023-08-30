@@ -32,6 +32,18 @@ class _ProjectPreviewCardState extends State<ProjectPreviewCard> {
   }
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    // Precache the images in media to prevent flickering during the transition
+    for (var media in widget.medias) {
+      if (media is Image) {
+        precacheImage(media.image, context);
+      }
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return CardPlus(
       onTap: widget.onTap,
@@ -40,7 +52,7 @@ class _ProjectPreviewCardState extends State<ProjectPreviewCard> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ClipRRect(
-            clipBehavior: Clip.hardEdge,
+            clipBehavior: Clip.antiAlias,
             borderRadius: const BorderRadius.vertical(bottom: Radius.circular(kCardBorderRadius)),
             child: Container(
               color: const Color(0xFFEFEFF9),

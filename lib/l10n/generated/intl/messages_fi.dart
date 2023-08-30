@@ -122,6 +122,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "learnMoreButton": MessageLookupByLibrary.simpleMessage("Lisätietoja"),
         "mobileAppForCustomersTitle":
             MessageLookupByLibrary.simpleMessage("Asiakkaiden mobiilisovellus"),
+        "myGithubButton": MessageLookupByLibrary.simpleMessage("My GitHub"),
+        "myLinkedInButton": MessageLookupByLibrary.simpleMessage("My LinkedIn"),
         "openCvButton": MessageLookupByLibrary.simpleMessage("Katsoa CV:ta"),
         "professionalSummaryCardBodyText": MessageLookupByLibrary.simpleMessage(
             "Kokenut mobiilikehittäjä, jolla on yli 6 vuoden omistautunut asiantuntemus Android-, iOS- ja web-sovellusten luomisessa käyttäen Flutteria ja julkaisemisessa sovelluskauppoihin. Sitoutunut luomaan huippuluokan sovelluksia asettamalla puhtaan ja luettavan koodin sekä poikkeuksellisen käyttäjäkokemuksen etusijalle."),

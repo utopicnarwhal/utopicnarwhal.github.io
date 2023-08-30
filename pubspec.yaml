@@ -81,6 +81,8 @@ flutter:
 
   # * Don't forget to run the code generation command after adding a new asset here:
   assets:
+    - assets/images/profile_photo.jpeg
+
     # Third-party logos
     - assets/images/third_party/firebase_logomark.svg
     - assets/images/third_party/google_material_design_logo.svg
@@ -90,6 +92,7 @@ flutter:
     - assets/images/third_party/google_play_logomark.svg
     - assets/images/third_party/app_store_logomark.svg
     - assets/images/third_party/github_actions_logomark.svg
+    - assets/images/third_party/linked_in_logomark.svg
     - assets/images/third_party/freska-service-workers-app-icon.svg
     - assets/images/third_party/freska-customer-app-icon.svg
     - assets/images/third_party/github_icon.svg

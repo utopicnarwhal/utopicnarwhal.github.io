@@ -839,6 +839,26 @@ class Dictums {
       args: [],
     );
   }
+
+  /// `My GitHub`
+  String get myGithubButton {
+    return Intl.message(
+      'My GitHub',
+      name: 'myGithubButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My LinkedIn`
+  String get myLinkedInButton {
+    return Intl.message(
+      'My LinkedIn',
+      name: 'myLinkedInButton',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<Dictums> {

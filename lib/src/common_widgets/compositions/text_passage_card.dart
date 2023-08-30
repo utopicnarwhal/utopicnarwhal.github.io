@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/src/design_system/components/card_plus.dart';
 import 'package:portfolio/src/design_system/styles/portfolio_theme.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
+import 'package:portfolio/src/utils/string_utils.dart';
 import 'package:styled_text/styled_text.dart';
 
 class TextPassageCard extends StatelessWidget {
@@ -26,7 +27,7 @@ class TextPassageCard extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           StyledText.selectable(
-            text: body,
+            text: body.removeRunts,
             style: Theme.of(context).textTheme.bodyLarge,
             tags: getUnifiedStyledTextTags(context),
           ),

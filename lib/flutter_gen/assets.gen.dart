@@ -33,7 +33,14 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   $AssetsImagesIllustrationsGen get illustrations => const $AssetsImagesIllustrationsGen();
+
+  /// File path: assets/images/profile_photo.jpeg
+  AssetGenImage get profilePhoto => const AssetGenImage('assets/images/profile_photo.jpeg');
+
   $AssetsImagesThirdPartyGen get thirdParty => const $AssetsImagesThirdPartyGen();
+
+  /// List of all assets
+  List<AssetGenImage> get values => [profilePhoto];
 }
 
 class $AssetsVideosGen {
@@ -113,6 +120,9 @@ class $AssetsImagesThirdPartyGen {
   /// File path: assets/images/third_party/google_play_logomark.svg
   String get googlePlayLogomark => 'assets/images/third_party/google_play_logomark.svg';
 
+  /// File path: assets/images/third_party/linked_in_logomark.svg
+  String get linkedInLogomark => 'assets/images/third_party/linked_in_logomark.svg';
+
   /// File path: assets/images/third_party/logo_dart.svg
   String get logoDart => 'assets/images/third_party/logo_dart.svg';
 
@@ -128,6 +138,7 @@ class $AssetsImagesThirdPartyGen {
         githubIcon,
         googleMaterialDesignLogo,
         googlePlayLogomark,
+        linkedInLogomark,
         logoDart
       ];
 }

@@ -9,7 +9,11 @@
             "args": [
                 "--debug",
                 "--web-renderer",
-                "canvaskit"
+                "canvaskit",
+                "--web-hostname",
+                "localhost",
+                "--web-port",
+                "8080"
             ],
         }
     ]

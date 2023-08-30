@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:multi_split_view/multi_split_view.dart';
 import 'package:portfolio/src/design_system/components/custom_app_bar.dart';
+import 'package:portfolio/src/pages/routes.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
 
 class CustomScaffold extends StatelessWidget {
@@ -31,7 +32,11 @@ class CustomScaffold extends StatelessWidget {
       key: scaffoldGlobalKey,
       backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       appBar: CustomAppBar(
-        title: Text(appBarTitle),
+        title: InkWell(
+          onTap: () => IntroRoute().go(context),
+          borderRadius: BorderRadius.circular(8),
+          child: Text(appBarTitle),
+        ),
         leadingWidth: drawer == null ? 120 : null,
         actions: actions,
       ),

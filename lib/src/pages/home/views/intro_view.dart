@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/flutter_gen/assets.gen.dart';
 import 'package:portfolio/l10n/generated/l10n.dart';
 import 'package:portfolio/src/common_widgets/compositions/project_preview_card.dart';
@@ -11,6 +12,7 @@ import 'package:portfolio/src/design_system/styles/motion/transitions.dart';
 import 'package:portfolio/src/design_system/styles/portfolio_theme.dart';
 import 'package:portfolio/src/pages/routes.dart';
 import 'package:portfolio/src/utils/responsive_layout_utils.dart';
+import 'package:portfolio/src/utils/string_utils.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
@@ -43,60 +45,46 @@ class _IntroViewState extends State<IntroView> {
     return CustomPrimaryView(
       edgePadding: edgePadding,
       children: [
-        Flex(
-          mainAxisSize: context.isExtraSmallScreen ? MainAxisSize.min : MainAxisSize.max,
-          crossAxisAlignment: context.isExtraSmallScreen ? CrossAxisAlignment.stretch : CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          direction: context.isExtraSmallScreen ? Axis.vertical : Axis.horizontal,
+        ResponsiveFlex(
+          flexes: const [4, 3],
           children: [
-            Flexible(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  SelectableText(
-                    Dictums.of(context).introViewGreeting,
-                    style: Theme.of(context).textTheme.displayLarge,
-                  ),
-                  Divider(
-                    thickness: 1,
-                    height: 32,
-                    color: Theme.of(context).colorScheme.outline,
-                  ),
-                  StyledText.selectable(
-                    text: Dictums.of(context).introViewMyTitleString,
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Theme.of(context).hintColor),
-                    tags: getUnifiedStyledTextTags(context),
-                  ),
-                ],
-              ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                SelectableText(
+                  Dictums.of(context).introViewGreeting,
+                  style: Theme.of(context).textTheme.displayLarge,
+                ),
+                Divider(
+                  thickness: 1,
+                  height: 32,
+                  color: Theme.of(context).colorScheme.outline,
+                ),
+                StyledText.selectable(
+                  text: Dictums.of(context).introViewMyTitleString.removeRunts,
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Theme.of(context).hintColor),
+                  tags: getUnifiedStyledTextTags(context),
+                ),
+              ],
             ),
-            SizedBox.square(dimension: edgePadding),
-            SizedBox.square(
-              dimension: context.isExtraSmallScreen ? null : 200,
-              child: Image.network(
-                'https://avatars.githubusercontent.com/u/8808766?v=4',
-                loadingBuilder: (context, child, loadingProgress) {
-                  return SkeletonAnimationConfiguration.staggeredList(
-                    position: 0,
-                    isLoading: loadingProgress != null &&
-                        loadingProgress.cumulativeBytesLoaded != loadingProgress.expectedTotalBytes,
-                    child: SkeletonLoader(
-                      child: child,
-                    ),
-                  );
-                },
-                frameBuilder: (context, child, _, __) {
-                  return AspectRatio(
-                    aspectRatio: 1,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(kCardBorderRadius),
-                      child: child,
-                    ),
-                  );
-                },
-                alignment: Alignment.topLeft,
-                fit: BoxFit.contain,
+            AspectRatio(
+              aspectRatio: 4 / 3,
+              child: CardPlus(
+                color: Colors.transparent,
+                addOutline: true,
+                child: Image.asset(
+                  Assets.images.profilePhoto.path,
+                  frameBuilder: (context, child, frame, _) => frame != null
+                      ? child
+                      : SkeletonAnimationConfiguration.staggeredList(
+                          position: 0,
+                          isLoading: true,
+                          child: SkeletonLoader(child: Container()),
+                        ),
+                  alignment: Alignment.topLeft,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
           ],
@@ -110,6 +98,41 @@ class _IntroViewState extends State<IntroView> {
             spacing: 10,
             alignment: WrapAlignment.end,
             children: [
+              ActionChip(
+                avatar: Builder(
+                  builder: (context) {
+                    return SvgPicture.asset(
+                      Assets.images.thirdParty.githubIcon,
+                      height: 48,
+                      width: 48,
+                      colorFilter: Theme.of(context).brightness == Brightness.light
+                          ? null
+                          : const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                    );
+                  },
+                ),
+                label: Text(Dictums.of(context).myGithubButton),
+                onPressed: () {
+                  url_launcher.launchUrl(
+                    Uri.parse('https://github.com/utopicnarwhal'),
+                    mode: url_launcher.LaunchMode.externalApplication,
+                  );
+                },
+              ),
+              ActionChip(
+                avatar: SvgPicture.asset(
+                  Assets.images.thirdParty.linkedInLogomark,
+                  height: 48,
+                  width: 48,
+                ),
+                label: Text(Dictums.of(context).myLinkedInButton),
+                onPressed: () {
+                  url_launcher.launchUrl(
+                    Uri.parse('https://linkedin.com/in/sergei-danilov-ab1b64164'),
+                    mode: url_launcher.LaunchMode.externalApplication,
+                  );
+                },
+              ),
               ActionChip(
                 avatar: const Icon(Icons.description_rounded),
                 label: Text(Dictums.of(context).openCvButton),
@@ -233,24 +256,10 @@ class _IntroViewState extends State<IntroView> {
                 Image.asset(
                   Assets.images.illustrations.freskaApp.preview.path,
                   key: ValueKey(Assets.images.illustrations.freskaApp.preview.hashCode),
-                  frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
-                      ? child
-                      : SkeletonAnimationConfiguration.staggeredList(
-                          position: 1,
-                          isLoading: true,
-                          child: SkeletonLoader(child: Container()),
-                        ),
                 ),
                 Image.asset(
                   Assets.images.illustrations.freskaApp.preview2.path,
                   key: ValueKey(Assets.images.illustrations.freskaApp.preview2.hashCode),
-                  frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
-                      ? child
-                      : SkeletonAnimationConfiguration.staggeredList(
-                          position: 1,
-                          isLoading: true,
-                          child: SkeletonLoader(child: Container()),
-                        ),
                 ),
               ],
             ),
@@ -262,13 +271,6 @@ class _IntroViewState extends State<IntroView> {
                 Image.asset(
                   Assets.images.illustrations.freskaProApp.preview.path,
                   key: ValueKey(Assets.images.illustrations.freskaProApp.preview.hashCode),
-                  frameBuilder: (context, child, frame, wasSynchronouslyLoaded) => frame != null
-                      ? child
-                      : SkeletonAnimationConfiguration.staggeredList(
-                          position: 1,
-                          isLoading: true,
-                          child: SkeletonLoader(child: Container()),
-                        ),
                 ),
               ],
             ),

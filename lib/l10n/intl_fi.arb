@@ -83,5 +83,7 @@
   "featuresAndFunctionalityConfigurabilityAndAnalytics": "Mukautettavuus ja analytiikka",
   "featuresAndFunctionalityMultilingualSupport": "Monikielinen tuki",
   "achivementsTitle": "Saavutukset",
-  "freskaCustomerAppAchivements": "• Luotiin onnistuneesti oma paketti jaettaville koodeille ja UI-kirjastokomponenteille, mikä nopeutti kehitystä ja parantui komponenttien testattavuutta. Lisäksi suunniteltiin Flutter-verkkoa käyttävä interaktiivinen demosivu näiden komponenttien esittelemiseksi, mikä parantaa entisestään saavutettavuutta ja käytettävyyttä.\n• Parannettiin CI/CD-pipeline-skriptejä GitHub Actionsilla, mikä johti keskimäärin 38 %:n vähenemiseen sovelluksen rakentamisen ja jakelun ajassa.\n• Optimoitiin mobiilisovellus eri laitteille ja näyttökokoille, mikä parantaa käytettävyyttä ja antaa miellyttävämmän visuaalisen kokemuksen."
+  "freskaCustomerAppAchivements": "• Luotiin onnistuneesti oma paketti jaettaville koodeille ja UI-kirjastokomponenteille, mikä nopeutti kehitystä ja parantui komponenttien testattavuutta. Lisäksi suunniteltiin Flutter-verkkoa käyttävä interaktiivinen demosivu näiden komponenttien esittelemiseksi, mikä parantaa entisestään saavutettavuutta ja käytettävyyttä.\n• Parannettiin CI/CD-pipeline-skriptejä GitHub Actionsilla, mikä johti keskimäärin 38 %:n vähenemiseen sovelluksen rakentamisen ja jakelun ajassa.\n• Optimoitiin mobiilisovellus eri laitteille ja näyttökokoille, mikä parantaa käytettävyyttä ja antaa miellyttävämmän visuaalisen kokemuksen.",
+  "myGithubButton": "My GitHub",
+  "myLinkedInButton": "My LinkedIn"
 }

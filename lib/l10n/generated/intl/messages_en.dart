@@ -122,6 +122,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "learnMoreButton": MessageLookupByLibrary.simpleMessage("Learn more"),
         "mobileAppForCustomersTitle":
             MessageLookupByLibrary.simpleMessage("Mobile app for customers"),
+        "myGithubButton": MessageLookupByLibrary.simpleMessage("My GitHub"),
+        "myLinkedInButton": MessageLookupByLibrary.simpleMessage("My LinkedIn"),
         "openCvButton": MessageLookupByLibrary.simpleMessage("Open CV"),
         "professionalSummaryCardBodyText": MessageLookupByLibrary.simpleMessage(
             "Skilful mobile developer with 6+ years of dedicated expertise in crafting Android, iOS, and Web apps using Flutter and publishing them into the app stores. Committed to creating top-notch applications by prioritizing clean, readable code and exceptional user experiences."),

@@ -3,28 +3,45 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/src/design_system/styles/motion/easing_and_durations.dart';
 import 'package:rxdart/rxdart.dart';
 
-class OnHoverSwitcher extends StatefulWidget {
-  const OnHoverSwitcher({required this.regularChild, required this.hoverChild, super.key});
+class ImageHoverSwitcher extends StatefulWidget {
+  const ImageHoverSwitcher({required this.regularImageAssetPath, required this.hoverImageAssetPath, super.key});
 
-  final Widget regularChild;
-  final Widget hoverChild;
+  final String regularImageAssetPath;
+  final String hoverImageAssetPath;
 
   @override
-  State<OnHoverSwitcher> createState() => _OnHoverSwitcherState();
+  State<ImageHoverSwitcher> createState() => _ImageHoverSwitcherState();
 }
 
-class _OnHoverSwitcherState extends State<OnHoverSwitcher> {
+class _ImageHoverSwitcherState extends State<ImageHoverSwitcher> with SingleTickerProviderStateMixin {
   late BehaviorSubject<bool> _hoverController;
+  late AnimationController _controller;
+  late Animation<double> _regularChildOpacityAnimation;
+  late Animation<double> _hoverChildOpacityAnimation;
 
   @override
   void initState() {
     super.initState();
-    _hoverController = BehaviorSubject.seeded(false);
+    _hoverController = BehaviorSubject.seeded(false)
+      ..listen((value) {
+        if (value) {
+          _controller.animateTo(1, curve: MaterialEasing.standardAccelerate);
+        } else {
+          _controller.animateBack(0, curve: MaterialEasing.standardAccelerate);
+        }
+      });
+    _controller = AnimationController(
+      vsync: this,
+      duration: MaterialDurations.medium2,
+    );
+    _regularChildOpacityAnimation = Tween<double>(begin: 1, end: 0).animate(_controller);
+    _hoverChildOpacityAnimation = Tween<double>(begin: 0, end: 1).animate(_controller);
   }
 
   @override
   void dispose() {
     _hoverController.close();
+    _controller.dispose();
     super.dispose();
   }
 
@@ -49,36 +66,20 @@ class _OnHoverSwitcherState extends State<OnHoverSwitcher> {
       onTapCancel: () {
         _hoverController.add(false);
       },
-      child: StreamBuilder<bool>(
-        initialData: _hoverController.value,
-        stream: _hoverController,
-        builder: (context, hoverSnapshot) {
-          return AnimatedCrossFade(
-            firstChild: widget.regularChild,
-            secondChild: widget.hoverChild,
-            crossFadeState: hoverSnapshot.data == true ? CrossFadeState.showSecond : CrossFadeState.showFirst,
-            duration: MaterialDurations.medium2,
-            firstCurve: MaterialEasing.standardAccelerate,
-            secondCurve: MaterialEasing.standardAccelerate,
-            alignment: Alignment.center,
-            layoutBuilder: (topChild, topChildKey, bottomChild, bottomChildKey) {
-              return Stack(
-                clipBehavior: Clip.none,
-                alignment: Alignment.center,
-                children: [
-                  KeyedSubtree(
-                    key: bottomChildKey,
-                    child: bottomChild,
-                  ),
-                  KeyedSubtree(
-                    key: topChildKey,
-                    child: topChild,
-                  ),
-                ],
-              );
-            },
-          );
-        },
+      child: Stack(
+        clipBehavior: Clip.none,
+        alignment: Alignment.center,
+        children: [
+          // Both of the children should be onstage to prevent flickering when image loads
+          Image.asset(
+            widget.regularImageAssetPath,
+            opacity: _regularChildOpacityAnimation,
+          ),
+          Image.asset(
+            widget.hoverImageAssetPath,
+            opacity: _hoverChildOpacityAnimation,
+          ),
+        ],
       ),
     );
   }

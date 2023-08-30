@@ -84,5 +84,7 @@
   "featuresAndFunctionalityConfigurabilityAndAnalytics": "Configurability and Analytics",
   "featuresAndFunctionalityMultilingualSupport": "Multilingual Support",
   "achivementsTitle": "Achivements",
-  "freskaCustomerAppAchivements": "• Successfully created a dedicated package for shareable code and UI library components, resulting in accelerated development and enhanced component testability. Additionally, designed an interactive demo page using Flutter web to showcase these components, further improving accessibility and usability.\n• Improved the CI/CD pipeline scripts with GitHub Actions, which led to an average 38% decrease in the time needed to build and deploy the app.\n• Optimized the mobile application for different devices and screen sizes, resulting in improved usability and more pleasing visual experience."
+  "freskaCustomerAppAchivements": "• Successfully created a dedicated package for shareable code and UI library components, resulting in accelerated development and enhanced component testability. Additionally, designed an interactive demo page using Flutter web to showcase these components, further improving accessibility and usability.\n• Improved the CI/CD pipeline scripts with GitHub Actions, which led to an average 38% decrease in the time needed to build and deploy the app.\n• Optimized the mobile application for different devices and screen sizes, resulting in improved usability and more pleasing visual experience.",
+  "myGithubButton": "My GitHub",
+  "myLinkedInButton": "My LinkedIn"
 }
