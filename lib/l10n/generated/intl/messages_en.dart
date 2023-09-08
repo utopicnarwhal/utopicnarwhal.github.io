@@ -135,6 +135,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Proficient in the art of designing responsive UI layouts that seamlessly adjust to diverse screen dimensions and orientations. With a keen eye for detail and a deep understanding of design principles, I consistently develop interfaces that maintain visual coherence and functionality across various devices. This expertise also involves taking into consideration possible inputs like mouse or touch interactions, ensuring a smooth and intuitive user experience regardless of the device in use."),
         "responsiveDesignHardSkillTitle":
             MessageLookupByLibrary.simpleMessage("Responsive Design"),
+        "roughTranslationDisclaimer": MessageLookupByLibrary.simpleMessage(
+            "Translations provided on this website have been generated using <link href=\"https://openai.com/chatgpt\">ChatGPT</link>"),
         "softSkillAdaptability":
             MessageLookupByLibrary.simpleMessage("Adaptability"),
         "softSkillAdaptabilityBody": MessageLookupByLibrary.simpleMessage(

@@ -122,8 +122,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "learnMoreButton": MessageLookupByLibrary.simpleMessage("Lisätietoja"),
         "mobileAppForCustomersTitle":
             MessageLookupByLibrary.simpleMessage("Asiakkaiden mobiilisovellus"),
-        "myGithubButton": MessageLookupByLibrary.simpleMessage("My GitHub"),
-        "myLinkedInButton": MessageLookupByLibrary.simpleMessage("My LinkedIn"),
+        "myGithubButton":
+            MessageLookupByLibrary.simpleMessage("GitHub-profiiliini"),
+        "myLinkedInButton":
+            MessageLookupByLibrary.simpleMessage("LinkedIn-profiiliini"),
         "openCvButton": MessageLookupByLibrary.simpleMessage("Katsoa CV:ta"),
         "professionalSummaryCardBodyText": MessageLookupByLibrary.simpleMessage(
             "Kokenut mobiilikehittäjä, jolla on yli 6 vuoden omistautunut asiantuntemus Android-, iOS- ja web-sovellusten luomisessa käyttäen Flutteria ja julkaisemisessa sovelluskauppoihin. Sitoutunut luomaan huippuluokan sovelluksia asettamalla puhtaan ja luettavan koodin sekä poikkeuksellisen käyttäjäkokemuksen etusijalle."),
@@ -135,6 +137,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Taitava suunnittelemaan responsiivisia käyttöliittymien ulkoasuja, jotka mukautuvat saumattomasti erilaisiin näyttökoon ja suuntaan. Tarkalla silmällä yksityiskohtiin ja syvällä ymmärryksellä suunnitteluperiaatteista kehitän jatkuvasti käyttöliittymiä, jotka säilyttävät visuaalisen yhtenäisyyden ja toimivuuden erilaisilla laitteilla. Tähän osaamiseen kuuluu myös mahdollisten syötteiden, kuten hiiren tai kosketusinteraktioiden, huomioiminen, varmistaen sujuvan ja intuitiivisen käyttökokemuksen laitteesta riippumatta."),
         "responsiveDesignHardSkillTitle":
             MessageLookupByLibrary.simpleMessage("Vastuullinen suunnittelu"),
+        "roughTranslationDisclaimer": MessageLookupByLibrary.simpleMessage(
+            "Tämän verkkosivuston tarjoamat käännökset on luotu käyttäen <link href=\"https://openai.com/chatgpt\">ChatGPT</link>-kielenmallia"),
         "softSkillAdaptability":
             MessageLookupByLibrary.simpleMessage("Sopeutumiskyky"),
         "softSkillAdaptabilityBody": MessageLookupByLibrary.simpleMessage(

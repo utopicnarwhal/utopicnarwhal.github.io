@@ -859,6 +859,16 @@ class Dictums {
       args: [],
     );
   }
+
+  /// `Translations provided on this website have been generated using <link href="https://openai.com/chatgpt">ChatGPT</link>`
+  String get roughTranslationDisclaimer {
+    return Intl.message(
+      'Translations provided on this website have been generated using <link href="https://openai.com/chatgpt">ChatGPT</link>',
+      name: 'roughTranslationDisclaimer',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<Dictums> {

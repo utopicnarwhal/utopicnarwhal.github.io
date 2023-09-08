@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/src/services/local_storage_service.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class DynamicLocale extends StatefulWidget {
   const DynamicLocale({
@@ -21,20 +21,12 @@ class DynamicLocale extends StatefulWidget {
 }
 
 class DynamicLocaleState extends State<DynamicLocale> {
-  static const String _sharedPreferencesKey = 'Locale';
-
   late BehaviorSubject<Locale> localeController;
 
   @override
   void initState() {
     super.initState();
-    localeController = BehaviorSubject.seeded(widget.defaultLocale);
-
-    _loadLocale().then((locale) {
-      if (mounted) {
-        localeController.add(locale);
-      }
-    });
+    localeController = BehaviorSubject.seeded(_loadLocale());
   }
 
   @override
@@ -49,19 +41,18 @@ class DynamicLocaleState extends State<DynamicLocale> {
     }
 
     localeController.add(newLocale);
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_sharedPreferencesKey, newLocale.languageCode);
+    await LocalStorageService.instance.setLocale(newLocale.languageCode);
   }
 
-  Future<Locale> _loadLocale() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    var localeLanguageCode = prefs.getString(_sharedPreferencesKey);
+  Locale _loadLocale() {
+    var localeLanguageCode = LocalStorageService.instance.getLocale();
     return localeLanguageCode != null ? Locale.fromSubtags(languageCode: localeLanguageCode) : widget.defaultLocale;
   }
 
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<Locale>(
+      initialData: localeController.value,
       stream: localeController,
       builder: (context, localeSnapshot) => widget.builder(
         context,

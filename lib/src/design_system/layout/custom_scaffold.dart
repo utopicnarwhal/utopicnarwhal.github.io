@@ -10,6 +10,7 @@ class CustomScaffold extends StatelessWidget {
     required this.appBarTitle,
     required this.primarySidebar,
     required this.body,
+    this.bodyFooter,
     required this.scaffoldGlobalKey,
     required this.actions,
   });
@@ -17,6 +18,7 @@ class CustomScaffold extends StatelessWidget {
   final String appBarTitle;
   final Widget primarySidebar;
   final Widget body;
+  final Widget? bodyFooter;
   final GlobalKey scaffoldGlobalKey;
   final List<Widget> actions;
 
@@ -86,6 +88,11 @@ class CustomScaffold extends StatelessWidget {
                   ),
                 ),
                 FocusTraversalGroup(child: body),
+                if (bodyFooter != null)
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: bodyFooter!,
+                  ),
               ],
             ),
           ],

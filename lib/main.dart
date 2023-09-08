@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:portfolio/flutter_gen/assets.gen.dart';
 import 'package:portfolio/src/app.dart';
+import 'package:portfolio/src/services/local_storage_service.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   LicenseRegistry.addLicense(
@@ -17,6 +18,8 @@ void main() {
       }),
     ]),
   );
+
+  await LocalStorageService.instance.init();
 
   runApp(const PortfolioApp());
 }
